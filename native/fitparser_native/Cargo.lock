@@ -93,6 +93,7 @@ dependencies = [
  "rustler",
  "serde",
  "serde_json",
+ "serde_rustler",
 ]
 
 [[package]]
@@ -204,6 +205,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "quick-error"
+version = "1.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a1d01941d82fa2ab50be1e79e6714289dd7cde78eba4c074bc5a4374f650dfe0"
+
+[[package]]
 name = "quote"
 version = "1.0.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -308,6 +315,17 @@ checksum = "3d1c7e3eac408d115102c4c24ad393e0821bb3a5df4d506a80f85f7a742a526b"
 dependencies = [
  "itoa",
  "ryu",
+ "serde",
+]
+
+[[package]]
+name = "serde_rustler"
+version = "0.0.8"
+source = "git+https://github.com/benhaney/serde_rustler.git#f8da90d85d7b2c9964cb3b962fae2869278e5b5d"
+dependencies = [
+ "lazy_static",
+ "quick-error",
+ "rustler",
  "serde",
 ]
 

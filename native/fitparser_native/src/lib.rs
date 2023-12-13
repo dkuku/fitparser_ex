@@ -2,7 +2,7 @@ use fitparser;
 use std::fs::File;
 
 #[rustler::nif]
-fn read(path: &str) -> Option<String> {
+fn to_json(path: &str) -> Option<String> {
     // Open file and handle any errors
     let mut fp = match File::open(path) {
         Ok(file) => file,
@@ -34,4 +34,4 @@ fn read(path: &str) -> Option<String> {
     return Some(json);
 }
 
-rustler::init!("Elixir.Fitparser.Native", [read]);
+rustler::init!("Elixir.Fitparser.Native", [to_json]);

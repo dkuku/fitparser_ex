@@ -1,7 +1,11 @@
 defmodule FitparserTest do
   use ExUnit.Case
 
-  test "greets the world" do
+  test "fails" do
+    assert (Application.app_dir(:fitparser) <> "non existent") |> Fitparser.Native.read() == nil
+  end
+
+  test "success" do
     assert (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
            |> Fitparser.Native.read()
            |> Jason.decode!() ==

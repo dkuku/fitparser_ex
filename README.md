@@ -1,6 +1,5 @@
-# FitDecoders
-
-**TODO: Add description**
+# Fitparser
+Elixir library used for decode [fit files](https://developer.garmin.com/fit/overview/) based on rust fitparser crate
 
 ## Installation
 

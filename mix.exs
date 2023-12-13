@@ -5,9 +5,24 @@ defmodule Fitparser.MixProject do
     [
       app: :fitparser,
       version: "0.1.0",
-      elixir: "~> 1.15",
+      elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+      description: description()
+    ]
+  end
+
+  defp description() do
+    "Decode garmin fit files"
+  end
+
+  defp package() do
+    [
+      # These are the default files included in the package
+      files: ~w(lib .formatter.exs mix.exs README*),
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => "https://github.com/dkuku/fitparser_ex"}
     ]
   end
 
@@ -22,8 +37,8 @@ defmodule Fitparser.MixProject do
   defp deps do
     [
       {:rustler, "~> 0.30.0"},
-      #      {:rustler_precompiled, "~> 0.7"},
-      {:jason, "~> 1.4.1"}
+      {:jason, "~> 1.4.1"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end

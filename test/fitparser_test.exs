@@ -3,12 +3,12 @@ defmodule FitparserTest do
 
   test "fails" do
     assert (Application.app_dir(:fitparser) <> "non existent") |> Fitparser.Native.to_json() ==
-             nil
+             {:error, "Error opening file"}
   end
 
   test "success" do
     assert (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
-           |> Fitparser.Native.to_json()
+           |> Fitparser.Native.to_json!()
            |> Jason.decode!() ==
              [
                %{

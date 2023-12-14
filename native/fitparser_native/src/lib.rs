@@ -1,37 +1,41 @@
-use fitparser;
 use std::fs::File;
+use fitparser;
+use rustler::{Atom, Error as RustlerError, NifTuple};
+
+mod atoms {
+    rustler::atoms! {
+        ok,
+        error,
+    }
+}
+
+#[derive(NifTuple)]
+struct Response {
+    status: Atom,
+    message: String,
+}
 
 #[rustler::nif]
-fn to_json(path: &str) -> Option<String> {
+pub fn to_json(path: &str) -> Result<Response, RustlerError> {
     // Open file and handle any errors
     let mut fp = match File::open(path) {
         Ok(file) => file,
-        Err(e) => {
-            println!("Error opening file: {}", e);
-            return None;
-        }
+        Err(_e) => return Err(RustlerError::Term(Box::new("Error opening file"))),
     };
 
     // Parse file data and handle any errors
     let data = match fitparser::from_reader(&mut fp) {
         Ok(data) => data,
-        Err(e) => {
-            println!("Error parsing file data: {}", e);
-            return None;
-        }
+        Err(_e) => return Err(RustlerError::Term(Box::new("Error parsing file"))),
     };
 
-    // Convert data to JSON string and handle any errors
-    let json = match serde_json::to_string(&data) {
-        Ok(json) => json,
-        Err(e) => {
-            println!("Error converting data to JSON: {}", e);
-            return None;
-        }
+    return match serde_json::to_string(&data) {
+        Ok(json) => Ok(Response {
+            status: atoms::ok(),
+            message: json,
+        }),
+        Err(_e) => Err(RustlerError::Term(Box::new("Error serialzing file"))),
     };
-
-    // Return JSON string
-    return Some(json);
 }
 
 rustler::init!("Elixir.Fitparser.Native", [to_json]);

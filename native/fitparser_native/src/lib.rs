@@ -1,5 +1,5 @@
 use fitparser;
-use rustler::{Atom, Error as RustlerError, NifTuple};
+use rustler::{Atom, Binary, Error as RustlerError, NifTuple};
 use std::fs::File;
 
 mod atoms {
@@ -16,7 +16,23 @@ struct Response {
 }
 
 #[rustler::nif]
-pub fn to_json(path: &str) -> Result<Response, RustlerError> {
+pub fn to_json<'a>(bin: Binary<'a>) -> Result<Response, RustlerError> {
+    let data = match fitparser::from_bytes(&bin) {
+        Ok(data) => data,
+        Err(_e) => return Err(RustlerError::Term(Box::new("Error parsing file"))),
+    };
+
+    return match serde_json::to_string(&data) {
+        Ok(json) => Ok(Response {
+            status: atoms::ok(),
+            message: json,
+        }),
+        Err(_e) => Err(RustlerError::Term(Box::new("Error serialzing file"))),
+    };
+}
+
+#[rustler::nif]
+pub fn read_to_json(path: &str) -> Result<Response, RustlerError> {
     // Open file and handle any errors
     let mut fp = match File::open(path) {
         Ok(file) => file,
@@ -38,4 +54,4 @@ pub fn to_json(path: &str) -> Result<Response, RustlerError> {
     };
 }
 
-rustler::init!("Elixir.Fitparser.Native", [to_json]);
+rustler::init!("Elixir.Fitparser.Native", [to_json, read_to_json]);

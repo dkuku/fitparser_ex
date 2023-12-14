@@ -1,6 +1,6 @@
-use std::fs::File;
 use fitparser;
 use rustler::{Atom, Error as RustlerError, NifTuple};
+use std::fs::File;
 
 mod atoms {
     rustler::atoms! {

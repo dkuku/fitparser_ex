@@ -33,13 +33,11 @@ pub fn to_term<'a>(env: Env<'a>, bin: Binary<'a>) -> Result<ResponseTerm<'a>, Ru
 
 #[rustler::nif]
 pub fn read_to_term<'a>(env: Env<'a>, path: &str) -> Result<ResponseTerm<'a>, RustlerError> {
-    // Open file and handle any errors
     let mut fp = match File::open(path) {
         Ok(file) => file,
         Err(_e) => return Err(RustlerError::Term(Box::new("Error opening file"))),
     };
 
-    // Parse file data and handle any errors
     let data = match fitparser::from_reader(&mut fp) {
         Ok(data) => convert_records(data),
         Err(_e) => return Err(RustlerError::Term(Box::new("Error parsing file"))),

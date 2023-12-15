@@ -4,7 +4,7 @@ defmodule Fitparser.MixProject do
   def project do
     [
       app: :fitparser,
-      version: "0.1.1",
+      version: "0.1.3",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -24,8 +24,8 @@ defmodule Fitparser.MixProject do
       licenses: ["Apache-2.0"],
       links: %{
         "GitHub" => "https://github.com/dkuku/fitparser_ex/",
-        "Cargo" => "https://docs.rs/fitparser/latest/fitparser/",
-        "FitSDK" => "https://developer.garmin.com/fit/overview/"
+        "Fitparser on Cargo" => "https://docs.rs/fitparser/latest/fitparser/",
+        "Garmin FitSDK" => "https://developer.garmin.com/fit/overview/"
       }
     ]
   end
@@ -41,7 +41,6 @@ defmodule Fitparser.MixProject do
   defp deps do
     [
       {:rustler, "~> 0.30.0"},
-      {:jason, "~> 1.4.1"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end

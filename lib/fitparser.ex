@@ -32,10 +32,10 @@ defmodule Fitparser.Native do
   @doc """
   this function accepts binary fit file and returns the file converted to term
   """
-  def to_term(_a), do: :erlang.nif_error(:nif_not_loaded)
+  def from_fit(_a), do: :erlang.nif_error(:nif_not_loaded)
 
-  def to_term!(a) do
-    case to_term(a) do
+  def from_fit!(a) do
+    case from_fit(a) do
       {:ok, result} -> result
       {:error, err} -> raise err
     end
@@ -44,10 +44,10 @@ defmodule Fitparser.Native do
   @doc """
   this function accepts a path to a file and returns the file converted to term
   """
-  def read_to_term(_a), do: :erlang.nif_error(:nif_not_loaded)
+  def load_fit(_a), do: :erlang.nif_error(:nif_not_loaded)
 
-  def read_to_term!(a) do
-    case read_to_term(a) do
+  def load_fit!(a) do
+    case load_fit(a) do
       {:ok, result} -> result
       {:error, err} -> raise err
     end

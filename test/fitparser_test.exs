@@ -1,28 +1,28 @@
 defmodule FitparserTest do
   use ExUnit.Case
 
-  describe "read_to_term/1" do
+  describe "from_fit/1" do
     test "fails" do
       assert (Application.app_dir(:fitparser) <> "non existent")
-             |> Fitparser.Native.read_to_term() ==
+             |> Fitparser.Native.from_fit() ==
                {:error, "Error opening file"}
     end
 
     test "success" do
       assert (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
-             |> Fitparser.Native.read_to_term!() == decoded_term()
+             |> Fitparser.Native.from_fit!() == decoded_term()
     end
   end
 
-  describe "to_term/1" do
+  describe "load_fit/1" do
     test "invalid content" do
-      assert Fitparser.Native.to_term("sratatata") == {:error, "Error parsing file"}
+      assert Fitparser.Native.load_fit("sratatata") == {:error, "Error parsing file"}
     end
 
     test "success from bytes" do
       assert (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
              |> File.read!()
-             |> Fitparser.Native.to_term!() == decoded_term()
+             |> Fitparser.Native.load_fit!() == decoded_term()
     end
   end
 

@@ -22,7 +22,7 @@ struct ResponseTerm<'a> {
 }
 
 #[rustler::nif]
-pub fn to_term<'a>(env: Env<'a>, bin: Binary<'a>) -> Result<ResponseTerm<'a>, RustlerError> {
+pub fn load_fit<'a>(env: Env<'a>, bin: Binary<'a>) -> Result<ResponseTerm<'a>, RustlerError> {
     let data = match fitparser::from_bytes(&bin) {
         Ok(data) => convert_records(data),
         Err(_e) => return Err(RustlerError::Term(Box::new("Error parsing file"))),
@@ -32,7 +32,7 @@ pub fn to_term<'a>(env: Env<'a>, bin: Binary<'a>) -> Result<ResponseTerm<'a>, Ru
 }
 
 #[rustler::nif]
-pub fn read_to_term<'a>(env: Env<'a>, path: &str) -> Result<ResponseTerm<'a>, RustlerError> {
+pub fn from_fit<'a>(env: Env<'a>, path: &str) -> Result<ResponseTerm<'a>, RustlerError> {
     let mut fp = match File::open(path) {
         Ok(file) => file,
         Err(_e) => return Err(RustlerError::Term(Box::new("Error opening file"))),
@@ -66,4 +66,4 @@ fn convert_records(
     return record;
 }
 
-rustler::init!("Elixir.Fitparser.Native", [to_term, read_to_term]);
+rustler::init!("Elixir.Fitparser.Native", [load_fit, from_fit]);

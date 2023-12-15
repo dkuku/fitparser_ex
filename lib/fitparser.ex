@@ -5,6 +5,30 @@ defmodule Fitparser.Native do
   """
   use Rustler, otp_app: :fitparser, crate: "fitparser_native"
 
+  defmodule FitDataRecord do
+    @moduledoc """
+    Used just for defining the atoms.
+    These are required when serializing from the rust side
+    """
+    defstruct [
+      :kind,
+      :fields
+    ]
+  end
+
+  defmodule FitDataField do
+    @moduledoc """
+    Used just for defining the atoms.
+    These are required when serializing from the rust side
+    """
+    defstruct [
+      :name,
+      :value,
+      :units,
+      :number
+    ]
+  end
+
   @doc """
   this function accepts binary fit file and returns the file converted to term
   """

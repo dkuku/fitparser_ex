@@ -12,6 +12,4 @@ crate-type = ["cdylib"]
 [dependencies]
 rustler = "0.30"
 fitparser = "0.6"
-serde = "1.0"
-serde_json = "1.0"
 serde_rustler = {git = "https://github.com/benhaney/serde_rustler.git"}

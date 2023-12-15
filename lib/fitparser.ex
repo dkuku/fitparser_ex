@@ -52,28 +52,4 @@ defmodule Fitparser.Native do
       {:error, err} -> raise err
     end
   end
-
-  @doc """
-  this function accepts binary fit file and returns the file converted to json
-  """
-  def to_json(_a), do: :erlang.nif_error(:nif_not_loaded)
-
-  def to_json!(a) do
-    case to_json(a) do
-      {:ok, result} -> result
-      {:error, err} -> raise err
-    end
-  end
-
-  @doc """
-  this function accepts a path to a file and returns the file converted to json
-  """
-  def read_to_json(_a), do: :erlang.nif_error(:nif_not_loaded)
-
-  def read_to_json!(a) do
-    case read_to_json(a) do
-      {:ok, result} -> result
-      {:error, err} -> raise err
-    end
-  end
 end

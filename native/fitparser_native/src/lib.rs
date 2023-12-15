@@ -28,13 +28,7 @@ pub fn to_term<'a>(env: Env<'a>, bin: Binary<'a>) -> Result<ResponseTerm<'a>, Ru
         Err(_e) => return Err(RustlerError::Term(Box::new("Error parsing file"))),
     };
 
-    return match serde_rustler::to_term(env, &data) {
-        Ok(term) => Ok(ResponseTerm {
-            status: atoms::ok(),
-            message: term,
-        }),
-        Err(e) => Err(RustlerError::Term(Box::new(e.to_string()))),
-    };
+    convert_to_term(env, data)
 }
 
 #[rustler::nif]
@@ -50,14 +44,20 @@ pub fn read_to_term<'a>(env: Env<'a>, path: &str) -> Result<ResponseTerm<'a>, Ru
         Ok(data) => convert_records(data),
         Err(_e) => return Err(RustlerError::Term(Box::new("Error parsing file"))),
     };
+    convert_to_term(env, data)
+}
 
-    return match serde_rustler::to_term(env, &data) {
+fn convert_to_term<'a>(
+    env: Env<'a>,
+    data: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>>,
+) -> Result<ResponseTerm<'a>, RustlerError> {
+    match serde_rustler::to_term(env, &data) {
         Ok(term) => Ok(ResponseTerm {
             status: atoms::ok(),
             message: term,
         }),
         Err(_e) => Err(RustlerError::Term(Box::new("Error serialzing file"))),
-    };
+    }
 }
 fn convert_records(
     data: Vec<FitDataRecord>,

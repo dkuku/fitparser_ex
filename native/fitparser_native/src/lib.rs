@@ -1,5 +1,6 @@
 use fitparser::FitDataRecord;
 use rustler::{Atom, Binary, Env, Error as RustlerError, NifTuple, Term};
+use serde::Serialize;
 use std::collections::HashMap;
 use std::fs::File;
 
@@ -11,14 +12,25 @@ mod atoms {
 }
 
 #[derive(NifTuple)]
-struct ResponseJson {
-    status: Atom,
-    message: String,
-}
-#[derive(NifTuple)]
 struct ResponseTerm<'a> {
     status: Atom,
     message: Term<'a>,
+}
+
+#[derive(Serialize)]
+#[serde(rename = "Elixir.Fitparser.FitDataField")]
+struct ElixirFitDataField {
+    name: String,
+    units: String,
+    value: String,
+    number: u8,
+}
+
+#[derive(Serialize)]
+#[serde(rename = "Elixir.Fitparser.FitDataRecord")]
+struct ElixirFitDataRecord {
+    kind: fitparser::profile::MesgNum,
+    fields: Vec<ElixirFitDataField>,
 }
 
 #[rustler::nif]
@@ -47,7 +59,7 @@ pub fn from_fit<'a>(env: Env<'a>, path: &str) -> Result<ResponseTerm<'a>, Rustle
 
 fn convert_to_term<'a>(
     env: Env<'a>,
-    data: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>>,
+    data: HashMap<fitparser::profile::MesgNum, Vec<ElixirFitDataRecord>>,
 ) -> Result<ResponseTerm<'a>, RustlerError> {
     match serde_rustler::to_term(env, &data) {
         Ok(term) => Ok(ResponseTerm {
@@ -59,11 +71,31 @@ fn convert_to_term<'a>(
 }
 fn convert_records(
     data: Vec<FitDataRecord>,
-) -> HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>> {
-    let mut record: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>> = HashMap::new();
-    data.into_iter()
-        .for_each(|rec| record.entry(rec.kind()).or_default().push(rec));
+) -> HashMap<fitparser::profile::MesgNum, Vec<ElixirFitDataRecord>> {
+    let mut record: HashMap<fitparser::profile::MesgNum, Vec<ElixirFitDataRecord>> = HashMap::new();
+    data.into_iter().for_each(|rec| {
+        record
+            .entry(rec.kind())
+            .or_default()
+            .push(wrap_in_elixir_struct(rec))
+    });
     return record;
+}
+
+fn wrap_in_elixir_struct(record: FitDataRecord) -> ElixirFitDataRecord {
+    ElixirFitDataRecord {
+        kind: record.kind(),
+        fields: record
+            .fields()
+            .iter()
+            .map(|field| ElixirFitDataField {
+                name: field.name().to_string(),
+                units: field.units().to_string(),
+                value: field.value().to_string(),
+                number: field.number(),
+            })
+            .collect(),
+    }
 }
 
 rustler::init!("Elixir.Fitparser.Native", [load_fit, from_fit]);

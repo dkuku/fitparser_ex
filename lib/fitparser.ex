@@ -1,7 +1,6 @@
 defmodule Fitparser.FitDataRecord do
   @moduledoc """
-  Used just for defining the atoms.
-  These are required when serializing from the rust side
+  The same struct is returned by the rust crate.
   """
   defstruct [
     :kind,
@@ -11,8 +10,7 @@ end
 
 defmodule Fitparser.FitDataField do
   @moduledoc """
-  Used just for defining the atoms.
-  These are required when serializing from the rust side
+  The same struct is returned by the rust crate.
   """
   defstruct [
     :name,

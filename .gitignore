@@ -26,3 +26,5 @@ fit_decoders-*.tar
 /tmp/
 
 /priv/examples
+
+/priv/native

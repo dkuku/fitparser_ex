@@ -1,4 +1,4 @@
-defmodule Fitparser.NativeTest do
+defmodule NativeTest do
   use ExUnit.Case
 
   alias Fitparser.FitDataRecord
@@ -41,19 +41,14 @@ defmodule Fitparser.NativeTest do
               name: "cum_operating_time",
               number: 7,
               units: "s",
-              value: "45126"
+              value: 45126
             },
-            %FitDataField{
-              name: "battery_voltage",
-              number: 10,
-              units: "V",
-              value: "1.5"
-            },
+            %FitDataField{name: "battery_voltage", number: 10, units: "V", value: 1.5},
             %FitDataField{
               name: "timestamp",
               number: 253,
               units: "s",
-              value: "2009-09-09 22:38:00 +01:00"
+              value: "2009-09-09T22:38:00+01:00"
             }
           ],
           kind: "device_info"
@@ -64,19 +59,14 @@ defmodule Fitparser.NativeTest do
               name: "cum_operating_time",
               number: 7,
               units: "s",
-              value: "45158"
+              value: 45158
             },
-            %FitDataField{
-              name: "battery_voltage",
-              number: 10,
-              units: "V",
-              value: "1.5"
-            },
+            %FitDataField{name: "battery_voltage", number: 10, units: "V", value: 1.5},
             %FitDataField{
               name: "timestamp",
               number: 253,
               units: "s",
-              value: "2009-09-09 23:38:00 +01:00"
+              value: "2009-09-09T23:38:00+01:00"
             }
           ],
           kind: "device_info"
@@ -85,35 +75,20 @@ defmodule Fitparser.NativeTest do
       "file_id" => [
         %FitDataRecord{
           fields: [
-            %FitDataField{
-              name: "type",
-              number: 0,
-              units: "",
-              value: "weight"
-            },
+            %FitDataField{name: "type", number: 0, units: nil, value: "weight"},
             %FitDataField{
               name: "manufacturer",
               number: 1,
-              units: "",
+              units: nil,
               value: "dynastream"
             },
-            %FitDataField{
-              name: "garmin_product",
-              number: 2,
-              units: "",
-              value: "22"
-            },
-            %FitDataField{
-              name: "serial_number",
-              number: 3,
-              units: "",
-              value: "1234"
-            },
+            %FitDataField{name: "garmin_product", number: 2, units: nil, value: 22},
+            %FitDataField{name: "serial_number", number: 3, units: nil, value: 1234},
             %FitDataField{
               name: "time_created",
               number: 4,
-              units: "",
-              value: "2009-09-09 21:38:00 +01:00"
+              units: nil,
+              value: "2009-09-09T21:38:00+01:00"
             }
           ],
           kind: "file_id"
@@ -122,36 +97,11 @@ defmodule Fitparser.NativeTest do
       "user_profile" => [
         %FitDataRecord{
           fields: [
-            %FitDataField{
-              name: "gender",
-              number: 1,
-              units: "",
-              value: "male"
-            },
-            %FitDataField{
-              name: "age",
-              number: 2,
-              units: "years",
-              value: "47"
-            },
-            %FitDataField{
-              name: "height",
-              number: 3,
-              units: "m",
-              value: "1.79"
-            },
-            %FitDataField{
-              name: "weight",
-              number: 4,
-              units: "kg",
-              value: "71"
-            },
-            %FitDataField{
-              name: "message_index",
-              number: 254,
-              units: "",
-              value: "0"
-            }
+            %FitDataField{name: "gender", number: 1, units: nil, value: "male"},
+            %FitDataField{name: "age", number: 2, units: "years", value: 47},
+            %FitDataField{name: "height", number: 3, units: "m", value: 1.79},
+            %FitDataField{name: "weight", number: 4, units: "kg", value: 71.0},
+            %FitDataField{name: "message_index", number: 254, units: nil, value: 0}
           ],
           kind: "user_profile"
         }
@@ -159,46 +109,26 @@ defmodule Fitparser.NativeTest do
       "weight_scale" => [
         %FitDataRecord{
           fields: [
-            %FitDataField{
-              name: "weight",
-              number: 0,
-              units: "kg",
-              value: "7580"
-            },
-            %FitDataField{
-              name: "percent_fat",
-              number: 1,
-              units: "%",
-              value: "22.3"
-            },
+            %FitDataField{name: "weight", number: 0, units: "kg", value: 7580},
+            %FitDataField{name: "percent_fat", number: 1, units: "%", value: 22.3},
             %FitDataField{
               name: "timestamp",
               number: 253,
               units: "s",
-              value: "2009-09-09 22:38:00 +01:00"
+              value: "2009-09-09T22:38:00+01:00"
             }
           ],
           kind: "weight_scale"
         },
         %FitDataRecord{
           fields: [
-            %FitDataField{
-              name: "weight",
-              number: 0,
-              units: "kg",
-              value: "7609"
-            },
-            %FitDataField{
-              name: "percent_fat",
-              number: 1,
-              units: "%",
-              value: "25.1"
-            },
+            %FitDataField{name: "weight", number: 0, units: "kg", value: 7609},
+            %FitDataField{name: "percent_fat", number: 1, units: "%", value: 25.1},
             %FitDataField{
               name: "timestamp",
               number: 253,
               units: "s",
-              value: "2009-09-09 23:38:00 +01:00"
+              value: "2009-09-09T23:38:00+01:00"
             }
           ],
           kind: "weight_scale"

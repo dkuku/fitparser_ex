@@ -1,9 +1,9 @@
+use derive_more::Deref;
 use fitparser::{FitDataField as FitDataFieldOriginal, FitDataRecord as FitDataRecordOriginal};
 use rustler::{Atom, Binary, Env, Error as RustlerError, NifTuple, Term};
 use serde::Serialize;
 use std::collections::HashMap;
 use std::fs::File;
-use std::ops::Deref;
 
 mod atoms {
     rustler::atoms! {
@@ -19,23 +19,32 @@ struct ResponseTerm<'a> {
 }
 
 #[derive(Serialize)]
-#[serde(rename = "Elixir.Fitparser.FitDataFieldOriginal")]
-struct FitDataField(FitDataFieldOriginal);
-impl Deref for FitDataField {
-    type Target = FitDataFieldOriginal;
-
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
+#[serde(rename = "Elixir.Fitparser.FitDataField")]
+#[derive(Deref)]
+struct FitDataField {
+    #[deref]
+    value: fitparser::Value,
+    name: String,
+    number: u8,
+    units: Option<String>,
 }
 
 impl FitDataField {
     fn new(fdf: &FitDataFieldOriginal) -> Self {
-        FitDataField(fdf.clone())
+        FitDataField {
+            value: fdf.value().clone(),
+            name: fdf.name().to_string(),
+            number: fdf.number(),
+            units: if fdf.units().is_empty() {
+                None
+            } else {
+                Some(fdf.units().to_string())
+            },
+        }
     }
 }
 #[derive(Serialize)]
-#[serde(rename = "Elixir.Fitparser.FitDataRecordOriginal")]
+#[serde(rename = "Elixir.Fitparser.FitDataRecord")]
 struct FitDataRecord {
     kind: fitparser::profile::MesgNum,
     fields: Vec<FitDataField>,
@@ -100,11 +109,3 @@ fn convert_records(
 }
 
 rustler::init!("Elixir.Fitparser.Native", [load_fit, from_fit]);
-// 3. The use of lifetimes in the `load_fit` and `from_fit` functions is unnecessary and can be removed.
-// 4. The `ResponseTerm` struct could be renamed to something more descriptive, as it is not just a response but also contains the status and message.
-// 5. The `FitDataField` and `FitDataRecord` structs could be renamed to something more descriptive as well.
-// 6. The `convert_records` function could be simplified by using the `entry` API instead of manually checking for the existence of a key.
-// 7. It would be helpful to have some error handling in the `convert_records` function in case the `FitDataRecordOriginal` cannot be converted to a `FitDataRecord`.
-// 8. The `convert_to_term` function could be simplified by using the `serde_rustler::to_term` function directly instead of manually checking for errors.
-// 9. It would be helpful to have some unit tests to ensure the code is functioning as expected.
-// 10. Overall, the code looks good and follows Rust best practices. Keep up the good work!

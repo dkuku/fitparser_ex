@@ -20,7 +20,15 @@ defmodule Fitparser.MixProject do
   defp package() do
     [
       # These are the default files included in the package
-      files: ~w(lib .formatter.exs mix.exs README*),
+      files: [
+        "lib",
+        "mix.exs",
+        "native/example/.cargo",
+        "native/example/src",
+        "native/example/Cargo*",
+        "checksum-*.exs",
+        "README*"
+      ],
       licenses: ["Apache-2.0"],
       links: %{
         "GitHub" => "https://github.com/dkuku/fitparser_ex/",

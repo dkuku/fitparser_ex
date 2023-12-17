@@ -1,8 +1,9 @@
-use fitparser::FitDataRecord;
+use fitparser::{FitDataField as FitDataFieldOriginal, FitDataRecord as FitDataRecordOriginal};
 use rustler::{Atom, Binary, Env, Error as RustlerError, NifTuple, Term};
 use serde::Serialize;
 use std::collections::HashMap;
 use std::fs::File;
+use std::ops::Deref;
 
 mod atoms {
     rustler::atoms! {
@@ -18,19 +19,35 @@ struct ResponseTerm<'a> {
 }
 
 #[derive(Serialize)]
-#[serde(rename = "Elixir.Fitparser.FitDataField")]
-struct ElixirFitDataField {
-    name: String,
-    units: String,
-    value: String,
-    number: u8,
+#[serde(rename = "Elixir.Fitparser.FitDataFieldOriginal")]
+struct FitDataField(FitDataFieldOriginal);
+impl Deref for FitDataField {
+    type Target = FitDataFieldOriginal;
+
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
 }
 
+impl FitDataField {
+    fn new(fdf: &FitDataFieldOriginal) -> Self {
+        FitDataField(fdf.clone())
+    }
+}
 #[derive(Serialize)]
-#[serde(rename = "Elixir.Fitparser.FitDataRecord")]
-struct ElixirFitDataRecord {
+#[serde(rename = "Elixir.Fitparser.FitDataRecordOriginal")]
+struct FitDataRecord {
     kind: fitparser::profile::MesgNum,
-    fields: Vec<ElixirFitDataField>,
+    fields: Vec<FitDataField>,
+}
+impl FitDataRecord {
+    fn new_from_fdr(fdr: FitDataRecordOriginal) -> Self {
+        let fields = fdr.fields().into_iter().map(FitDataField::new).collect();
+        FitDataRecord {
+            kind: fdr.kind(),
+            fields,
+        }
+    }
 }
 
 #[rustler::nif]
@@ -59,7 +76,7 @@ pub fn from_fit<'a>(env: Env<'a>, path: &str) -> Result<ResponseTerm<'a>, Rustle
 
 fn convert_to_term<'a>(
     env: Env<'a>,
-    data: HashMap<fitparser::profile::MesgNum, Vec<ElixirFitDataRecord>>,
+    data: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>>,
 ) -> Result<ResponseTerm<'a>, RustlerError> {
     match serde_rustler::to_term(env, &data) {
         Ok(term) => Ok(ResponseTerm {
@@ -70,32 +87,24 @@ fn convert_to_term<'a>(
     }
 }
 fn convert_records(
-    data: Vec<FitDataRecord>,
-) -> HashMap<fitparser::profile::MesgNum, Vec<ElixirFitDataRecord>> {
-    let mut record: HashMap<fitparser::profile::MesgNum, Vec<ElixirFitDataRecord>> = HashMap::new();
-    data.into_iter().for_each(|rec| {
+    data: Vec<FitDataRecordOriginal>,
+) -> HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>> {
+    let mut record: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>> = HashMap::new();
+    data.into_iter().for_each(|fdr| {
         record
-            .entry(rec.kind())
+            .entry(fdr.kind())
             .or_default()
-            .push(wrap_in_elixir_struct(rec))
+            .push(FitDataRecord::new_from_fdr(fdr))
     });
     return record;
 }
 
-fn wrap_in_elixir_struct(record: FitDataRecord) -> ElixirFitDataRecord {
-    ElixirFitDataRecord {
-        kind: record.kind(),
-        fields: record
-            .fields()
-            .iter()
-            .map(|field| ElixirFitDataField {
-                name: field.name().to_string(),
-                units: field.units().to_string(),
-                value: field.value().to_string(),
-                number: field.number(),
-            })
-            .collect(),
-    }
-}
-
 rustler::init!("Elixir.Fitparser.Native", [load_fit, from_fit]);
+// 3. The use of lifetimes in the `load_fit` and `from_fit` functions is unnecessary and can be removed.
+// 4. The `ResponseTerm` struct could be renamed to something more descriptive, as it is not just a response but also contains the status and message.
+// 5. The `FitDataField` and `FitDataRecord` structs could be renamed to something more descriptive as well.
+// 6. The `convert_records` function could be simplified by using the `entry` API instead of manually checking for the existence of a key.
+// 7. It would be helpful to have some error handling in the `convert_records` function in case the `FitDataRecordOriginal` cannot be converted to a `FitDataRecord`.
+// 8. The `convert_to_term` function could be simplified by using the `serde_rustler::to_term` function directly instead of manually checking for errors.
+// 9. It would be helpful to have some unit tests to ensure the code is functioning as expected.
+// 10. Overall, the code looks good and follows Rust best practices. Keep up the good work!

@@ -62,11 +62,11 @@ impl FitDataRecord {
 #[rustler::nif]
 pub fn load_fit<'a>(env: Env<'a>, bin: Binary<'a>) -> Result<ResponseTerm<'a>, RustlerError> {
     let data = match fitparser::from_bytes(&bin) {
-        Ok(data) => convert_records(data),
+        Ok(data) => transpose_and_convert_records(data),
         Err(_e) => return Err(RustlerError::Term(Box::new("Error parsing file"))),
     };
 
-    convert_to_term(env, data)
+    convert_to_elixir_term(env, data)
 }
 
 #[rustler::nif]
@@ -77,13 +77,13 @@ pub fn from_fit<'a>(env: Env<'a>, path: &str) -> Result<ResponseTerm<'a>, Rustle
     };
 
     let data = match fitparser::from_reader(&mut fp) {
-        Ok(data) => convert_records(data),
+        Ok(data) => transpose_and_convert_records(data),
         Err(_e) => return Err(RustlerError::Term(Box::new("Error parsing file"))),
     };
-    convert_to_term(env, data)
+    convert_to_elixir_term(env, data)
 }
 
-fn convert_to_term<'a>(
+fn convert_to_elixir_term<'a>(
     env: Env<'a>,
     data: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>>,
 ) -> Result<ResponseTerm<'a>, RustlerError> {
@@ -95,7 +95,12 @@ fn convert_to_term<'a>(
         Err(_e) => Err(RustlerError::Term(Box::new("Error serialzing file"))),
     }
 }
-fn convert_records(
+/*
+fitparser returns an Vector of records.
+For easier access we transform this vector to a hashmap that keeps related records together.
+This function also changes the type from fitparser types to types controlled by us.
+*/
+fn transpose_and_convert_records(
     data: Vec<FitDataRecordOriginal>,
 ) -> HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>> {
     let mut record: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>> = HashMap::new();

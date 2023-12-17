@@ -1,4 +1,5 @@
-use fitparser::FitDataRecord;
+use derive_more::Deref;
+use fitparser::{FitDataField as FitDataFieldOriginal, FitDataRecord as FitDataRecordOriginal};
 use rustler::{Atom, Binary, Env, Error as RustlerError, NifTuple, Term};
 use serde::Serialize;
 use std::collections::HashMap;
@@ -19,18 +20,43 @@ struct ResponseTerm<'a> {
 
 #[derive(Serialize)]
 #[serde(rename = "Elixir.Fitparser.FitDataField")]
-struct ElixirFitDataField {
+#[derive(Deref)]
+struct FitDataField {
+    #[deref]
+    value: fitparser::Value,
     name: String,
-    units: String,
-    value: String,
     number: u8,
+    units: Option<String>,
 }
 
+impl FitDataField {
+    fn new(fdf: &FitDataFieldOriginal) -> Self {
+        FitDataField {
+            value: fdf.value().clone(),
+            name: fdf.name().to_string(),
+            number: fdf.number(),
+            units: if fdf.units().is_empty() {
+                None
+            } else {
+                Some(fdf.units().to_string())
+            },
+        }
+    }
+}
 #[derive(Serialize)]
 #[serde(rename = "Elixir.Fitparser.FitDataRecord")]
-struct ElixirFitDataRecord {
+struct FitDataRecord {
     kind: fitparser::profile::MesgNum,
-    fields: Vec<ElixirFitDataField>,
+    fields: Vec<FitDataField>,
+}
+impl FitDataRecord {
+    fn new_from_fdr(fdr: FitDataRecordOriginal) -> Self {
+        let fields = fdr.fields().into_iter().map(FitDataField::new).collect();
+        FitDataRecord {
+            kind: fdr.kind(),
+            fields,
+        }
+    }
 }
 
 #[rustler::nif]
@@ -59,7 +85,7 @@ pub fn from_fit<'a>(env: Env<'a>, path: &str) -> Result<ResponseTerm<'a>, Rustle
 
 fn convert_to_term<'a>(
     env: Env<'a>,
-    data: HashMap<fitparser::profile::MesgNum, Vec<ElixirFitDataRecord>>,
+    data: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>>,
 ) -> Result<ResponseTerm<'a>, RustlerError> {
     match serde_rustler::to_term(env, &data) {
         Ok(term) => Ok(ResponseTerm {
@@ -70,32 +96,16 @@ fn convert_to_term<'a>(
     }
 }
 fn convert_records(
-    data: Vec<FitDataRecord>,
-) -> HashMap<fitparser::profile::MesgNum, Vec<ElixirFitDataRecord>> {
-    let mut record: HashMap<fitparser::profile::MesgNum, Vec<ElixirFitDataRecord>> = HashMap::new();
-    data.into_iter().for_each(|rec| {
+    data: Vec<FitDataRecordOriginal>,
+) -> HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>> {
+    let mut record: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>> = HashMap::new();
+    data.into_iter().for_each(|fdr| {
         record
-            .entry(rec.kind())
+            .entry(fdr.kind())
             .or_default()
-            .push(wrap_in_elixir_struct(rec))
+            .push(FitDataRecord::new_from_fdr(fdr))
     });
     return record;
-}
-
-fn wrap_in_elixir_struct(record: FitDataRecord) -> ElixirFitDataRecord {
-    ElixirFitDataRecord {
-        kind: record.kind(),
-        fields: record
-            .fields()
-            .iter()
-            .map(|field| ElixirFitDataField {
-                name: field.name().to_string(),
-                units: field.units().to_string(),
-                value: field.value().to_string(),
-                number: field.number(),
-            })
-            .collect(),
-    }
 }
 
 rustler::init!("Elixir.Fitparser.Native", [load_fit, from_fit]);

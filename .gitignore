@@ -26,3 +26,7 @@ fit_decoders-*.tar
 /tmp/
 
 /priv/examples
+
+/priv/native
+
+checksum-Elixir.Fitparser.Native.exs

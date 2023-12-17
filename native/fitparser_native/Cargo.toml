@@ -9,8 +9,12 @@ name = "fitparser_native"
 path = "src/lib.rs"
 crate-type = ["cdylib"]
 
+[features]
+default = ["nif_version_2_15"]
+nif_version_2_15 = ["rustler/nif_version_2_15"]
+
 [dependencies]
-rustler = "0.30"
 fitparser = "0.6"
 serde = "1.0"
 serde_rustler = {git = "https://github.com/benhaney/serde_rustler.git"}
+rustler = "0.30"

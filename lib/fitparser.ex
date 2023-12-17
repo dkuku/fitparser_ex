@@ -26,7 +26,16 @@ defmodule Fitparser.Native do
   It is a rustler wrapper for [fitparser rust crate](https://docs.rs/fitparser/latest/fitparser/)
   """
 
-  use Rustler, otp_app: :fitparser, crate: "fitparser_native"
+  version = Mix.Project.config()[:version]
+
+  use RustlerPrecompiled,
+    otp_app: :fitparser,
+    crate: "fitparser_native",
+    version: version,
+    base_url: "https://github.com/dkuku/fitparser_ex/releases/download/v#{version}",
+    force_build: System.get_env("RUSTLER_PRECOMPILATION_EXAMPLE_BUILD") in ["1", "true"],
+    targets:
+      Enum.uniq(["aarch64-unknown-linux-musl" | RustlerPrecompiled.Config.default_targets()])
 
   @doc """
   this function accepts binary fit file and returns the file converted to term

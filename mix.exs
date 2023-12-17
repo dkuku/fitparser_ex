@@ -4,7 +4,7 @@ defmodule Fitparser.MixProject do
   def project do
     [
       app: :fitparser,
-      version: "0.1.4",
+      version: "0.1.5",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -40,7 +40,8 @@ defmodule Fitparser.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler, "~> 0.30.0"},
+      {:rustler_precompiled, "~> 0.7"},
+      {:rustler, ">= 0.0.0", optional: true},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end

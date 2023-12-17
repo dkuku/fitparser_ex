@@ -1,10 +1,11 @@
 defmodule Fitparser.MixProject do
   use Mix.Project
 
+  @version "0.2.1"
   def project do
     [
       app: :fitparser,
-      version: "0.2.0",
+      version: @version,
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -23,9 +24,9 @@ defmodule Fitparser.MixProject do
       files: [
         "lib",
         "mix.exs",
-        "native/example/.cargo",
-        "native/example/src",
-        "native/example/Cargo*",
+        "native/fitparser_native/.cargo",
+        "native/fitparser_native/src",
+        "native/fitparser_native/Cargo*",
         "checksum-*.exs",
         "README*"
       ],

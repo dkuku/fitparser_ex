@@ -40,7 +40,7 @@ defmodule Fitparser.Native do
     crate: "fitparser_native",
     version: version,
     base_url: "https://github.com/dkuku/fitparser_ex/releases/download/v#{version}",
-    force_build: System.get_env("RUSTLER_PRECOMPILATION_EXAMPLE_BUILD") in ["1", "true"],
+    force_build: System.get_env("FITPARSER_TEST") in ["1", "true"],
     targets: Enum.uniq(RustlerPrecompiled.Config.default_targets() -- unsupported)
 
   @doc """

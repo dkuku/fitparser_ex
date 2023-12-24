@@ -96,9 +96,10 @@ fn convert_to_elixir_term<'a>(
     }
 }
 /*
-fitparser returns an Vector of records.
-For easier access we transform this vector to a hashmap that keeps related records together.
-This function also changes the type from fitparser types to types controlled by us.
+fitparser returns an Vector of records For easier access we transform
+this vector to a hashmap that keeps related records together This
+function also changes the type from fitparser types to types controlled
+by us
 */
 fn transpose_and_convert_records(
     data: Vec<FitDataRecordOriginal>,

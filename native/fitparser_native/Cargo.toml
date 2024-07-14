@@ -14,9 +14,8 @@ default = ["nif_version_2_15"]
 nif_version_2_15 = ["rustler/nif_version_2_15"]
 
 [dependencies]
-fitparser = "0.6"
-serde = {version = "1.0", features = ["derive"]}
+fitparser = "0.7"
+serde = { version = "1.0", features = ["derive"] }
 serde_derive = "1.0"
-serde_rustler = {git = "https://github.com/benhaney/serde_rustler.git"}
-rustler = "0.30"
+rustler = { version = "0.34", features = ["serde"] }
 derive_more = "0.99.17"

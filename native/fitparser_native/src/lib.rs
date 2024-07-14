@@ -1,6 +1,6 @@
 use derive_more::Deref;
 use fitparser::{FitDataField as FitDataFieldOriginal, FitDataRecord as FitDataRecordOriginal};
-use rustler::{Atom, Binary, Env, Error as RustlerError, NifTuple, Term};
+use rustler::{serde::to_term, Atom, Binary, Env, Error as RustlerError, NifTuple, Term};
 use serde::Serialize;
 use std::collections::HashMap;
 use std::fs::File;
@@ -87,7 +87,7 @@ fn convert_to_elixir_term<'a>(
     env: Env<'a>,
     data: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>>,
 ) -> Result<ResponseTerm<'a>, RustlerError> {
-    match serde_rustler::to_term(env, &data) {
+    match to_term(env, &data) {
         Ok(term) => Ok(ResponseTerm {
             status: atoms::ok(),
             message: term,
@@ -113,5 +113,3 @@ fn transpose_and_convert_records(
     });
     return record;
 }
-
-rustler::init!("Elixir.Fitparser.Native", [load_fit, from_fit]);

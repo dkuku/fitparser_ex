@@ -82,7 +82,12 @@ defmodule NativeTest do
               units: nil,
               value: "dynastream"
             },
-            %FitDataField{name: "garmin_product", number: 2, units: nil, value: 22},
+            %FitDataField{
+              name: "garmin_product",
+              number: 2,
+              units: nil,
+              value: "hrm_fit_single_byte_product_id"
+            },
             %FitDataField{name: "serial_number", number: 3, units: nil, value: 1234},
             %FitDataField{
               name: "time_created",

@@ -9,7 +9,7 @@ by adding `fitparser` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:fitparser, "~> 0.1.0"}
+    {:fitparser, "~> 0.3"}
   ]
 end
 ```

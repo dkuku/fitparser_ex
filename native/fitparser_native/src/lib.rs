@@ -113,3 +113,4 @@ fn transpose_and_convert_records(
     });
     return record;
 }
+rustler::init!("Elixir.Fitparser.Native");

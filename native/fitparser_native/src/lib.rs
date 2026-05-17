@@ -87,12 +87,22 @@ fn convert_to_elixir_term<'a>(
     env: Env<'a>,
     data: HashMap<fitparser::profile::MesgNum, Vec<FitDataRecord>>,
 ) -> Result<ResponseTerm<'a>, RustlerError> {
+    // Ensure struct field atoms exist in the BEAM atom table. rustler-serde's
+    // SerializeStruct path requires keys to be pre-existing atoms (it calls
+    // Atom::try_from_bytes, which does NOT create new atoms); in a freshly
+    // started BEAM these atoms may not yet be registered, causing
+    // InvalidStructKey errors. See: rustler::serde::ser::SerializeStruct.
+    for key in [
+        "value", "name", "number", "units", "kind", "fields", "__struct__",
+    ] {
+        let _ = Atom::from_str(env, key);
+    }
     match to_term(env, &data) {
         Ok(term) => Ok(ResponseTerm {
             status: atoms::ok(),
             message: term,
         }),
-        Err(_e) => Err(RustlerError::Term(Box::new("Error serialzing file"))),
+        Err(e) => Err(RustlerError::Term(Box::new(format!("serde error: {}", e)))),
     }
 }
 /*

@@ -189,17 +189,10 @@ defmodule Fitparser.Decoder do
 
   defp records(<<header, rest::binary>>, defs, last, acc, opts, component_state)
        when (header &&& @compressed_timestamp_header) != 0 do
-    local = header >>> @compressed_local_message_shift &&& @compressed_local_message_mask
-    offset = header &&& @compressed_timestamp_mask
+    local = compressed_local_message(header)
+    timestamp = compressed_timestamp(last, compressed_timestamp_offset(header))
 
-    case definition_for(defs, local) do
-      nil ->
-        :error
-
-      definition ->
-        timestamp = compressed_timestamp(last, offset)
-        record_data(rest, definition, defs, timestamp, acc, opts, component_state)
-    end
+    record_data_for_local(rest, defs, local, timestamp, acc, opts, component_state)
   end
 
   defp records(<<header, rest::binary>>, defs, last, acc, opts, component_state)
@@ -230,12 +223,18 @@ defmodule Fitparser.Decoder do
          opts,
          component_state
        ) do
-    case definition_for(defs, local) do
-      nil ->
-        :error
+    record_data_for_local(rest, defs, local, last, acc, opts, component_state)
+  end
 
-      definition ->
-        record_data(rest, definition, defs, last, acc, opts, component_state)
+  defp compressed_local_message(header),
+    do: header >>> @compressed_local_message_shift &&& @compressed_local_message_mask
+
+  defp compressed_timestamp_offset(header), do: header &&& @compressed_timestamp_mask
+
+  defp record_data_for_local(rest, defs, local, last, acc, opts, component_state) do
+    case definition_for(defs, local) do
+      nil -> :error
+      definition -> record_data(rest, definition, defs, last, acc, opts, component_state)
     end
   end
 
@@ -296,7 +295,7 @@ defmodule Fitparser.Decoder do
   defp missing_definition(_), do: nil
 
   defp missing_definition(global, endian, fields, size),
-    do: {:definition, global, endian, fields, [], size, profile_fields(global, fields)}
+    do: definition_data(global, endian, fields, [], size)
 
   defp definition(
          <<_reserved, @little_endian_arch, global::little-16, count, rest::binary>>,
@@ -319,8 +318,7 @@ defmodule Fitparser.Decoder do
       size =
         Enum.reduce(fields, 0, fn {_number, field_size, _type}, total -> total + field_size end)
 
-      {{:definition, global, endian, fields, dev_fields, size, profile_fields(global, fields)},
-       rest}
+      {definition_data(global, endian, fields, dev_fields, size), rest}
     else
       :error -> :error
     end
@@ -352,15 +350,66 @@ defmodule Fitparser.Decoder do
 
   defp developer_field_definitions(_, _, _), do: :error
 
-  defp profile_fields(global, fields),
-    do: Map.new(fields, fn {number, _size, _type} -> {number, field(global, number)} end)
+  defp definition_data(global, endian, fields, dev_fields, size) do
+    profile_fields = profile_fields(global, fields)
+    reference_fields? = reference_fields_required?(profile_fields)
 
-  defp definition_global({:definition, global, _endian, _fields, _dev_fields, _size, _profile}),
-    do: global
+    {:definition, global, endian, fields, dev_fields, size, profile_fields, reference_fields?}
+  end
+
+  defp profile_fields(global, fields) do
+    Map.new(fields, fn {number, _size, _type} ->
+      {number, cache_field_metadata(global, field(global, number))}
+    end)
+  end
+
+  defp cache_field_metadata(_global, nil), do: nil
+
+  defp cache_field_metadata(global, definition) do
+    subfields = Enum.map(definition.subfields || [], &cache_field_metadata(global, &1))
+
+    definition
+    |> Map.put(:subfields, subfields)
+    |> Map.put(:normalized_units, empty_to_nil(definition.units))
+    |> Map.put(:normalized_type, normalize_type(definition.type))
+    |> Map.put(:scale_offset, scale_and_offset(definition.scale, definition.offset))
+    |> Map.put(:component_specs, component_specs(global, definition))
+  end
+
+  defp component_specs(_global, %{components: [], bits: _bits}), do: []
+  defp component_specs(_global, %{bits: nil}), do: []
+
+  defp component_specs(global, %{components: components, bits: bits, accumulate: accumulate}) do
+    component_specs(
+      global,
+      components,
+      component_widths(bits, length(components)),
+      String.split(to_string(accumulate), ","),
+      []
+    )
+  end
+
+  defp component_specs(_global, [], _widths, _accumulate, specs), do: Enum.reverse(specs)
+  defp component_specs(_global, _components, [], _accumulate, specs), do: Enum.reverse(specs)
+
+  defp component_specs(global, [name | components], [width | widths], accumulate, specs) do
+    {accumulate?, accumulate} = next_accumulate(accumulate)
+    spec = {name, width, accumulate?, field_by_name(global, name)}
+
+    component_specs(global, components, widths, accumulate, [spec | specs])
+  end
+
+  defp next_accumulate([accumulate | rest]), do: {accumulate, rest}
+  defp next_accumulate([]), do: {"0", []}
+
+  defp definition_global(
+         {:definition, global, _endian, _fields, _dev_fields, _size, _profile, _references}
+       ),
+       do: global
 
   defp data(
          binary,
-         {:definition, global, endian, defs, dev_defs, size, profile_fields},
+         {:definition, global, endian, defs, dev_defs, size, profile_fields, reference_fields?},
          last,
          opts,
          component_state
@@ -373,6 +422,7 @@ defmodule Fitparser.Decoder do
       defs,
       dev_defs,
       profile_fields,
+      reference_fields?,
       last,
       opts,
       component_state
@@ -387,6 +437,7 @@ defmodule Fitparser.Decoder do
          _defs,
          _dev_defs,
          _profile_fields,
+         _reference_fields?,
          _last,
          _opts,
          _state
@@ -402,6 +453,7 @@ defmodule Fitparser.Decoder do
          defs,
          dev_defs,
          profile_fields,
+         reference_fields?,
          last,
          opts,
          component_state
@@ -410,7 +462,9 @@ defmodule Fitparser.Decoder do
     {dev_pairs, rest} = Enum.map_reduce(dev_defs, rest, &decode_developer_field/2)
 
     timestamp = Enum.find_value(pairs, last, &timestamp_pair/1)
-    field_opts = Map.put(opts, :reference_fields, reference_fields(profile_fields, pairs))
+
+    field_opts =
+      Map.put(opts, :reference_fields, reference_fields(profile_fields, pairs, reference_fields?))
 
     {fields, component_state} =
       decode_fields(
@@ -489,29 +543,23 @@ defmodule Fitparser.Decoder do
 
   defp ordered_fields?(_fields), do: false
 
-  defp reference_fields(profile_fields, pairs) do
-    case references_required?(profile_fields, pairs) do
-      true ->
-        Map.new(pairs, fn {number, value} ->
-          definition = Map.get(profile_fields, number)
-          name = field_name(definition, number)
-          value = enum_value(definition, value)
+  defp reference_fields(_profile_fields, _pairs, false), do: %{}
 
-          {name, value}
-        end)
+  defp reference_fields(profile_fields, pairs, true) do
+    Map.new(pairs, fn {number, value} ->
+      definition = Map.get(profile_fields, number)
+      name = field_name(definition, number)
+      value = enum_value(definition, value)
 
-      false ->
-        %{}
-    end
+      {name, value}
+    end)
   end
 
-  defp references_required?(_profile_fields, []), do: false
-
-  defp references_required?(profile_fields, [{number, _value} | pairs]) do
-    case Map.get(profile_fields, number) do
-      %{subfields: [_ | _]} -> true
-      _ -> references_required?(profile_fields, pairs)
-    end
+  defp reference_fields_required?(profile_fields) do
+    Enum.any?(profile_fields, fn
+      {_number, %{subfields: [_ | _]}} -> true
+      _field -> false
+    end)
   end
 
   defp field_name(%{name: name}, _number), do: name
@@ -724,16 +772,14 @@ defmodule Fitparser.Decoder do
       case definition do
         %{
           name: name,
-          units: units,
-          type: type,
+          normalized_units: units,
+          normalized_type: type,
           enum: enum,
-          scale: scale,
-          offset: offset,
+          scale_offset: scale,
           components: components,
           array: array
         } ->
-          {name, empty_to_nil(units), normalize_type(type), enum, scale_and_offset(scale, offset),
-           components, array}
+          {name, units, type, enum, scale, components, array}
 
         nil ->
           {"field_#{number}", nil, nil, nil, nil, [], false}
@@ -809,32 +855,47 @@ defmodule Fitparser.Decoder do
   defp expand_component_fields(
          global,
          {number, value},
-         %{components: components, bits: bits, accumulate: accumulate},
+         %{component_specs: [_ | _] = specs},
          state,
          opts
-       )
-       when components != [] and not is_nil(bits) do
-    widths = component_widths(bits, length(components))
-    accumulate = accumulate |> to_string() |> String.split(",")
+       ) do
     raw = component_integer(value)
 
-    components
-    |> Enum.zip(Enum.zip(widths, accumulate ++ List.duplicate("0", length(components))))
-    |> Enum.map_reduce({0, state}, fn {name, {width, accumulate?}}, {offset, state} ->
-      mask = (1 <<< width) - 1
-      component_raw = raw >>> offset &&& mask
-      key = {global, number, name}
-
-      {component_raw, state} = accumulate_component(accumulate?, state, key, component_raw, width)
-      component = field_by_name(global, name)
-
-      {component_field(name, component, component_raw, width, number, opts),
-       {offset + width, state}}
-    end)
-    |> then(fn {fields, {_offset, state}} -> {fields, state} end)
+    expand_component_specs(specs, global, number, raw, 0, state, opts, [])
   end
 
   defp expand_component_fields(_global, _pair, _definition, state, _opts), do: {[], state}
+
+  defp expand_component_specs([], _global, _number, _raw, _offset, state, _opts, fields),
+    do: {Enum.reverse(fields), state}
+
+  defp expand_component_specs(
+         [{name, width, accumulate?, definition} | specs],
+         global,
+         number,
+         raw,
+         offset,
+         state,
+         opts,
+         fields
+       ) do
+    component_raw = raw >>> offset &&& (1 <<< width) - 1
+    key = {global, number, name}
+
+    {component_raw, state} = accumulate_component(accumulate?, state, key, component_raw, width)
+    field = component_field(name, definition, component_raw, width, number, opts)
+
+    expand_component_specs(
+      specs,
+      global,
+      number,
+      raw,
+      offset + width,
+      state,
+      opts,
+      [field | fields]
+    )
+  end
 
   defp component_widths(bits, _count) when is_list(bits), do: bits
   defp component_widths(bits, count), do: List.duplicate(bits, count)
@@ -849,18 +910,20 @@ defmodule Fitparser.Decoder do
   defp component_integer(value) when is_integer(value), do: value
   defp component_integer(value) when is_binary(value), do: :binary.decode_unsigned(value, :little)
 
-  defp component_integer(value) when is_list(value) do
-    value
-    |> Enum.map(fn
-      <<byte>> -> byte
-      byte when is_integer(byte) -> byte
-      _ -> 0
-    end)
-    |> Enum.with_index()
-    |> Enum.reduce(0, fn {byte, index}, result -> result ||| byte <<< (index * 8) end)
-  end
+  defp component_integer(value) when is_list(value), do: component_integer(value, 0, 0)
 
   defp component_integer(_value), do: 0
+
+  defp component_integer([], _shift, result), do: result
+
+  defp component_integer([<<byte>> | rest], shift, result),
+    do: component_integer(rest, shift + 8, result ||| byte <<< shift)
+
+  defp component_integer([byte | rest], shift, result) when is_integer(byte),
+    do: component_integer(rest, shift + 8, result ||| byte <<< shift)
+
+  defp component_integer([_value | rest], shift, result),
+    do: component_integer(rest, shift + 8, result)
 
   defp component_field(name, nil, value, _width, number, _opts),
     do: %FitDataField{name: name, value: value, units: nil, number: number}
@@ -935,7 +998,8 @@ defmodule Fitparser.Decoder do
   defp timestamp_value(value, _type), do: value
 
   defp put_definition(acc, local, definition, %{include_metadata: true}) do
-    {:definition, global, endian, fields, developer_fields, _size, _profile_fields} = definition
+    {:definition, global, endian, fields, developer_fields, _size, _profile_fields, _references} =
+      definition
 
     definition = %FitDataDefinition{
       local: local,

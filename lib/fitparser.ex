@@ -17,12 +17,6 @@ defmodule Fitparser.Decoder do
   @compressed_timestamp_mask 0x1F
   @compressed_timestamp_base_mask 0xFFFFFFE0
   @compressed_timestamp_wrap 32
-  @header_size_offset 0
-  @protocol_version_offset 1
-  @profile_version_offset 2
-  @profile_version_size 2
-  @data_size_offset 4
-  @data_size_size 4
   @little_endian_arch 0
   @big_endian_arch 1
   @base_type_enum 0
@@ -1050,23 +1044,24 @@ defmodule Fitparser.Decoder do
   defp finalize_groups(groups),
     do: Map.new(groups, fn {name, records} -> {name, Enum.reverse(records)} end)
 
-  defp add_metadata_from_options(result, header, body, crc, opts) do
-    add_metadata(result, header, body, crc, opts.include_metadata)
-  end
+  defp add_metadata_from_options(result, header, body, crc, %{include_metadata: include_metadata}),
+       do: add_metadata(result, header, body, crc, include_metadata)
 
   defp add_metadata(result, _header, _body, _crc, false), do: result
 
-  defp add_metadata(result, header, body, crc, true) do
+  defp add_metadata(
+         result,
+         <<header_size, protocol_version, profile_version::little-16, data_size::little-32,
+           _rest::binary>>,
+         body,
+         crc,
+         true
+       ) do
     header_record = %FitDataHeader{
-      header_size: :binary.at(header, @header_size_offset),
-      protocol_version: :binary.at(header, @protocol_version_offset),
-      profile_version:
-        :binary.decode_unsigned(
-          binary_part(header, @profile_version_offset, @profile_version_size),
-          :little
-        ),
-      data_size:
-        :binary.decode_unsigned(binary_part(header, @data_size_offset, @data_size_size), :little)
+      header_size: header_size,
+      protocol_version: protocol_version,
+      profile_version: profile_version,
+      data_size: data_size
     }
 
     crc_record = %FitDataCrc{value: crc, valid: Fitparser.Crc.body_valid?(body, crc)}

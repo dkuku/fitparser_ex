@@ -2,7 +2,6 @@ defmodule Fitparser.Crc do
   @moduledoc false
 
   @header_without_crc_size 12
-  @header_with_crc_size 14
   @crc_size 2
 
   def validate_structure(
@@ -51,15 +50,21 @@ defmodule Fitparser.Crc do
 
   def valid_sections?(_), do: false
 
-  def header_valid?(header) do
-    header_size = byte_size(header)
+  def header_valid?(<<_header_without_crc::binary-size(@header_without_crc_size)>>), do: true
 
-    header_crc =
-      :binary.decode_unsigned(binary_part(header, header_size - @crc_size, @crc_size), :little)
+  def header_valid?(
+        <<_header_without_crc::binary-size(@header_without_crc_size), 0::little-16,
+          _extension::binary>>
+      ),
+      do: true
 
-    header_size < @header_with_crc_size or header_crc == 0 or
-      CRC.crc(:crc_16, binary_part(header, 0, header_size - @crc_size)) == header_crc
-  end
+  def header_valid?(
+        <<header_without_crc::binary-size(@header_without_crc_size), header_crc::little-16,
+          _extension::binary>>
+      ),
+      do: CRC.crc(:crc_16, header_without_crc) == header_crc
+
+  def header_valid?(_header), do: true
 
   def body_valid?(body, crc), do: CRC.crc(:crc_16, body) == crc
 

@@ -53,6 +53,15 @@ defmodule DecoderTest do
                Fitparser.Decoder.load_fit(tampered, validate_crc: true)
     end
 
+    test "validates an extended header CRC at its protocol-defined offset" do
+      header_without_crc = <<16, 16, 0::little-16, 0::little-32, ".FIT">>
+      header_crc = CRC.crc(:crc_16, header_without_crc)
+      data = <<header_without_crc::binary, header_crc::little-16, 0xAA, 0xBB, 0::little-16>>
+
+      assert Fitparser.Crc.valid_sections?(data)
+      assert {:ok, %{}} = Fitparser.Decoder.load_fit(data, validate_crc: true)
+    end
+
     test "resolves developer field descriptions" do
       path = Application.app_dir(:fitparser) <> "/priv/examples/DeveloperData.fit"
       [record | _] = Fitparser.Decoder.from_fit!(path)[:record]

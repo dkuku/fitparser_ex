@@ -1,5 +1,11 @@
 defmodule Fitparser.Decoder do
-  @moduledoc "Pure Elixir Garmin FIT decoder."
+  @moduledoc """
+  Pure Elixir decoder for Garmin FIT files.
+
+  Decoded records are grouped by FIT message name. Known messages use atom keys;
+  unknown messages use `"message_<global_number>"`. See `load_fit/2` for the
+  supported options.
+  """
   use Fitparser.Profile
 
   import Bitwise
@@ -46,6 +52,7 @@ defmodule Fitparser.Decoder do
   @local_definition_count 16
   @empty_definitions Tuple.duplicate(nil, @local_definition_count)
 
+  @doc "Decodes the FIT file at `path`."
   def from_fit(path, opts \\ []) do
     case File.read(path) do
       {:ok, data} -> load_fit(data, opts)
@@ -53,13 +60,26 @@ defmodule Fitparser.Decoder do
     end
   end
 
+  @doc "Decodes the FIT file at `path`, raising on error."
   def from_fit!(path, opts \\ []), do: unwrap(from_fit(path, opts))
 
   @doc "Decodes FIT bytes. Alias for `load_fit/2`."
   def decode(data, opts \\ []), do: load_fit(data, opts)
 
+  @doc "Decodes FIT bytes, raising on error. Alias for `load_fit!/2`."
   def decode!(data, opts \\ []), do: load_fit!(data, opts)
 
+  @doc """
+  Decodes FIT bytes.
+
+  Options:
+
+    * `:expand_components` — expands component fields; defaults to `false`.
+    * `:standard_units` — converts semicircles and FIT booleans; defaults to `false`.
+    * `:validate_crc` — validates FIT header and data CRCs; defaults to `false`.
+    * `:include_metadata` — adds FIT structural records; defaults to `false`.
+    * `:processors` — record processors applied after decoding; defaults to `[]`.
+  """
   def load_fit(data, opts \\ []) when is_binary(data) do
     opts = normalize_options(opts)
 
@@ -72,6 +92,7 @@ defmodule Fitparser.Decoder do
     end
   end
 
+  @doc "Decodes FIT bytes, raising on error."
   def load_fit!(data, opts \\ []), do: unwrap(load_fit(data, opts))
   defp unwrap({:ok, value}), do: value
   defp unwrap({:error, message}), do: raise(message)

@@ -1,8 +1,15 @@
 defmodule Fitparser.Decoder do
   @moduledoc "Pure Elixir Garmin FIT decoder."
   use Fitparser.Profile
+
   import Bitwise
-  alias Fitparser.{FitDataCrc, FitDataDefinition, FitDataField, FitDataHeader, FitDataRecord}
+
+  alias Fitparser.FitDataCrc
+  alias Fitparser.FitDataDefinition
+  alias Fitparser.FitDataField
+  alias Fitparser.FitDataHeader
+  alias Fitparser.FitDataRecord
+
   @epoch 631_065_600
   @semicircles_to_degrees 180 / 2_147_483_648
   @fit_header_size 12
@@ -89,23 +96,22 @@ defmodule Fitparser.Decoder do
   defp validate_crc(_data, false), do: :ok
 
   defp validate_crc(data, true) do
-    case Fitparser.Crc.valid_sections?(data) do
-      true -> :ok
-      false -> {:error, "Invalid FIT CRC"}
+    if Fitparser.Crc.valid_sections?(data) do
+      :ok
+    else
+      {:error, "Invalid FIT CRC"}
     end
   end
 
   defp decode_fit(
-         <<header_size, _protocol, _profile::little-16, data_size::little-32, ".FIT",
-           rest::binary>> = data,
+         <<header_size, _protocol, _profile::little-16, data_size::little-32, ".FIT", rest::binary>> = data,
          opts
        )
        when header_size >= @fit_header_size and byte_size(rest) >= data_size + @crc_size do
     header_extra = header_size - @fit_header_size
     header = binary_part(data, 0, header_size)
 
-    <<_extra::binary-size(^header_extra), body::binary-size(^data_size), _crc::little-16,
-      tail::binary>> = rest
+    <<_extra::binary-size(^header_extra), body::binary-size(^data_size), _crc::little-16, tail::binary>> = rest
 
     case records(body, @empty_definitions, nil, %{}, opts, %{}) do
       {:ok, result} ->
@@ -128,8 +134,7 @@ defmodule Fitparser.Decoder do
   defp decode_fit(_, _opts), do: :error
 
   defp decode_fit(
-         <<header_size, _protocol, _profile::little-16, data_size::little-32, ".FIT",
-           rest::binary>> = data,
+         <<header_size, _protocol, _profile::little-16, data_size::little-32, ".FIT", rest::binary>> = data,
          acc,
          opts
        )
@@ -137,8 +142,7 @@ defmodule Fitparser.Decoder do
     header_extra = header_size - @fit_header_size
     header = binary_part(data, 0, header_size)
 
-    <<_extra::binary-size(^header_extra), body::binary-size(^data_size), _crc::little-16,
-      tail::binary>> = rest
+    <<_extra::binary-size(^header_extra), body::binary-size(^data_size), _crc::little-16, tail::binary>> = rest
 
     case records(body, @empty_definitions, nil, %{}, opts, %{}) do
       {:ok, result} ->
@@ -208,19 +212,11 @@ defmodule Fitparser.Decoder do
     end
   end
 
-  defp records(
-         <<_header_flags::4, local::4, rest::binary>>,
-         defs,
-         last,
-         acc,
-         opts,
-         component_state
-       ) do
+  defp records(<<_header_flags::4, local::4, rest::binary>>, defs, last, acc, opts, component_state) do
     record_data_for_local(rest, defs, local, last, acc, opts, component_state)
   end
 
-  defp compressed_local_message(header),
-    do: header >>> @compressed_local_message_shift &&& @compressed_local_message_mask
+  defp compressed_local_message(header), do: header >>> @compressed_local_message_shift &&& @compressed_local_message_mask
 
   defp compressed_timestamp_offset(header), do: header &&& @compressed_timestamp_mask
 
@@ -258,43 +254,29 @@ defmodule Fitparser.Decoder do
     compressed_timestamp(base, low, offset)
   end
 
-  defp compressed_timestamp(base, low, offset) when offset < low,
-    do: base + offset + @compressed_timestamp_wrap
+  defp compressed_timestamp(base, low, offset) when offset < low, do: base + offset + @compressed_timestamp_wrap
 
   defp compressed_timestamp(base, _low, offset), do: base + offset
 
   # A few scale exports omit the local definition header for their
   # weight_scale records. The profile layout is fixed for this message.
-  defp missing_definition(2),
-    do: missing_definition(30, :big, [{0, 2, 132}, {1, 2, 132}, {253, 4, 140}], 8)
+  defp missing_definition(2), do: missing_definition(30, :big, [{0, 2, 132}, {1, 2, 132}, {253, 4, 140}], 8)
 
   defp missing_definition(7),
     do:
       missing_definition(
         23,
         :big,
-        [
-          {0, 1, 2},
-          {1, 1, 2},
-          {2, 2, 132},
-          {3, 4, 140},
-          {4, 2, 132},
-          {5, 2, 132},
-          {253, 4, 140}
-        ],
+        [{0, 1, 2}, {1, 1, 2}, {2, 2, 132}, {3, 4, 140}, {4, 2, 132}, {5, 2, 132}, {253, 4, 140}],
         16
       )
 
   defp missing_definition(_), do: nil
 
-  defp missing_definition(global, endian, fields, size),
-    do: definition_data(global, endian, fields, [], size)
+  defp missing_definition(global, endian, fields, size), do: definition_data(global, endian, fields, [], size)
 
-  defp definition(
-         <<_reserved, @little_endian_arch, global::little-16, count, rest::binary>>,
-         header
-       ),
-       do: definition(global, :little, count, rest, header)
+  defp definition(<<_reserved, @little_endian_arch, global::little-16, count, rest::binary>>, header),
+    do: definition(global, :little, count, rest, header)
 
   defp definition(<<_reserved, @big_endian_arch, global::big-16, count, rest::binary>>, header),
     do: definition(global, :big, count, rest, header)
@@ -312,8 +294,6 @@ defmodule Fitparser.Decoder do
         Enum.reduce(fields, 0, fn {_number, field_size, _type}, total -> total + field_size end)
 
       {definition_data(global, endian, fields, dev_fields, size), rest}
-    else
-      :error -> :error
     end
   end
 
@@ -328,11 +308,9 @@ defmodule Fitparser.Decoder do
 
   defp field_definitions(_rest, _count, _fields), do: :error
 
-  defp developer_definitions(rest, header) when (header &&& @developer_fields_header) == 0,
-    do: {[], rest}
+  defp developer_definitions(rest, header) when (header &&& @developer_fields_header) == 0, do: {[], rest}
 
-  defp developer_definitions(<<count, rest::binary>>, _header),
-    do: developer_field_definitions(rest, count, [])
+  defp developer_definitions(<<count, rest::binary>>, _header), do: developer_field_definitions(rest, count, [])
 
   defp developer_definitions(_rest, _header), do: :error
 
@@ -395,10 +373,8 @@ defmodule Fitparser.Decoder do
   defp next_accumulate([accumulate | rest]), do: {accumulate, rest}
   defp next_accumulate([]), do: {"0", []}
 
-  defp definition_global(
-         {:definition, global, _endian, _fields, _decode_defs, _dev_fields, _size, _references}
-       ),
-       do: global
+  defp definition_global({:definition, global, _endian, _fields, _decode_defs, _dev_fields, _size, _references}),
+    do: global
 
   defp data(
          binary,
@@ -421,33 +397,10 @@ defmodule Fitparser.Decoder do
     )
   end
 
-  defp decode_data(
-         binary,
-         size,
-         _global,
-         _endian,
-         _decode_defs,
-         _dev_defs,
-         _reference_fields?,
-         _last,
-         _opts,
-         _state
-       )
-       when byte_size(binary) < size,
-       do: :error
+  defp decode_data(binary, size, _global, _endian, _decode_defs, _dev_defs, _reference_fields?, _last, _opts, _state)
+       when byte_size(binary) < size, do: :error
 
-  defp decode_data(
-         binary,
-         _size,
-         global,
-         endian,
-         decode_defs,
-         dev_defs,
-         reference_fields?,
-         last,
-         opts,
-         component_state
-       ) do
+  defp decode_data(binary, _size, global, endian, decode_defs, dev_defs, reference_fields?, last, opts, component_state) do
     {pairs, rest} =
       Enum.map_reduce(decode_defs, binary, &decode_field(&1, &2, endian, opts.expand_components))
 
@@ -478,14 +431,7 @@ defmodule Fitparser.Decoder do
 
   defp decode_fields([], _global, _field_opts, _opts, state, fields), do: {fields, state}
 
-  defp decode_fields(
-         [pair | pairs],
-         global,
-         field_opts,
-         opts,
-         state,
-         fields
-       ) do
+  defp decode_fields([pair | pairs], global, field_opts, opts, state, fields) do
     {number, value, component_raw, definition} = pair
     field_pair = {number, value}
 
@@ -569,8 +515,7 @@ defmodule Fitparser.Decoder do
     resolve_developer_groups(groups, descriptions)
   end
 
-  defp resolve_developer_groups(groups, descriptions) when map_size(descriptions) == 0,
-    do: groups
+  defp resolve_developer_groups(groups, descriptions) when map_size(descriptions) == 0, do: groups
 
   defp resolve_developer_groups(groups, descriptions) do
     Map.new(groups, fn {name, records} ->
@@ -578,9 +523,8 @@ defmodule Fitparser.Decoder do
     end)
   end
 
-  defp put_description(acc, index, number, values)
-       when is_integer(index) and is_integer(number),
-       do: Map.put(acc, {index, number}, values)
+  defp put_description(acc, index, number, values) when is_integer(index) and is_integer(number),
+    do: Map.put(acc, {index, number}, values)
 
   defp put_description(acc, _index, _number, _values), do: acc
 
@@ -615,12 +559,10 @@ defmodule Fitparser.Decoder do
 
   defp decode_developer_value(raw, nil, _number), do: raw
 
-  defp decode_developer_value(raw, type, number),
-    do: decode_value(raw, type, :little, number, false)
+  defp decode_developer_value(raw, type, number), do: decode_value(raw, type, :little, number, false)
 
-  defp scale_value(value, scale, offset)
-       when is_number(scale) and scale != 0 and is_number(value),
-       do: value / scale - offset
+  defp scale_value(value, scale, offset) when is_number(scale) and scale != 0 and is_number(value),
+    do: value / scale - offset
 
   defp scale_value(value, _scale, _offset), do: value
 
@@ -630,11 +572,17 @@ defmodule Fitparser.Decoder do
 
   defp decode_value(raw, type, endian, _number, array) do
     base = type &&& @base_type_mask
-    decode_value(raw, base, effective_endian(type, endian), array)
+    decode_base_value(raw, base, effective_endian(type, endian), array, known_base_type?(base))
   end
 
-  defp decode_value(raw, base, endian, true), do: decode_array(raw, base, endian)
-  defp decode_value(raw, base, endian, false), do: decode_scalar(raw, base, endian)
+  defp decode_base_value(raw, _base, _endian, _array, false), do: raw
+
+  defp decode_base_value(raw, base, endian, true, _known?), do: decode_array(raw, base, endian)
+
+  defp decode_base_value(raw, base, endian, false, _known?), do: decode_scalar(raw, base, endian)
+
+  defp known_base_type?(base) when base in @base_type_enum..@base_type_uint64, do: true
+  defp known_base_type?(_base), do: false
 
   # The high bit in a FIT base-type ID marks an endian-capable type; it does
   # not override the architecture declared by the message definition.
@@ -657,14 +605,14 @@ defmodule Fitparser.Decoder do
   end
 
   defp decode_scalar(raw, base, endian) do
-    case invalid_value?(raw, base, endian) do
-      true -> nil
-      false -> decode_base(raw, base, endian)
+    if invalid_value?(raw, base, endian) do
+      nil
+    else
+      decode_base(raw, base, endian)
     end
   end
 
-  defp decode_base(raw, @base_type_string, _endian),
-    do: raw |> String.trim_trailing(<<0>>) |> to_string()
+  defp decode_base(raw, @base_type_string, _endian), do: raw |> String.trim_trailing(<<0>>) |> to_string()
 
   defp decode_base(<<value::little-float-32>>, @base_type_float32, :little), do: value
   defp decode_base(<<value::big-float-32>>, @base_type_float32, :big), do: value
@@ -689,25 +637,20 @@ defmodule Fitparser.Decoder do
               @base_type_string,
               @base_type_uint8z,
               @base_type_byte
-            ],
-       do: 1
+            ], do: 1
 
-  defp element_size(base) when base in [@base_type_sint16, @base_type_uint16, @base_type_uint16z],
-    do: 2
+  defp element_size(base) when base in [@base_type_sint16, @base_type_uint16, @base_type_uint16z], do: 2
 
-  defp element_size(base)
-       when base in [@base_type_sint32, @base_type_uint32, @base_type_float32, @base_type_uint32z],
-       do: 4
+  defp element_size(base) when base in [@base_type_sint32, @base_type_uint32, @base_type_float32, @base_type_uint32z],
+    do: 4
 
-  defp element_size(base) when base in [@base_type_float64, @base_type_sint64, @base_type_uint64],
-    do: 8
+  defp element_size(base) when base in [@base_type_float64, @base_type_sint64, @base_type_uint64], do: 8
 
   defp invalid_value?(<<>>, _base, _endian), do: true
   defp invalid_value?(raw, @base_type_string, _endian), do: sentinel_bytes?(raw, 0)
 
-  defp invalid_value?(raw, base, _endian)
-       when base in [@base_type_uint8z, @base_type_uint16z, @base_type_uint32z],
-       do: sentinel_bytes?(raw, 0)
+  defp invalid_value?(raw, base, _endian) when base in [@base_type_uint8z, @base_type_uint16z, @base_type_uint32z],
+    do: sentinel_bytes?(raw, 0)
 
   defp invalid_value?(<<0x7F>>, @base_type_sint8, _endian), do: true
   defp invalid_value?(<<0xFF, 0x7F>>, @base_type_sint16, :little), do: true
@@ -715,19 +658,9 @@ defmodule Fitparser.Decoder do
   defp invalid_value?(<<0xFF, 0xFF, 0xFF, 0x7F>>, @base_type_sint32, :little), do: true
   defp invalid_value?(<<0x7F, 0xFF, 0xFF, 0xFF>>, @base_type_sint32, :big), do: true
 
-  defp invalid_value?(
-         <<0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x7F>>,
-         @base_type_sint64,
-         :little
-       ),
-       do: true
+  defp invalid_value?(<<0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x7F>>, @base_type_sint64, :little), do: true
 
-  defp invalid_value?(
-         <<0x7F, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF>>,
-         @base_type_sint64,
-         :big
-       ),
-       do: true
+  defp invalid_value?(<<0x7F, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF>>, @base_type_sint64, :big), do: true
 
   defp invalid_value?(raw, _base, _endian), do: sentinel_bytes?(raw, 255)
 
@@ -736,14 +669,10 @@ defmodule Fitparser.Decoder do
   defp sentinel_bytes?(<<sentinel, sentinel>>, sentinel), do: true
   defp sentinel_bytes?(<<sentinel, sentinel, sentinel, sentinel>>, sentinel), do: true
 
-  defp sentinel_bytes?(
-         <<sentinel, sentinel, sentinel, sentinel, sentinel, sentinel, sentinel, sentinel>>,
-         sentinel
-       ),
-       do: true
+  defp sentinel_bytes?(<<sentinel, sentinel, sentinel, sentinel, sentinel, sentinel, sentinel, sentinel>>, sentinel),
+    do: true
 
-  defp sentinel_bytes?(<<sentinel, rest::binary>>, sentinel),
-    do: sentinel_bytes?(rest, sentinel)
+  defp sentinel_bytes?(<<sentinel, rest::binary>>, sentinel), do: sentinel_bytes?(rest, sentinel)
 
   defp sentinel_bytes?(_raw, _sentinel), do: false
 
@@ -795,9 +724,8 @@ defmodule Fitparser.Decoder do
     %FitDataField{name: name, value: value, units: units, number: number}
   end
 
-  defp maybe_array_value(value, array, components)
-       when (array or components != []) and is_binary(value),
-       do: :binary.bin_to_list(value)
+  defp maybe_array_value(value, array, components) when (array or components != []) and is_binary(value),
+    do: :binary.bin_to_list(value)
 
   defp maybe_array_value(value, _array, _components), do: value
 
@@ -814,42 +742,31 @@ defmodule Fitparser.Decoder do
     end
   end
 
-  defp subfield_matches?(
-         %{ref_field_name: names, ref_field_value: values},
-         references
-       )
+  defp subfield_matches?(%{ref_field_name: names, ref_field_value: values}, references)
        when is_binary(names) and is_binary(values) do
     names = String.split(names, ",", trim: true)
     values = String.split(values, ",", trim: true)
 
     names != [] and length(names) == length(values) and
-      Enum.zip(names, values)
-      |> Enum.any?(fn {name, value} -> Map.get(references, name) |> to_string() == value end)
+      names
+      |> Enum.zip(values)
+      |> Enum.any?(fn {name, value} -> references |> Map.get(name) |> to_string() == value end)
   end
 
   defp subfield_matches?(_subfield, _references), do: false
 
-  defp component_fields(_global, _pair, _component_raw, _definition, state, _opts, false),
-    do: {[], state}
+  defp component_fields(_global, _pair, _component_raw, _definition, state, _opts, false), do: {[], state}
 
   defp component_fields(global, pair, component_raw, definition, state, opts, true),
     do: expand_component_fields(global, pair, component_raw, definition, state, opts)
 
-  defp expand_component_fields(
-         global,
-         {number, value},
-         component_raw,
-         %{component_specs: [_ | _] = specs},
-         state,
-         opts
-       ) do
+  defp expand_component_fields(global, {number, value}, component_raw, %{component_specs: [_ | _] = specs}, state, opts) do
     raw = component_integer(component_raw || value)
 
     expand_component_specs(specs, global, number, raw, 0, state, opts, [])
   end
 
-  defp expand_component_fields(_global, _pair, _component_raw, _definition, state, _opts),
-    do: {[], state}
+  defp expand_component_fields(_global, _pair, _component_raw, _definition, state, _opts), do: {[], state}
 
   defp expand_component_specs([], _global, _number, _raw, _offset, state, _opts, fields),
     do: {Enum.reverse(fields), state}
@@ -885,9 +802,8 @@ defmodule Fitparser.Decoder do
   defp component_widths(bits, _count) when is_list(bits), do: bits
   defp component_widths(bits, count), do: List.duplicate(bits, count)
 
-  defp component_raw(%{component_specs: [_ | _]}, raw, type, true)
-       when (type &&& @base_type_mask) == @base_type_byte,
-       do: raw
+  defp component_raw(%{component_specs: [_ | _]}, raw, type, true) when (type &&& @base_type_mask) == @base_type_byte,
+    do: raw
 
   defp component_raw(_definition, _raw, _type, _expand_components), do: nil
 
@@ -943,8 +859,7 @@ defmodule Fitparser.Decoder do
   defp component_integer([byte | rest], shift, result) when is_integer(byte),
     do: component_integer(rest, shift + 8, result ||| byte <<< shift)
 
-  defp component_integer([_value | rest], shift, result),
-    do: component_integer(rest, shift + 8, result)
+  defp component_integer([_value | rest], shift, result), do: component_integer(rest, shift + 8, result)
 
   defp component_field(name, nil, value, _width, number, _opts),
     do: %FitDataField{name: name, value: value, units: nil, number: number}
@@ -973,16 +888,14 @@ defmodule Fitparser.Decoder do
   end
 
   defp decode_component(value, width, type)
-       when type in [@base_type_sint8, @base_type_sint16, @base_type_sint32, @base_type_sint64] and
-              width > 0 do
+       when type in [@base_type_sint8, @base_type_sint16, @base_type_sint32, @base_type_sint64] and width > 0 do
     sign_bit = 1 <<< (width - 1)
     signed_component(value, sign_bit, width)
   end
 
   defp decode_component(value, _width, _type), do: value
 
-  defp signed_component(value, sign_bit, width) when (value &&& sign_bit) != 0,
-    do: value - (1 <<< width)
+  defp signed_component(value, sign_bit, width) when (value &&& sign_bit) != 0, do: value - (1 <<< width)
 
   defp signed_component(value, _sign_bit, _width), do: value
 
@@ -995,13 +908,11 @@ defmodule Fitparser.Decoder do
     normalize_value_by_units(value, type, units, opts.standard_units)
   end
 
-  defp normalize_value_by_units(value, type, units, true),
-    do: normalize_profile_value(value, type, units)
+  defp normalize_value_by_units(value, type, units, true), do: normalize_profile_value(value, type, units)
 
   defp normalize_value_by_units(value, _type, _units, false), do: value
 
-  defp normalize_profile_value(value, _type, "semicircles") when is_number(value),
-    do: value * @semicircles_to_degrees
+  defp normalize_profile_value(value, _type, "semicircles") when is_number(value), do: value * @semicircles_to_degrees
 
   defp normalize_profile_value(value, _type, "semicircles") when is_list(value),
     do: Enum.map(value, &normalize_profile_value(&1, nil, "semicircles"))
@@ -1011,8 +922,7 @@ defmodule Fitparser.Decoder do
   defp normalize_profile_value("false", :bool, _units), do: false
   defp normalize_profile_value(value, _type, _units), do: value
 
-  defp timestamp_value(value, type)
-       when type in [:date_time, :local_date_time] and is_integer(value) do
+  defp timestamp_value(value, type) when type in [:date_time, :local_date_time] and is_integer(value) do
     @epoch + value
   end
 
@@ -1041,18 +951,16 @@ defmodule Fitparser.Decoder do
     Map.update(acc, name, [record], &[record | &1])
   end
 
-  defp finalize_groups(groups),
-    do: Map.new(groups, fn {name, records} -> {name, Enum.reverse(records)} end)
+  defp finalize_groups(groups), do: Map.new(groups, fn {name, records} -> {name, Enum.reverse(records)} end)
 
   defp add_metadata_from_options(result, header, body, crc, %{include_metadata: include_metadata}),
-       do: add_metadata(result, header, body, crc, include_metadata)
+    do: add_metadata(result, header, body, crc, include_metadata)
 
   defp add_metadata(result, _header, _body, _crc, false), do: result
 
   defp add_metadata(
          result,
-         <<header_size, protocol_version, profile_version::little-16, data_size::little-32,
-           _rest::binary>>,
+         <<header_size, protocol_version, profile_version::little-16, data_size::little-32, _rest::binary>>,
          body,
          crc,
          true

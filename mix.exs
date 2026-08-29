@@ -14,11 +14,11 @@ defmodule Fitparser.MixProject do
     ]
   end
 
-  defp description() do
+  defp description do
     "Decode Garmin FIT files using pure Elixir"
   end
 
-  defp package() do
+  defp package do
     [
       files: [
         "lib",
@@ -49,7 +49,8 @@ defmodule Fitparser.MixProject do
       {:decimal, "~> 2.1"},
       {:crc, "~> 0.10"},
       {:sweet_xml, "~> 0.7"},
-      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:styler, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end

@@ -11,8 +11,7 @@ defmodule Fitparser.Processor do
   @callback process(FitDataRecord.t(), keyword()) :: FitDataRecord.t()
 
   @doc false
-  def apply(record, processor, opts) when is_atom(processor),
-    do: processor.process(record, opts)
+  def apply(record, processor, opts) when is_atom(processor), do: processor.process(record, opts)
 
   def apply(record, {processor, processor_opts}, opts) when is_atom(processor),
     do: processor.process(record, Keyword.merge(opts, processor_opts))
@@ -20,6 +19,5 @@ defmodule Fitparser.Processor do
   def apply(record, processor, _opts) when is_function(processor, 1), do: processor.(record)
   def apply(record, processor, opts) when is_function(processor, 2), do: processor.(record, opts)
 
-  def apply(_record, processor, _opts),
-    do: raise(ArgumentError, "invalid FIT processor: #{inspect(processor)}")
+  def apply(_record, processor, _opts), do: raise(ArgumentError, "invalid FIT processor: #{inspect(processor)}")
 end

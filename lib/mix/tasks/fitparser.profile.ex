@@ -1,5 +1,4 @@
 defmodule Mix.Tasks.Fitparser.Profile do
-  import SweetXml
   @shortdoc "Generates Fitparser.Profile from messages.csv and types.csv"
   @moduledoc """
   Generates the compile-time FIT profile module from Garmin CSV profile files.
@@ -10,17 +9,18 @@ defmodule Mix.Tasks.Fitparser.Profile do
 
   use Mix.Task
 
+  import SweetXml
+
   @impl Mix.Task
   def run(args) do
     {messages_path, types_path} = paths(args)
 
     {messages, {types, enums}} =
       if Path.extname(messages_path) == ".xlsx" do
-        {xlsx_rows(messages_path, "sheet2.xml") |> message_rows(),
-         xlsx_rows(messages_path, "sheet1.xml") |> type_rows()}
+        {messages_path |> xlsx_rows("sheet2.xml") |> message_rows(),
+         messages_path |> xlsx_rows("sheet1.xml") |> type_rows()}
       else
-        {messages_path |> File.read!() |> csv() |> message_rows(),
-         types_path |> File.read!() |> csv() |> type_rows()}
+        {messages_path |> File.read!() |> csv() |> message_rows(), types_path |> File.read!() |> csv() |> type_rows()}
       end
 
     output =
@@ -58,9 +58,9 @@ defmodule Mix.Tasks.Fitparser.Profile do
            (Enum.at(row, 1) in [nil, ""] and Enum.at(row, 2) not in [nil, ""]))
     end)
     |> Enum.map(fn {message, row} ->
-      {message, parse_integer_or_nil(Enum.at(row, 1)), Enum.at(row, 2), Enum.at(row, 3),
-       Enum.at(row, 6), Enum.at(row, 7), Enum.at(row, 8), Enum.at(row, 4), Enum.at(row, 5),
-       Enum.at(row, 9), Enum.at(row, 10), Enum.at(row, 11), Enum.at(row, 12), Enum.at(row, 13)}
+      {message, parse_integer_or_nil(Enum.at(row, 1)), Enum.at(row, 2), Enum.at(row, 3), Enum.at(row, 6), Enum.at(row, 7),
+       Enum.at(row, 8), Enum.at(row, 4), Enum.at(row, 5), Enum.at(row, 9), Enum.at(row, 10), Enum.at(row, 11),
+       Enum.at(row, 12), Enum.at(row, 13)}
     end)
   end
 
@@ -74,8 +74,8 @@ defmodule Mix.Tasks.Fitparser.Profile do
     enums =
       rows
       |> Enum.reduce({nil, nil, %{}}, fn row, {type, base, acc} ->
-        type = if Enum.at(row, 0) not in [nil, ""], do: Enum.at(row, 0), else: type
-        base = if Enum.at(row, 1) not in [nil, ""], do: Enum.at(row, 1), else: base
+        type = if Enum.at(row, 0) in [nil, ""], do: type, else: Enum.at(row, 0)
+        base = if Enum.at(row, 1) in [nil, ""], do: base, else: Enum.at(row, 1)
 
         if type not in [nil, ""] and base not in [nil, ""] and
              Enum.at(row, 2) not in [nil, ""] and
@@ -114,9 +114,8 @@ defmodule Mix.Tasks.Fitparser.Profile do
     fields = collect_subfields(fields)
 
     field_map =
-      Enum.reduce(fields, %{}, fn {message, number, name, type, scale, offset, units, array,
-                                   components, bits, accumulate, ref_field_name, ref_field_value,
-                                   _comment, subfields},
+      Enum.reduce(fields, %{}, fn {message, number, name, type, scale, offset, units, array, components, bits, accumulate,
+                                   ref_field_name, ref_field_value, _comment, subfields},
                                   acc ->
         case Enum.find(messages, fn {_number, message_name} -> message_name == message end) do
           {message_number, _} ->
@@ -143,10 +142,9 @@ defmodule Mix.Tasks.Fitparser.Profile do
 
     fields =
       Enum.map(field_map, fn {{message, number}, metadata} ->
-        {message, number, metadata.name, atom_literal(type_atom(metadata.type)), metadata.scale,
-         metadata.offset, metadata.units, metadata.enum, metadata.array, metadata.components,
-         metadata.bits, metadata.accumulate, metadata.ref_field_name, metadata.ref_field_value,
-         nil, metadata.subfields}
+        {message, number, metadata.name, atom_literal(type_atom(metadata.type)), metadata.scale, metadata.offset,
+         metadata.units, metadata.enum, metadata.array, metadata.components, metadata.bits, metadata.accumulate,
+         metadata.ref_field_name, metadata.ref_field_value, nil, metadata.subfields}
       end)
 
     EEx.eval_file(Path.join(__DIR__, "profile.ex.eex"),
@@ -167,26 +165,26 @@ defmodule Mix.Tasks.Fitparser.Profile do
       {_, nil, _, _, _, _, _, _, _, _, _, _, _, _}, [] ->
         []
 
-      {message, number, name, type, scale, offset, units, array, components, bits, accumulate,
-       ref_field_name, ref_field_value, comment},
+      {message, number, name, type, scale, offset, units, array, components, bits, accumulate, ref_field_name,
+       ref_field_value, comment},
       acc ->
         [
-          {message, number, name, type, scale, offset, units, array, components, bits, accumulate,
-           ref_field_name, ref_field_value, comment, []}
+          {message, number, name, type, scale, offset, units, array, components, bits, accumulate, ref_field_name,
+           ref_field_value, comment, []}
           | acc
         ]
     end)
     |> Enum.reverse()
-    |> Enum.map(fn {message, number, name, type, scale, offset, units, array, components, bits,
-                    accumulate, ref_field_name, ref_field_value, comment, subfields} ->
-      {message, number, name, type, scale, offset, units, array, components, bits, accumulate,
-       ref_field_name, ref_field_value, comment, Enum.reverse(subfields)}
+    |> Enum.map(fn {message, number, name, type, scale, offset, units, array, components, bits, accumulate,
+                    ref_field_name, ref_field_value, comment, subfields} ->
+      {message, number, name, type, scale, offset, units, array, components, bits, accumulate, ref_field_name,
+       ref_field_value, comment, Enum.reverse(subfields)}
     end)
   end
 
   defp field_metadata(
-         {_, _, name, type, scale, offset, units, array, components, bits, accumulate,
-          ref_field_name, ref_field_value, _comment},
+         {_, _, name, type, scale, offset, units, array, components, bits, accumulate, ref_field_name, ref_field_value,
+          _comment},
          enums
        ) do
     %{
@@ -231,8 +229,7 @@ defmodule Mix.Tasks.Fitparser.Profile do
   defp parse_list(nil), do: []
   defp parse_list(""), do: []
 
-  defp parse_list(value),
-    do: value |> String.split(",") |> Enum.map(&String.trim/1) |> Enum.reject(&(&1 == ""))
+  defp parse_list(value), do: value |> String.split(",") |> Enum.map(&String.trim/1) |> Enum.reject(&(&1 == ""))
 
   defp type_atom(nil), do: nil
   defp type_atom(value), do: String.to_atom(value)
@@ -268,8 +265,7 @@ defmodule Mix.Tasks.Fitparser.Profile do
   defp csv(text), do: text |> String.split(["\r\n", "\n"], trim: true) |> Enum.map(&csv_line/1)
   defp csv_line(line), do: csv_line(String.to_charlist(line), [], [], false)
 
-  defp csv_line([], field, row, _quoted),
-    do: Enum.reverse([field |> Enum.reverse() |> to_string() | row])
+  defp csv_line([], field, row, _quoted), do: Enum.reverse([field |> Enum.reverse() |> to_string() | row])
 
   defp csv_line([?\" | rest], field, row, false), do: csv_line(rest, field, row, true)
   defp csv_line([?\", ?\" | rest], field, row, true), do: csv_line(rest, [?\" | field], row, true)
@@ -278,8 +274,7 @@ defmodule Mix.Tasks.Fitparser.Profile do
   defp csv_line([?, | rest], field, row, false),
     do: csv_line(rest, [], [field |> Enum.reverse() |> to_string() | row], false)
 
-  defp csv_line([char | rest], field, row, quoted),
-    do: csv_line(rest, [char | field], row, quoted)
+  defp csv_line([char | rest], field, row, quoted), do: csv_line(rest, [char | field], row, quoted)
 
   defp xlsx_rows(path, sheet) do
     {:ok, files} = :zip.extract(String.to_charlist(path), [:memory])
@@ -299,30 +294,22 @@ defmodule Mix.Tasks.Fitparser.Profile do
     rows =
       xpath(
         doc,
-        ~x"//x:row"l
-        |> add_namespace("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main")
+        add_namespace(~x"//x:row"l, "x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main")
       )
 
-    rows
-    |> Enum.map(fn row ->
+    Enum.map(rows, fn row ->
       row
-      |> xpath(
-        ~x".//x:c"l
-        |> add_namespace("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main")
-      )
+      |> xpath(add_namespace(~x".//x:c"l, "x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main"))
       |> Enum.reduce([], fn cell, values ->
-        reference = xpath(cell, ~x"./@r"s) |> to_string()
+        reference = cell |> xpath(~x"./@r"s) |> to_string()
 
         raw =
-          xpath(
-            cell,
-            ~x".//x:v/text()"s
-            |> add_namespace("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main")
-          )
+          cell
+          |> xpath(add_namespace(~x".//x:v/text()"s, "x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main"))
           |> to_string()
 
         value =
-          if xpath(cell, ~x"./@t"s) |> to_string() == "s",
+          if cell |> xpath(~x"./@t"s) |> to_string() == "s",
             do: Enum.at(shared, String.to_integer(raw)),
             else: raw
 
@@ -340,17 +327,11 @@ defmodule Mix.Tasks.Fitparser.Profile do
   defp shared_strings(xml) do
     doc = SweetXml.parse(xml)
 
-    xpath(
-      doc,
-      ~x"//x:si"l
-      |> add_namespace("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main")
-    )
+    doc
+    |> xpath(add_namespace(~x"//x:si"l, "x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main"))
     |> Enum.map(
-      &(xpath(
-          &1,
-          ~x".//x:t/text()"s
-          |> add_namespace("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main")
-        )
+      &(&1
+        |> xpath(add_namespace(~x".//x:t/text()"s, "x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main"))
         |> to_string())
     )
   end

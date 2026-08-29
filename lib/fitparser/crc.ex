@@ -5,8 +5,7 @@ defmodule Fitparser.Crc do
   @crc_size 2
 
   def validate_structure(
-        <<header_size, _protocol, _profile::little-16, data_size::little-32, ".FIT",
-          _rest::binary>> = data
+        <<header_size, _protocol, _profile::little-16, data_size::little-32, ".FIT", _rest::binary>> = data
       )
       when header_size >= @header_without_crc_size do
     required = header_size + data_size + @crc_size
@@ -27,12 +26,8 @@ defmodule Fitparser.Crc do
     end
   end
 
-  def valid_sections?(
-        <<header_size, _protocol, _profile::little-16, data_size::little-32, ".FIT",
-          _rest::binary>> = data
-      )
-      when header_size >= @header_without_crc_size and
-             byte_size(data) >= header_size + data_size + @crc_size do
+  def valid_sections?(<<header_size, _protocol, _profile::little-16, data_size::little-32, ".FIT", _rest::binary>> = data)
+      when header_size >= @header_without_crc_size and byte_size(data) >= header_size + data_size + @crc_size do
     header = binary_part(data, 0, header_size)
     body = binary_part(data, header_size, data_size)
     crc = file_crc(data, header_size, data_size)
@@ -52,17 +47,12 @@ defmodule Fitparser.Crc do
 
   def header_valid?(<<_header_without_crc::binary-size(@header_without_crc_size)>>), do: true
 
-  def header_valid?(
-        <<_header_without_crc::binary-size(@header_without_crc_size), 0::little-16,
-          _extension::binary>>
-      ),
-      do: true
+  def header_valid?(<<_header_without_crc::binary-size(@header_without_crc_size), 0::little-16, _extension::binary>>),
+    do: true
 
   def header_valid?(
-        <<header_without_crc::binary-size(@header_without_crc_size), header_crc::little-16,
-          _extension::binary>>
-      ),
-      do: CRC.crc(:crc_16, header_without_crc) == header_crc
+        <<header_without_crc::binary-size(@header_without_crc_size), header_crc::little-16, _extension::binary>>
+      ), do: CRC.crc(:crc_16, header_without_crc) == header_crc
 
   def header_valid?(_header), do: true
 

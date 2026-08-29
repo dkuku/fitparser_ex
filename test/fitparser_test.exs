@@ -1,20 +1,17 @@
 defmodule DecoderTest do
   use ExUnit.Case
 
-  alias Fitparser.FitDataRecord
   alias Fitparser.FitDataField
+  alias Fitparser.FitDataRecord
 
   describe "from_fit/1" do
     test "fails" do
-      assert (Application.app_dir(:fitparser) <> "non existent")
-             |> Fitparser.Decoder.from_fit() ==
+      assert Fitparser.Decoder.from_fit(Application.app_dir(:fitparser) <> "non existent") ==
                {:error, "Error opening file"}
     end
 
     test "success" do
-      actual =
-        (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
-        |> Fitparser.Decoder.from_fit!()
+      actual = Fitparser.Decoder.from_fit!(Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
 
       assert normalize_field_order(decoded_term()) == normalize_field_order(actual)
     end
@@ -194,8 +191,7 @@ defmodule DecoderTest do
     body = <<0x40, 0, 0, 999::little-16, 1, 0, 1, 2, 0, 42>>
 
     data =
-      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
-        0::little-16>>
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary, 0::little-16>>
 
     result = Fitparser.Decoder.decode!(data)
     assert %{"message_999" => [%FitDataRecord{fields: [field]}]} = result
@@ -203,12 +199,21 @@ defmodule DecoderTest do
     assert field == %FitDataField{name: "field_0", value: 42, units: nil, number: 0}
   end
 
+  test "preserves raw bytes for unknown FIT base types" do
+    body = <<0x40, 0, 0, 999::little-16, 1, 0, 2, 16, 0, 1, 2>>
+
+    data =
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary, 0::little-16>>
+
+    assert %{"message_999" => [%FitDataRecord{fields: [field]}]} = Fitparser.Decoder.decode!(data)
+    assert field.value == <<1, 2>>
+  end
+
   test "decodes byte arrays as byte lists" do
     body = <<0x40, 0, 0, 174::little-16, 1, 3, 3, 13, 0, 1, 2, 255>>
 
     data =
-      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
-        0::little-16>>
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary, 0::little-16>>
 
     assert %{obdii_data: [%FitDataRecord{fields: [field]}]} =
              Fitparser.Decoder.decode!(data)
@@ -221,8 +226,7 @@ defmodule DecoderTest do
     body = <<0x40, 0, 0, 314::little-16, 1, 3, 2, 3, 0, 255, 127>>
 
     data =
-      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
-        0::little-16>>
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary, 0::little-16>>
 
     assert %{hsa_body_battery_data: [%FitDataRecord{fields: [field]}]} =
              Fitparser.Decoder.decode!(data)
@@ -235,8 +239,7 @@ defmodule DecoderTest do
     body = <<0x40, 0, 0, 999::little-16, 1, 0, 4, 8, 0, 0, 0, 72, 65>>
 
     data =
-      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
-        0::little-16>>
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary, 0::little-16>>
 
     assert %{"message_999" => records} = Fitparser.Decoder.decode!(data)
     assert hd(hd(records).fields).value == 12.5
@@ -246,8 +249,7 @@ defmodule DecoderTest do
     body = <<0x40, 0, 0, 132::little-16, 1, 253, 4, 0x86, 0, 840_026_841::little-32>>
 
     data =
-      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
-        0::little-16>>
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary, 0::little-16>>
 
     assert %{hr: [%FitDataRecord{fields: [field]}]} = Fitparser.Decoder.decode!(data)
     assert field.name == "timestamp"
@@ -255,11 +257,11 @@ defmodule DecoderTest do
   end
 
   defmodule TestProcessor do
+    @moduledoc false
     @behaviour Fitparser.Processor
 
     @impl true
-    def process(record, opts),
-      do: %{record | kind: String.to_atom(Atom.to_string(record.kind) <> opts[:suffix])}
+    def process(record, opts), do: %{record | kind: String.to_atom(Atom.to_string(record.kind) <> opts[:suffix])}
   end
 
   def decoded_term do
@@ -271,7 +273,7 @@ defmodule DecoderTest do
               name: "cum_operating_time",
               number: 7,
               units: "s",
-              value: 45126
+              value: 45_126
             },
             %FitDataField{name: "battery_voltage", number: 10, units: "V", value: 1.5},
             %FitDataField{
@@ -289,7 +291,7 @@ defmodule DecoderTest do
               name: "cum_operating_time",
               number: 7,
               units: "s",
-              value: 45158
+              value: 45_158
             },
             %FitDataField{name: "battery_voltage", number: 10, units: "V", value: 1.5},
             %FitDataField{

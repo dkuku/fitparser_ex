@@ -23,7 +23,12 @@ defmodule Mix.Tasks.Fitparser.Profile do
          types_path |> File.read!() |> csv() |> type_rows()}
       end
 
-    output = render(messages, types, enums)
+    output =
+      messages
+      |> render(types, enums)
+      |> Code.format_string!()
+      |> IO.iodata_to_binary()
+
     File.mkdir_p!("lib/fitparser")
     File.write!("lib/fitparser/profile.ex", output)
 
@@ -111,7 +116,7 @@ defmodule Mix.Tasks.Fitparser.Profile do
     field_map =
       Enum.reduce(fields, %{}, fn {message, number, name, type, scale, offset, units, array,
                                    components, bits, accumulate, ref_field_name, ref_field_value,
-                                   comment, subfields},
+                                   _comment, subfields},
                                   acc ->
         case Enum.find(messages, fn {_number, message_name} -> message_name == message end) do
           {message_number, _} ->
@@ -128,7 +133,6 @@ defmodule Mix.Tasks.Fitparser.Profile do
               accumulate: empty_to_nil(accumulate),
               ref_field_name: empty_to_nil(ref_field_name),
               ref_field_value: empty_to_nil(ref_field_value),
-              comment: empty_to_nil(comment),
               subfields: Enum.map(subfields, &field_metadata(&1, enums))
             })
 
@@ -142,7 +146,7 @@ defmodule Mix.Tasks.Fitparser.Profile do
         {message, number, metadata.name, atom_literal(type_atom(metadata.type)), metadata.scale,
          metadata.offset, metadata.units, metadata.enum, metadata.array, metadata.components,
          metadata.bits, metadata.accumulate, metadata.ref_field_name, metadata.ref_field_value,
-         metadata.comment, metadata.subfields}
+         nil, metadata.subfields}
       end)
 
     EEx.eval_file(Path.join(__DIR__, "profile.ex.eex"),
@@ -182,7 +186,7 @@ defmodule Mix.Tasks.Fitparser.Profile do
 
   defp field_metadata(
          {_, _, name, type, scale, offset, units, array, components, bits, accumulate,
-          ref_field_name, ref_field_value, comment},
+          ref_field_name, ref_field_value, _comment},
          enums
        ) do
     %{
@@ -198,7 +202,6 @@ defmodule Mix.Tasks.Fitparser.Profile do
       accumulate: empty_to_nil(accumulate),
       ref_field_name: empty_to_nil(ref_field_name),
       ref_field_value: empty_to_nil(ref_field_value),
-      comment: empty_to_nil(comment),
       subfields: []
     }
   end

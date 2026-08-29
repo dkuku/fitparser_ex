@@ -12,9 +12,11 @@ defmodule DecoderTest do
     end
 
     test "success" do
-      assert decoded_term() ==
-               (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
-               |> Fitparser.Decoder.from_fit!()
+      actual =
+        (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
+        |> Fitparser.Decoder.from_fit!()
+
+      assert normalize_field_order(decoded_term()) == normalize_field_order(actual)
     end
   end
 
@@ -30,10 +32,12 @@ defmodule DecoderTest do
     end
 
     test "success from bytes" do
-      assert decoded_term() ==
-               (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
-               |> File.read!()
-               |> Fitparser.Decoder.load_fit!()
+      actual =
+        (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
+        |> File.read!()
+        |> Fitparser.Decoder.load_fit!()
+
+      assert normalize_field_order(decoded_term()) == normalize_field_order(actual)
     end
 
     test "validates the FIT CRC when requested" do
@@ -52,12 +56,25 @@ defmodule DecoderTest do
     test "resolves developer field descriptions" do
       path = Application.app_dir(:fitparser) <> "/priv/examples/DeveloperData.fit"
       [record | _] = Fitparser.Decoder.from_fit!(path)[:record]
-      [field | _] = record.fields
+      field = Enum.find(record.fields, &(&1.name == "doughnuts_earned"))
 
       assert field.name == "doughnuts_earned"
       assert field.units == "doughnuts"
       assert field.value == 1
       assert field.developer_data_index == 0
+    end
+
+    test "preserves FIT definition field order" do
+      [record | _] =
+        (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
+        |> Fitparser.Decoder.from_fit!()
+        |> Map.fetch!(:device_info)
+
+      assert Enum.map(record.fields, & &1.name) == [
+               "timestamp",
+               "battery_voltage",
+               "cum_operating_time"
+             ]
     end
 
     test "expands component fields" do
@@ -67,17 +84,42 @@ defmodule DecoderTest do
         |> Map.fetch!(:record)
         |> Enum.find(fn record -> Enum.any?(record.fields, &(&1.name == "speed")) end)
 
-      assert Enum.any?(record.fields, &(&1.name == "enhanced_speed"))
+      refute Enum.any?(record.fields, &(&1.name == "enhanced_speed"))
+
+      expanded =
+        "priv/examples/activity_poolswim_with_hr.fit"
+        |> Fitparser.Decoder.from_fit!(expand_components: true)
+        |> Map.fetch!(:record)
+        |> Enum.find(fn record -> Enum.any?(record.fields, &(&1.name == "speed")) end)
+
+      assert Enum.any?(expanded.fields, &(&1.name == "enhanced_speed"))
     end
 
     test "can disable component expansion" do
       data = File.read!("priv/examples/activity_poolswim_with_hr.fit")
 
-      records =
-        Fitparser.Decoder.load_fit!(data, expand_components: false)[:record]
+      records = Fitparser.Decoder.load_fit!(data)[:record]
 
       refute Enum.any?(records, fn record ->
                Enum.any?(record.fields, &(&1.name == "enhanced_speed"))
+             end)
+    end
+
+    test "normalizes HR component timestamps against their FIT timestamp base" do
+      records =
+        "priv/examples/activity_poolswim_with_hr.fit"
+        |> Fitparser.Decoder.from_fit!(expand_components: true)
+        |> Map.fetch!(:hr)
+
+      record =
+        Enum.find(
+          records,
+          &Enum.any?(&1.fields, fn field -> field.name == "event_timestamp_12" end)
+        )
+
+      assert Enum.any?(record.fields, fn
+               %{name: "event_timestamp", value: value} when value > 1_000_000_000 -> true
+               _ -> false
              end)
     end
 
@@ -147,7 +189,7 @@ defmodule DecoderTest do
         0::little-16>>
 
     result = Fitparser.Decoder.decode!(data)
-    assert %{message_999: [%FitDataRecord{fields: [field]}]} = result
+    assert %{"message_999" => [%FitDataRecord{fields: [field]}]} = result
 
     assert field == %FitDataField{name: "field_0", value: 42, units: nil, number: 0}
   end
@@ -187,8 +229,20 @@ defmodule DecoderTest do
       <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
         0::little-16>>
 
-    assert %{message_999: records} = Fitparser.Decoder.decode!(data)
+    assert %{"message_999" => records} = Fitparser.Decoder.decode!(data)
     assert hd(hd(records).fields).value == 12.5
+  end
+
+  test "uses the definition architecture for endian-capable base types" do
+    body = <<0x40, 0, 0, 132::little-16, 1, 253, 4, 0x86, 0, 840_026_841::little-32>>
+
+    data =
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
+        0::little-16>>
+
+    assert %{hr: [%FitDataRecord{fields: [field]}]} = Fitparser.Decoder.decode!(data)
+    assert field.name == "timestamp"
+    assert field.value == 1_471_092_441
   end
 
   defmodule TestProcessor do
@@ -307,5 +361,14 @@ defmodule DecoderTest do
         }
       ]
     }
+  end
+
+  defp normalize_field_order(records_by_kind) do
+    Map.new(records_by_kind, fn {kind, records} ->
+      {kind,
+       Enum.map(records, fn record ->
+         %{record | fields: Enum.sort_by(record.fields, & &1.number)}
+       end)}
+    end)
   end
 end

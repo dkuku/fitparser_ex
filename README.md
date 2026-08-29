@@ -22,8 +22,10 @@ and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/fitparser>.
 
 Use `Fitparser.Decoder.load_fit/2` for FIT bytes and
-`Fitparser.Decoder.from_fit/2` for file paths. Component fields are expanded
-automatically; pass `expand_components: false` to disable them.
+`Fitparser.Decoder.from_fit/2` for file paths. For faster decoding, component
+fields are disabled by default; pass `expand_components: true` to expand them.
+Fields preserve the order from the FIT definition; expanded component fields
+follow their source field, and developer fields follow regular fields.
 `Fitparser.Decoder.decode/2` and `decode!/2` are aliases for the
 `load_fit` functions, matching the common FIT decoder API.
 

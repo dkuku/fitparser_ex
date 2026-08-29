@@ -15,7 +15,6 @@ defmodule Fitparser.FieldDefinition do
     :accumulate,
     :ref_field_name,
     :ref_field_value,
-    :comment,
     :subfields
   ]
 end

@@ -40,7 +40,7 @@ defmodule Fitparser.Profile do
         defp message(<%= number %>), do: <%= ":" <> name %>
       <% end %>
         defp message(_), do: nil
-      <%= for {message, number, name, type, scale, offset, units, enum, array, components, bits, accumulate, ref_field_name, ref_field_value, comment, subfields} <- @fields do %>
+      <%= for {message, number, name, type, scale, offset, units, enum, array, components, bits, accumulate, ref_field_name, ref_field_value, _comment, subfields} <- @fields do %>
         defp field(<%= message %>, <%= number %>) do
           %Fitparser.FieldDefinition{
             name: <%= inspect(name) %>,
@@ -55,7 +55,6 @@ defmodule Fitparser.Profile do
             accumulate: <%= inspect(accumulate) %>,
             ref_field_name: <%= inspect(ref_field_name) %>,
             ref_field_value: <%= inspect(ref_field_value) %>,
-            comment: <%= inspect(comment) %>,
             subfields: <%= inspect(subfields, limit: :infinity) %>
           }
         end
@@ -65,10 +64,6 @@ defmodule Fitparser.Profile do
         defp field_by_name(<%= message %>, <%= inspect(name) %>), do: field(<%= message %>, <%= number %>)
       <% end %>
         defp field_by_name(_, _), do: nil
-      <%= for {name, number} <- @types do %>
-        defp type(:<%= name %>), do: <%= number %>
-      <% end %>
-        defp type(_), do: nil
     end
   end
 end

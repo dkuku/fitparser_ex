@@ -304,7 +304,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -323,7 +322,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Use ANT for connectivity features",
           subfields: []
         }
       end
@@ -342,7 +340,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -361,7 +358,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -380,7 +376,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Beats / min. Blank: 0",
           subfields: []
         }
       end
@@ -399,7 +394,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Fractional part of start_timestamp",
           subfields: []
         }
       end
@@ -418,7 +412,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -437,7 +430,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -456,7 +448,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -475,7 +466,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Only set for files that are can be created/erased.",
           subfields: []
         }
       end
@@ -494,7 +484,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -513,7 +502,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Max saturated and unsaturated hemoglobin",
           subfields: []
         }
       end
@@ -532,7 +520,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -551,7 +538,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Body battery uncharged value",
           subfields: []
         }
       end
@@ -570,7 +556,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -589,7 +574,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Maximum ascent rate",
           subfields: []
         }
       end
@@ -608,7 +592,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -627,7 +610,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -646,7 +628,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -665,8 +646,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.",
           subfields: []
         }
       end
@@ -685,8 +664,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Must align to logging interval, for example, time must be 00:00:00 for daily log.",
           subfields: []
         }
       end
@@ -705,7 +682,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of the max_cadence",
           subfields: []
         }
       end
@@ -724,7 +700,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -743,7 +718,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Index for the Leader Board entry selected as the default race participant",
           subfields: []
         }
       end
@@ -773,7 +747,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "stop",
           subfields: []
         }
       end
@@ -792,7 +765,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -811,7 +783,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -830,8 +801,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Accumualted time each leader board member required to reach the described point. This value is zero for all leader board members at the starting point of the segment.",
           subfields: []
         }
       end
@@ -850,7 +819,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -869,7 +837,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -888,7 +855,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -918,7 +884,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -937,7 +902,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -956,7 +920,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -975,7 +938,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -994,7 +956,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "stroke_type enum used as the index",
           subfields: []
         }
       end
@@ -1013,7 +974,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1032,7 +992,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1051,7 +1010,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Depth to switch to high setpoint in automatic mode",
           subfields: []
         }
       end
@@ -1070,7 +1028,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1089,7 +1046,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1354,7 +1310,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Manufacturer that produced the segment",
           subfields: []
         }
       end
@@ -1373,8 +1328,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "A 0-100 scale representing how a user felt while performing a workout. Low values are considered feeling bad, while high values are good.",
           subfields: []
         }
       end
@@ -1393,7 +1346,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1412,7 +1364,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Raw parameter data",
           subfields: []
         }
       end
@@ -1431,7 +1382,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1450,7 +1400,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1469,8 +1418,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average power by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -1489,7 +1436,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1635,7 +1581,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1654,7 +1599,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1673,7 +1617,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1692,7 +1635,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Deprecated. Use data field.",
           subfields: []
         }
       end
@@ -1721,7 +1663,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1740,7 +1681,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1759,7 +1699,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1778,8 +1717,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for radar_threat_alert subfield components",
           subfields: []
         }
       end
@@ -1798,7 +1735,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1817,7 +1753,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "0 if above water",
           subfields: []
         }
       end
@@ -1843,7 +1778,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1862,7 +1796,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1881,7 +1814,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1900,7 +1832,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1919,8 +1850,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Timestamp of first sample recorded in the message. Used with time_offset to generate time of each sample",
           subfields: []
         }
       end
@@ -1939,7 +1868,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1958,7 +1886,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1977,7 +1904,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -1996,8 +1922,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.",
           subfields: []
         }
       end
@@ -2016,7 +1940,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Minimum minutes before an autosync can occur",
           subfields: []
         }
       end
@@ -2035,7 +1958,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "X-Axis Measurement",
           subfields: []
         }
       end
@@ -2054,7 +1976,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2073,7 +1994,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2092,7 +2012,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Trigger the alarm on descent",
           subfields: []
         }
       end
@@ -2111,7 +2030,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2175,7 +2093,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2204,7 +2121,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2223,7 +2139,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2242,7 +2157,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Total time spent in the standing position",
           subfields: []
         }
       end
@@ -2261,7 +2175,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2280,7 +2193,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2299,7 +2211,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2318,7 +2229,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2337,7 +2247,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2356,7 +2265,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2375,8 +2283,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Associates this blood pressure message to a user. This corresponds to the index of the user profile message in the blood pressure file.",
           subfields: []
         }
       end
@@ -2395,7 +2301,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2414,7 +2319,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2433,7 +2337,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2452,7 +2355,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2471,7 +2373,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average right platform center offset",
           subfields: []
         }
       end
@@ -2490,7 +2391,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Range -PI to +PI",
           subfields: []
         }
       end
@@ -2509,7 +2409,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Processing interval length in seconds",
           subfields: []
         }
       end
@@ -2582,7 +2481,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2601,8 +2499,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average left power phase peak angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -2621,7 +2517,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2640,7 +2535,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Processing interval length in seconds",
           subfields: []
         }
       end
@@ -2659,8 +2553,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates the amount of restlessness during sleep. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -2679,7 +2571,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2698,7 +2589,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "The timestamp representing when this nap event was last updated",
           subfields: []
         }
       end
@@ -2717,7 +2607,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2790,7 +2679,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2809,7 +2697,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "total_strides",
@@ -2818,7 +2705,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -2834,7 +2720,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -2872,7 +2757,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2902,7 +2786,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2921,8 +2804,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.",
           subfields: []
         }
       end
@@ -2941,7 +2822,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of total_descent",
           subfields: []
         }
       end
@@ -2960,7 +2840,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -2979,7 +2858,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3111,7 +2989,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Dive types the alarm will trigger on",
           subfields: []
         }
       end
@@ -3130,7 +3007,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "1 = gap (time represents ms gap length). 0 = BBI data",
           subfields: []
         }
       end
@@ -3149,7 +3025,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3168,7 +3043,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond part of the timestamp.",
           subfields: []
         }
       end
@@ -3187,7 +3061,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3206,7 +3079,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3225,7 +3097,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3244,7 +3115,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3263,7 +3133,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3282,7 +3151,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3301,7 +3169,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3320,7 +3187,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Show a visible pop-up for this alarm",
           subfields: []
         }
       end
@@ -3339,7 +3205,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3358,8 +3223,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Offset from system time. Required to convert timestamp from system time to UTC.",
           subfields: []
         }
       end
@@ -3378,7 +3241,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3397,7 +3259,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "range 0-100",
           subfields: []
         }
       end
@@ -3416,7 +3277,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3435,7 +3295,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3454,7 +3313,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the timestamp",
           subfields: []
         }
       end
@@ -3473,7 +3331,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3513,7 +3370,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3532,7 +3388,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time since end of last dive",
           subfields: []
         }
       end
@@ -3551,7 +3406,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3570,7 +3424,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3589,7 +3442,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3616,7 +3468,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3635,7 +3486,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Friendly name assigned to leader",
           subfields: []
         }
       end
@@ -3654,7 +3504,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3673,8 +3522,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Each time in the array describes the time at which the gyro sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in gyro_x and gyro_y and gyro_z",
           subfields: []
         }
       end
@@ -3693,7 +3540,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3712,7 +3558,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3731,7 +3576,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "stroke_type enum used as the index",
           subfields: []
         }
       end
@@ -3750,7 +3594,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3769,7 +3612,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3788,7 +3630,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Corresponds to file_id of scheduled workout / course.",
           subfields: []
         }
       end
@@ -3807,7 +3648,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "5 minute high RMSSD value over sleep",
           subfields: []
         }
       end
@@ -3826,7 +3666,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3845,7 +3684,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of total_descent",
           subfields: []
         }
       end
@@ -3864,7 +3702,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Segment enabled for evaluation",
           subfields: []
         }
       end
@@ -3883,7 +3720,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "lev motor power",
           subfields: []
         }
       end
@@ -3902,7 +3738,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Current partial pressure of oxygen",
           subfields: []
         }
       end
@@ -3921,7 +3756,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3940,7 +3774,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3959,7 +3792,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "number of fields in screen",
           subfields: []
         }
       end
@@ -3978,7 +3810,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -3997,7 +3828,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4016,7 +3846,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4035,7 +3864,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Typical wake time",
           subfields: []
         }
       end
@@ -4054,7 +3882,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4073,7 +3900,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4092,7 +3918,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4111,7 +3936,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "0 if above water",
           subfields: []
         }
       end
@@ -4130,7 +3954,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4149,7 +3972,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4168,7 +3990,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4187,7 +4008,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4206,7 +4026,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of the total_cycles",
           subfields: []
         }
       end
@@ -4225,7 +4044,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4244,7 +4062,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond part of the timestamp.",
           subfields: []
         }
       end
@@ -4263,7 +4080,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4282,7 +4098,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4301,7 +4116,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4331,7 +4145,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4350,7 +4163,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4369,7 +4181,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4388,7 +4199,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4407,7 +4217,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Primary key of the user that created the segment",
           subfields: []
         }
       end
@@ -4509,7 +4318,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Sport associated with the segment",
           subfields: []
         }
       end
@@ -4528,7 +4336,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4547,7 +4354,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4566,7 +4372,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4585,7 +4390,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4604,7 +4408,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Encoded configuration data. Health SDK use only",
           subfields: []
         }
       end
@@ -4623,7 +4426,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "User defined running step length set to 0 for auto length",
           subfields: []
         }
       end
@@ -4663,7 +4465,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4682,7 +4483,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4701,7 +4501,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4720,7 +4519,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Total step sum",
           subfields: []
         }
       end
@@ -4739,7 +4537,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4758,7 +4555,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4777,7 +4573,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4796,7 +4591,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4815,7 +4609,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4834,7 +4627,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4853,7 +4645,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4872,8 +4663,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates the sleep interruptions. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -4892,7 +4681,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4911,7 +4699,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average platform center offset Left",
           subfields: []
         }
       end
@@ -4930,7 +4717,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4949,7 +4735,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4968,7 +4753,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -4987,7 +4771,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "zone number used as the index",
           subfields: []
         }
       end
@@ -5006,7 +4789,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "End of clip in video time",
           subfields: []
         }
       end
@@ -5025,7 +4807,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "secondary_custom_target_speed_high",
@@ -5034,7 +4815,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -5050,7 +4830,6 @@ defmodule Fitparser.Profile do
               enum: %{100 => "bpm_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -5066,7 +4845,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -5082,7 +4860,6 @@ defmodule Fitparser.Profile do
               enum: %{1000 => "watts_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -5109,7 +4886,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -5128,8 +4904,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -5148,7 +4922,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Use Bluetooth Low Energy for connectivity features",
           subfields: []
         }
       end
@@ -5167,7 +4940,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of total_ascent",
           subfields: []
         }
       end
@@ -5186,7 +4958,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "favero_product",
@@ -5195,7 +4966,6 @@ defmodule Fitparser.Profile do
               enum: %{10 => "assioma_uno", 12 => "assioma_duo"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -5706,7 +5476,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -5979,7 +5748,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -5998,7 +5766,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6017,8 +5784,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Standard deviation of R-R interval (SDRR) - Heart rate variability measure most useful for wellness users.",
           subfields: []
         }
       end
@@ -6037,7 +5802,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6056,7 +5820,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Min saturated and unsaturated hemoglobin",
           subfields: []
         }
       end
@@ -6075,8 +5838,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -6110,7 +5871,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6129,7 +5889,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6148,7 +5907,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6167,7 +5925,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Size in bytes of data field",
           subfields: []
         }
       end
@@ -6186,7 +5943,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6205,7 +5961,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6224,7 +5979,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6243,7 +5997,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6375,7 +6128,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Dive types the alarm will trigger on",
           subfields: []
         }
       end
@@ -6394,7 +6146,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond resolution of the timestamp",
           subfields: []
         }
       end
@@ -6413,7 +6164,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Depth setting (m) for depth type alarms",
           subfields: []
         }
       end
@@ -6432,8 +6182,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates the amount of light sleep. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -6452,7 +6200,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "The average overnight deviation from baseline temperature in degrees C",
           subfields: []
         }
       end
@@ -6471,7 +6218,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Internal calibration factors, one for each: xy, yx, zx",
           subfields: []
         }
       end
@@ -6490,7 +6236,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Reset by new battery or charge.",
           subfields: []
         }
       end
@@ -6509,7 +6254,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6528,8 +6272,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Accumulated cycles. Maintained by MonitoringReader for each activity_type. See SDK documentation.",
           subfields: [
             %{
               name: "steps",
@@ -6538,7 +6280,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1,
@@ -6554,7 +6295,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 2,
@@ -6581,7 +6321,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6600,8 +6339,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Maximum power by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -6703,7 +6440,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6722,7 +6458,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6741,7 +6476,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6760,7 +6494,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6779,7 +6512,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Alarm type setting",
           subfields: []
         }
       end
@@ -6798,7 +6530,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Index into time zone arrays.",
           subfields: []
         }
       end
@@ -6817,7 +6548,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6836,8 +6566,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "timestamp epoch expressed in local time, used to convert activity timestamps to local time",
           subfields: []
         }
       end
@@ -6969,7 +6697,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -6988,7 +6715,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7007,7 +6733,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7026,7 +6751,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average stress for the monitoring session",
           subfields: []
         }
       end
@@ -7045,7 +6769,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average left platform center offset",
           subfields: []
         }
       end
@@ -7064,7 +6787,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7083,7 +6805,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7102,7 +6823,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7121,7 +6841,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7155,7 +6874,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7174,7 +6892,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated accel reading",
           subfields: []
         }
       end
@@ -7193,7 +6910,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7212,7 +6928,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Right power phase angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -7231,7 +6946,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Min saturated and unsaturated hemoglobin",
           subfields: []
         }
       end
@@ -7250,7 +6964,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7269,7 +6982,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7304,7 +7016,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Leader type of each leader in the segment file",
           subfields: []
         }
       end
@@ -7323,7 +7034,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7342,7 +7052,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7361,7 +7070,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7380,8 +7088,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Each time in the array describes the time at which the compass sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in cmps_x and cmps_y and cmps_z",
           subfields: []
         }
       end
@@ -7400,8 +7106,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Maximum cadence by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -7420,7 +7124,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7439,7 +7142,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "digital_layout",
@@ -7448,7 +7150,6 @@ defmodule Fitparser.Profile do
               enum: %{0 => "traditional", 1 => "modern", 2 => "bold"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -7464,7 +7165,6 @@ defmodule Fitparser.Profile do
               enum: %{0 => "minimal", 1 => "traditional", 2 => "modern"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -7491,7 +7191,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7510,7 +7209,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Start time of the set",
           subfields: []
         }
       end
@@ -7529,7 +7227,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Enabled state of the move alert",
           subfields: []
         }
       end
@@ -7548,7 +7245,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "If New Leaf",
           subfields: []
         }
       end
@@ -7567,7 +7263,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7586,7 +7281,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7605,7 +7299,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "If high PO2 should be switched to automatically",
           subfields: []
         }
       end
@@ -7624,7 +7317,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7643,7 +7335,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7662,7 +7353,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7681,7 +7371,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Total accelerometer time above threshold in the interval",
           subfields: []
         }
       end
@@ -7700,7 +7389,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7719,7 +7407,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Fractional part of timestamp, added to timestamp",
           subfields: []
         }
       end
@@ -7738,7 +7425,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7757,7 +7443,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7776,7 +7461,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7795,7 +7479,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond part of the system timestamp",
           subfields: []
         }
       end
@@ -7814,7 +7497,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7833,8 +7515,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Indicates single type / intensity for duration since last monitoring message.",
           subfields: []
         }
       end
@@ -7853,7 +7533,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7872,7 +7551,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indicates if calibrated data was used in the calculation",
           subfields: []
         }
       end
@@ -7891,7 +7569,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Alarm type setting",
           subfields: []
         }
       end
@@ -7910,7 +7587,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7929,7 +7605,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7948,8 +7623,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Accumulated total calories. Maintained by MonitoringReader for each activity_type. See SDK documentation",
           subfields: []
         }
       end
@@ -7968,7 +7641,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -7987,7 +7659,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8006,7 +7677,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8025,7 +7695,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8044,7 +7713,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8063,8 +7731,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "velocity[0] is lon velocity. Velocity[1] is lat velocity. Velocity[2] is altitude velocity.",
           subfields: []
         }
       end
@@ -8083,7 +7749,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8102,7 +7767,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8121,7 +7785,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8140,7 +7803,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Timestamp message was output",
           subfields: []
         }
       end
@@ -8159,7 +7821,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "total_distance / total_timer_time",
           subfields: []
         }
       end
@@ -8178,7 +7839,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Timestamp message was output",
           subfields: []
         }
       end
@@ -8197,7 +7857,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "NMEA sentence",
           subfields: []
         }
       end
@@ -8216,7 +7875,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8235,7 +7893,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8254,7 +7911,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Includes pauses",
           subfields: []
         }
       end
@@ -8273,8 +7929,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates the total time spent awake between sleep. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -8293,7 +7947,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8312,8 +7965,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.",
           subfields: []
         }
       end
@@ -8332,7 +7983,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8351,7 +8001,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "A more precise target speed field",
           subfields: []
         }
       end
@@ -8370,7 +8019,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8389,7 +8037,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8408,8 +8055,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average right power phase peak angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -8428,7 +8073,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time setting (s) for time type alarms",
           subfields: []
         }
       end
@@ -8447,7 +8091,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Enabled state of the activity tracker functionality",
           subfields: []
         }
       end
@@ -8466,7 +8109,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "# of active lengths of swim pool",
           subfields: []
         }
       end
@@ -8485,7 +8127,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Friendly name assigned to segment",
           subfields: []
         }
       end
@@ -8504,7 +8145,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8523,7 +8163,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8542,7 +8181,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8561,7 +8199,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "A score for a jump calculated based on hang time, rotations, and distance.",
           subfields: []
         }
       end
@@ -8580,7 +8217,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8599,7 +8235,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8618,7 +8253,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8637,7 +8271,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Left platform center offset",
           subfields: []
         }
       end
@@ -8656,7 +8289,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "0 if above water",
           subfields: []
         }
       end
@@ -8675,7 +8307,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8694,7 +8325,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8713,7 +8343,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Z-Axis Measurement",
           subfields: []
         }
       end
@@ -8732,7 +8361,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Primary key of the user that created the segment file",
           subfields: []
         }
       end
@@ -8751,7 +8379,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Sampling Interval in 32 kHz timescale",
           subfields: []
         }
       end
@@ -8770,7 +8397,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Avg saturated and unsaturated hemoglobin",
           subfields: []
         }
       end
@@ -8789,7 +8415,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "North east corner longitude",
           subfields: []
         }
       end
@@ -8808,7 +8433,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8827,7 +8451,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8853,7 +8476,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8872,7 +8494,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8891,7 +8512,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8910,7 +8530,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8929,7 +8548,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time between surfacing and ending the activity",
           subfields: []
         }
       end
@@ -8948,7 +8566,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "# of lengths of swim pool",
           subfields: []
         }
       end
@@ -8967,7 +8584,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -8986,8 +8602,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Used to correlate UTC to system time if the timestamp of the message is in system time. This UTC time is derived from the GPS data.",
           subfields: []
         }
       end
@@ -9006,7 +8620,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Automatically upload using BLE",
           subfields: []
         }
       end
@@ -9025,7 +8638,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9044,7 +8656,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Event ID. Health SDK use only",
           subfields: []
         }
       end
@@ -9110,7 +8721,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9129,7 +8739,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9148,7 +8757,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9167,7 +8775,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9186,7 +8793,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "0 if above water",
           subfields: []
         }
       end
@@ -9205,7 +8811,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Wrist temperature reading",
           subfields: []
         }
       end
@@ -9224,8 +8829,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average power by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -9244,7 +8847,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9263,7 +8865,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9282,7 +8883,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9301,7 +8901,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9320,8 +8919,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average left power phase angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -9340,7 +8937,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9359,7 +8955,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9378,7 +8973,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9397,8 +8991,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average power by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -9417,7 +9009,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9436,7 +9027,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9455,7 +9045,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9474,7 +9063,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Start of clip in video time",
           subfields: []
         }
       end
@@ -9493,7 +9081,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9512,7 +9099,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9531,7 +9117,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the timestamp.",
           subfields: []
         }
       end
@@ -9550,8 +9135,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Fractional part of the UTC timestamp at the time the system timestamp was recorded.",
           subfields: []
         }
       end
@@ -9570,7 +9153,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9589,7 +9171,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9608,7 +9189,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9627,7 +9207,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Activity ID of each leader in the segment file",
           subfields: []
         }
       end
@@ -9646,7 +9225,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Number of transitions to the standing state",
           subfields: []
         }
       end
@@ -9665,7 +9243,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indexed using minute_activity_level enum",
           subfields: []
         }
       end
@@ -9684,7 +9261,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9703,7 +9279,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9722,7 +9297,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9741,8 +9315,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "String version of the activity ID of each leader in the segment file. 21 characters long for each ID, express in decimal",
           subfields: []
         }
       end
@@ -9761,7 +9333,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9780,7 +9351,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9799,7 +9369,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9818,7 +9387,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Range -PI/2 to +PI/2",
           subfields: []
         }
       end
@@ -9837,7 +9405,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the timestamp",
           subfields: []
         }
       end
@@ -9856,7 +9423,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Total number of title parts",
           subfields: []
         }
       end
@@ -9875,7 +9441,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9894,7 +9459,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9913,7 +9477,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9932,7 +9495,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9951,7 +9513,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -9970,7 +9531,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Processing interval length in seconds",
           subfields: []
         }
       end
@@ -10011,7 +9571,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10030,7 +9589,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10049,7 +9607,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Processing interval length in seconds",
           subfields: []
         }
       end
@@ -10068,7 +9625,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10087,8 +9643,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates stress and recovery during sleep. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -10107,7 +9661,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Timestamp of when the event started",
           subfields: [
             %{
               name: "auto_activity_detect_start_timestamp",
@@ -10116,7 +9669,6 @@ defmodule Fitparser.Profile do
               enum: %{268_435_456 => "min"},
               array: false,
               bits: nil,
-              comment: "Auto Activity Detect Start Timestamp.",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -10143,7 +9695,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10162,7 +9713,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10181,7 +9731,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Sounds and vibration enabled or disabled in-dive",
           subfields: []
         }
       end
@@ -10200,7 +9749,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10219,7 +9767,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10238,7 +9785,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10257,7 +9803,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "0 if above water",
           subfields: []
         }
       end
@@ -10276,7 +9821,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10295,7 +9839,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Max saturated and unsaturated hemoglobin",
           subfields: []
         }
       end
@@ -10314,7 +9857,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10333,7 +9875,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Right platform center offset",
           subfields: []
         }
       end
@@ -10352,7 +9893,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Maximum descent rate",
           subfields: []
         }
       end
@@ -10371,7 +9911,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10390,7 +9929,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10409,7 +9947,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated gyro reading",
           subfields: []
         }
       end
@@ -10428,8 +9965,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Maximum cadence by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -10448,7 +9983,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10467,7 +10001,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10486,7 +10019,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10505,8 +10037,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.",
           subfields: []
         }
       end
@@ -10525,7 +10055,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Internal Calibration factor",
           subfields: []
         }
       end
@@ -10544,7 +10073,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10563,7 +10091,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10587,7 +10114,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10606,7 +10132,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10625,7 +10150,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Array of millisecond times between beats",
           subfields: []
         }
       end
@@ -10644,7 +10168,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10663,7 +10186,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Avg saturated and unsaturated hemoglobin",
           subfields: []
         }
       end
@@ -10682,7 +10204,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10748,7 +10269,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10767,7 +10287,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Y-Axis Measurement",
           subfields: []
         }
       end
@@ -10786,7 +10305,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10805,7 +10323,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -10824,8 +10341,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "total_cycles / total_timer_time if non_zero_avg_cadence otherwise total_cycles / total_elapsed_time",
           subfields: [
             %{
               name: "avg_running_cadence",
@@ -10834,7 +10349,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -10861,7 +10375,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "String version of the activity_id. 21 characters long, express in decimal",
           subfields: []
         }
       end
@@ -10880,7 +10393,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Description of the workout",
           subfields: []
         }
       end
@@ -10982,7 +10494,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11001,7 +10512,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11020,7 +10530,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11039,7 +10548,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11058,7 +10566,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11077,7 +10584,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Y-Axis Measurement",
           subfields: []
         }
       end
@@ -11096,7 +10602,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11115,7 +10620,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Excludes pauses",
           subfields: []
         }
       end
@@ -11145,7 +10649,6 @@ defmodule Fitparser.Profile do
           accumulate: "1,1,1,1,1,1,1,1,1,1",
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11164,8 +10667,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Maximum cadence by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -11184,7 +10685,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11203,7 +10703,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Bitfield to configure enabled screens for each supported loop",
           subfields: []
         }
       end
@@ -11222,7 +10721,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Used to hold the tap threshold setting",
           subfields: []
         }
       end
@@ -11241,7 +10739,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Processing interval length in seconds",
           subfields: []
         }
       end
@@ -11260,7 +10757,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of the total_cycles",
           subfields: []
         }
       end
@@ -11279,7 +10775,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indicates which guidelines to use for no-fly surface interval.",
           subfields: []
         }
       end
@@ -11298,7 +10793,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time (includes pauses)",
           subfields: []
         }
       end
@@ -11317,7 +10811,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11336,7 +10829,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11355,7 +10847,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11457,7 +10948,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11476,7 +10966,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11495,7 +10984,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11514,7 +11002,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11533,7 +11020,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11552,7 +11038,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11571,8 +11056,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Associates this weight scale message to a user. This corresponds to the index of the user profile message in the weight scale file.",
           subfields: []
         }
       end
@@ -11591,7 +11074,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11610,7 +11092,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11629,7 +11110,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11648,7 +11128,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indicates which sensor the calibration is for",
           subfields: []
         }
       end
@@ -11667,7 +11146,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "custom_target_speed_high",
@@ -11676,7 +11154,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -11692,7 +11169,6 @@ defmodule Fitparser.Profile do
               enum: %{100 => "bpm_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -11708,7 +11184,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -11724,7 +11199,6 @@ defmodule Fitparser.Profile do
               enum: %{1000 => "watts_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -11751,7 +11225,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Used for Morning Report greeting",
           subfields: []
         }
       end
@@ -11770,7 +11243,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11808,7 +11280,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11827,7 +11298,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11846,7 +11316,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average left power phase angles. Indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -11865,7 +11334,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11884,7 +11352,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11903,7 +11370,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11922,7 +11388,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -11948,7 +11413,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Display mode for the time",
           subfields: []
         }
       end
@@ -11967,7 +11431,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Sampling Interval in Milliseconds",
           subfields: []
         }
       end
@@ -11986,7 +11449,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Fractional part of the system timestamp",
           subfields: []
         }
       end
@@ -12005,7 +11467,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12024,7 +11485,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12043,8 +11503,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.",
           subfields: []
         }
       end
@@ -12063,7 +11521,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12082,8 +11539,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.",
           subfields: []
         }
       end
@@ -12102,8 +11557,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Common Borg CR10 / 0-10 RPE scale, multiplied 10x.. Aggregate score for all workouts in a single session.",
           subfields: []
         }
       end
@@ -12122,7 +11575,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Unique identifier from GCS report ID string, length is 12",
           subfields: []
         }
       end
@@ -12141,7 +11593,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12160,7 +11611,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12179,7 +11629,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Timestamp message was output",
           subfields: []
         }
       end
@@ -12198,7 +11647,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Alarm ID",
           subfields: []
         }
       end
@@ -12223,7 +11671,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Smart Notification display orientation",
           subfields: []
         }
       end
@@ -12242,7 +11689,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Min percentage of hemoglobin saturated with oxygen",
           subfields: []
         }
       end
@@ -12261,7 +11707,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Number of front gears",
           subfields: []
         }
       end
@@ -12280,7 +11725,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond part of the timestamp.",
           subfields: []
         }
       end
@@ -12299,7 +11743,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Fresh water is usually 1000; salt water is usually 1025",
           subfields: []
         }
       end
@@ -12318,7 +11761,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12337,7 +11779,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12356,7 +11797,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12375,8 +11815,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Must align to logging interval, for example, time must be 00:00:00 for daily log.",
           subfields: []
         }
       end
@@ -12395,7 +11833,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12414,7 +11851,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Body battery charged value",
           subfields: []
         }
       end
@@ -12484,7 +11920,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12503,7 +11938,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12522,7 +11956,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12549,7 +11982,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12814,7 +12246,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -12916,7 +12347,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13021,7 +12451,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Tornado, Severe Thunderstorm, etc.",
           subfields: []
         }
       end
@@ -13040,7 +12469,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Sport name from associated sport mesg",
           subfields: []
         }
       end
@@ -13059,8 +12487,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates the quality of sleep based on sleep stages, heart-rate variability and possible awakenings during the night. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -13079,7 +12505,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13098,7 +12523,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13117,7 +12541,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13136,8 +12559,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.",
           subfields: []
         }
       end
@@ -13210,7 +12631,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13272,7 +12692,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13291,7 +12710,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "The number of awakenings during sleep.",
           subfields: []
         }
       end
@@ -13310,7 +12728,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13329,7 +12746,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13348,7 +12764,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13367,7 +12782,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13386,7 +12800,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13405,7 +12818,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Number of rear gears",
           subfields: []
         }
       end
@@ -13424,7 +12836,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the timestamp.",
           subfields: []
         }
       end
@@ -13443,7 +12854,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13467,7 +12877,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13486,7 +12895,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13505,7 +12913,6 @@ defmodule Fitparser.Profile do
           accumulate: "1",
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13524,7 +12931,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of the max_cadence",
           subfields: []
         }
       end
@@ -13543,7 +12949,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13562,7 +12967,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Field within the parent that this glob is associated with",
           subfields: []
         }
       end
@@ -13581,7 +12985,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13608,7 +13011,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13627,7 +13029,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13646,8 +13047,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Stress Level: [0,100] Off wrist: -1 Excess motion: -2 Not enough data: -3 Recovering from exercise: -4 Unidentified: -5 Blank: -16",
           subfields: []
         }
       end
@@ -13666,7 +13065,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13685,7 +13083,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "number of valid steps",
           subfields: []
         }
       end
@@ -13704,7 +13101,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "3 week baseline, lower boundary of balanced HRV status",
           subfields: []
         }
       end
@@ -13723,7 +13119,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13742,7 +13137,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13769,8 +13163,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Allows setting specific activities auto-activity detect enabled/disabled settings",
           subfields: []
         }
       end
@@ -13789,7 +13181,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13808,7 +13199,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13827,7 +13217,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13846,7 +13235,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -13865,8 +13253,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Left power phase peak angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -13885,7 +13271,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Typical bed time",
           subfields: []
         }
       end
@@ -13904,8 +13289,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average cadence by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -13924,7 +13307,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "favero_product",
@@ -13933,7 +13315,6 @@ defmodule Fitparser.Profile do
               enum: %{10 => "assioma_uno", 12 => "assioma_duo"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -14444,7 +13825,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -14471,7 +13851,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14490,7 +13869,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14509,7 +13887,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14528,7 +13905,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14547,7 +13923,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14566,7 +13941,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14606,7 +13980,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14625,7 +13998,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14644,7 +14016,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14663,7 +14034,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "max_running_cadence",
@@ -14672,7 +14042,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -14699,8 +14068,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Each time in the array describes the time at which the barometer sample with the corrosponding index was taken. The samples may span across seconds. Array size must match the number of samples in baro_cal",
           subfields: []
         }
       end
@@ -14719,7 +14086,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14738,7 +14104,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -14757,8 +14122,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -14777,7 +14140,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "favero_product",
@@ -14786,7 +14148,6 @@ defmodule Fitparser.Profile do
               enum: %{10 => "assioma_uno", 12 => "assioma_duo"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -15297,7 +14658,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -15324,7 +14684,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15343,7 +14702,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15362,7 +14720,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "South west corner latitude.",
           subfields: []
         }
       end
@@ -15381,7 +14738,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indexed by activity_type",
           subfields: []
         }
       end
@@ -15400,7 +14756,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15419,7 +14774,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15438,7 +14792,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15457,7 +14810,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15476,7 +14828,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15495,7 +14846,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15514,7 +14864,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15533,7 +14882,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "total_distance / total_timer_time",
           subfields: []
         }
       end
@@ -15552,8 +14900,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average right power phase angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -15572,7 +14918,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "0 if above water",
           subfields: []
         }
       end
@@ -15597,7 +14942,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Helps to conserve battery by changing modes",
           subfields: []
         }
       end
@@ -15616,7 +14960,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15675,7 +15018,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15707,7 +15049,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15726,7 +15067,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15745,7 +15085,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15764,7 +15103,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Ascent/descent rate (mps) setting for speed type alarms",
           subfields: []
         }
       end
@@ -15783,7 +15121,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Active time of split rounds",
           subfields: []
         }
       end
@@ -15802,7 +15139,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time at safety stop (if enabled)",
           subfields: []
         }
       end
@@ -15821,7 +15157,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15840,7 +15175,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indidcates if the estimate was obtained using onboard GPS or connected GPS",
           subfields: []
         }
       end
@@ -15859,7 +15193,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15878,8 +15211,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.",
           subfields: []
         }
       end
@@ -15898,7 +15229,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15917,7 +15247,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "UUID of the segment file",
           subfields: []
         }
       end
@@ -15936,7 +15265,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -15955,7 +15283,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated Magnetometer reading",
           subfields: []
         }
       end
@@ -15974,7 +15301,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated Magnetometer reading",
           subfields: []
         }
       end
@@ -15993,7 +15319,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16012,7 +15337,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16031,8 +15355,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Heat Index if GCS heatIdx above or equal to 90F or wind chill if GCS windChill below or equal to 32F",
           subfields: []
         }
       end
@@ -16051,7 +15373,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16070,7 +15391,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16089,7 +15409,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16108,7 +15427,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "North east corner latitude",
           subfields: []
         }
       end
@@ -16174,7 +15492,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "session",
           subfields: []
         }
       end
@@ -16193,7 +15510,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16212,7 +15528,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16231,8 +15546,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The percent complete of the current attitude stage. Set to 0 for attitude stages 0, 1 and 2 and to 100 for attitude stage 3 by AHRS modules that do not support it. Range - 100",
           subfields: []
         }
       end
@@ -16251,7 +15564,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "zone number used as the index",
           subfields: []
         }
       end
@@ -16270,7 +15582,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16289,7 +15600,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16308,7 +15618,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16327,7 +15636,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Array of millisecond times between beats",
           subfields: []
         }
       end
@@ -16346,7 +15654,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16412,7 +15719,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16431,7 +15737,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16450,7 +15755,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average pressure-based surface air consumption",
           subfields: []
         }
       end
@@ -16469,7 +15773,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16488,7 +15791,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Status of measurements in buffer - 0 indicates SEARCHING 1 indicates LOCKED",
           subfields: []
         }
       end
@@ -16507,7 +15809,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16526,7 +15827,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16545,7 +15845,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16564,7 +15863,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Enable auto-detect setting for the lactate threshold feature.",
           subfields: []
         }
       end
@@ -16583,7 +15881,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Number of teeth on each gear 0 is innermost",
           subfields: []
         }
       end
@@ -16602,7 +15899,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the timestamp",
           subfields: []
         }
       end
@@ -16704,7 +16000,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16723,7 +16018,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of the total_cycles",
           subfields: []
         }
       end
@@ -16742,7 +16036,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indicates whether the up key is enabled during dives",
           subfields: []
         }
       end
@@ -16761,7 +16054,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16780,7 +16072,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "3 week baseline, upper boundary of balanced HRV status",
           subfields: []
         }
       end
@@ -16799,8 +16090,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "total_power / total_timer_time if non_zero_avg_power otherwise total_power / total_elapsed_time",
           subfields: []
         }
       end
@@ -16819,7 +16108,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16838,7 +16126,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16857,7 +16144,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indicates if any segments should be deleted",
           subfields: []
         }
       end
@@ -16876,7 +16162,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of the avg_cadence",
           subfields: []
         }
       end
@@ -16895,7 +16180,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the timestamp",
           subfields: []
         }
       end
@@ -16914,7 +16198,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Optional free form string to indicate the devices name or model",
           subfields: []
         }
       end
@@ -16933,7 +16216,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16952,7 +16234,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16971,7 +16252,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -16990,7 +16270,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17031,7 +16310,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17142,8 +16420,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "1 bit for gap indicator, 1 bit for quality indicator, and 14 bits for Beat-to-Beat interval values in whole-integer millisecond resolution",
           subfields: []
         }
       end
@@ -17162,8 +16438,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "timestamp epoch expressed in local time used to convert timestamps to local time",
           subfields: []
         }
       end
@@ -17182,7 +16456,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "RHR for today only. (Feeds into 7-day average)",
           subfields: []
         }
       end
@@ -17201,7 +16474,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17220,7 +16492,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17239,7 +16510,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Group primary key of each leader in the segment file",
           subfields: []
         }
       end
@@ -17258,7 +16528,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17277,7 +16546,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of the max_cadence",
           subfields: []
         }
       end
@@ -17303,7 +16571,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17322,7 +16589,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17362,7 +16628,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17381,8 +16646,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Right power phase peak angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -17401,7 +16664,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17533,7 +16795,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17560,7 +16821,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Mode for backlight",
           subfields: []
         }
       end
@@ -17579,7 +16839,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "ID of the activity associated with this leader time",
           subfields: []
         }
       end
@@ -17598,7 +16857,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17617,7 +16875,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17646,7 +16903,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17665,7 +16921,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17684,7 +16939,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17703,7 +16957,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17722,7 +16975,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17741,7 +16993,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "average heart rate (excludes pause time)",
           subfields: []
         }
       end
@@ -17793,7 +17044,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17812,7 +17062,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indicates how the segment was selected to be sent to the device",
           subfields: []
         }
       end
@@ -17843,7 +17092,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17862,7 +17110,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17881,7 +17128,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "heart_rate_antplus_device_type",
@@ -17916,7 +17162,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -17941,7 +17186,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -17968,7 +17212,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -17987,7 +17230,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Max percentage of hemoglobin saturated with oxygen",
           subfields: []
         }
       end
@@ -18133,7 +17375,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Message Number of the parent message",
           subfields: []
         }
       end
@@ -18152,7 +17393,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Target PO2 when using low setpoint",
           subfields: []
         }
       end
@@ -18171,7 +17411,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the timestamp",
           subfields: []
         }
       end
@@ -18190,7 +17429,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Ascent/descent rate (mps) setting for speed type alarms",
           subfields: []
         }
       end
@@ -18209,7 +17447,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18228,7 +17465,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18247,7 +17483,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Optional free form string to indicate the devices name or model",
           subfields: []
         }
       end
@@ -18266,7 +17501,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated accel reading",
           subfields: []
         }
       end
@@ -18285,7 +17519,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18304,7 +17537,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18323,7 +17555,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18342,7 +17573,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18361,7 +17591,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18380,7 +17609,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18404,7 +17632,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18423,7 +17650,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18442,7 +17668,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18461,7 +17686,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18480,8 +17704,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Maximum power by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -18500,7 +17722,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average ascent rate, not including descents or stops",
           subfields: []
         }
       end
@@ -18519,7 +17740,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18538,8 +17758,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Must align to logging interval, for example, time must be 00:00:00 for daily log.",
           subfields: []
         }
       end
@@ -18558,7 +17776,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18577,7 +17794,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18596,7 +17812,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18615,7 +17830,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18645,7 +17859,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18664,7 +17877,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18683,7 +17895,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18702,8 +17913,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Whole second part of UTC timestamp at the time the system timestamp was recorded.",
           subfields: []
         }
       end
@@ -18722,7 +17931,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond part of the timestamp.",
           subfields: []
         }
       end
@@ -18741,7 +17949,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18768,7 +17975,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18787,7 +17993,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18813,7 +18018,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18832,7 +18036,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18851,7 +18054,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18870,7 +18072,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Depth to switch to low setpoint in automatic mode",
           subfields: []
         }
       end
@@ -18889,7 +18090,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18926,7 +18126,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18945,8 +18144,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average right power phase peak angles data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -18965,7 +18162,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -18984,7 +18180,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19003,7 +18198,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "0 if above water",
           subfields: []
         }
       end
@@ -19022,8 +18216,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Block of utf8 bytes. Note, mutltibyte characters may be split across adjoining memo_glob messages.",
           subfields: []
         }
       end
@@ -19042,8 +18234,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.",
           subfields: []
         }
       end
@@ -19062,8 +18252,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for sport_point subfield components",
           subfields: []
         }
       end
@@ -19082,7 +18270,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "5 minute RMSSD",
           subfields: []
         }
       end
@@ -19101,7 +18288,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19120,7 +18306,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19139,7 +18324,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Playback time of video",
           subfields: []
         }
       end
@@ -19158,7 +18342,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19177,7 +18360,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19196,7 +18378,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Excludes stress during awake periods in the sleep window",
           subfields: []
         }
       end
@@ -19215,7 +18396,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond part of the timestamp.",
           subfields: []
         }
       end
@@ -19234,7 +18414,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19253,7 +18432,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "0 if above water",
           subfields: []
         }
       end
@@ -19272,7 +18450,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19291,8 +18468,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average right power phase peak angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -19311,7 +18486,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19330,7 +18504,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated Magnetometer reading",
           subfields: []
         }
       end
@@ -19349,7 +18522,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "zone number used as the index",
           subfields: []
         }
       end
@@ -19368,8 +18540,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -19388,7 +18558,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19407,7 +18576,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19426,7 +18594,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19445,7 +18612,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Max percentage of hemoglobin saturated with oxygen",
           subfields: []
         }
       end
@@ -19464,7 +18630,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Processing interval length in seconds",
           subfields: []
         }
       end
@@ -19483,7 +18648,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19502,7 +18666,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19521,8 +18684,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -19541,8 +18702,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates the amount of REM sleep. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -19561,7 +18720,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19580,7 +18738,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19599,7 +18756,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19618,7 +18774,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated accel reading",
           subfields: []
         }
       end
@@ -19637,7 +18792,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19656,7 +18810,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19675,7 +18828,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19694,7 +18846,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19713,7 +18864,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19732,7 +18882,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Number of transitions to the standing state",
           subfields: []
         }
       end
@@ -19751,7 +18900,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19770,7 +18918,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Max percentage of hemoglobin saturated with oxygen",
           subfields: []
         }
       end
@@ -19789,7 +18936,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19808,7 +18954,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19827,7 +18972,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "32 kHz timestamp",
           subfields: []
         }
       end
@@ -19959,7 +19103,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19978,7 +19121,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -19997,7 +19139,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20016,7 +19157,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20035,7 +19175,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Final overnight temperature value",
           subfields: []
         }
       end
@@ -20054,7 +19193,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20073,7 +19211,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20092,7 +19229,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20111,7 +19247,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20130,7 +19265,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20149,7 +19283,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20168,7 +19301,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Level shift value used to shift the ADC value back into range",
           subfields: []
         }
       end
@@ -20187,7 +19319,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20206,7 +19337,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20233,7 +19363,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20252,7 +19381,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond resolution of the timestamp",
           subfields: []
         }
       end
@@ -20271,7 +19399,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20403,7 +19530,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20422,7 +19548,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibration factor divisor",
           subfields: []
         }
       end
@@ -20441,7 +19566,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20460,7 +19584,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20725,7 +19848,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20744,7 +19866,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20763,7 +19884,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Wheelchair Pushes",
           subfields: []
         }
       end
@@ -20782,7 +19902,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20809,7 +19928,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20828,7 +19946,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time setting (s) for time type alarms",
           subfields: []
         }
       end
@@ -20847,7 +19964,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "3 week baseline, upper boundary of low HRV status",
           subfields: []
         }
       end
@@ -20866,7 +19982,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20885,7 +20000,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20904,7 +20018,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20923,7 +20036,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Max temperature during the logging interval ended at timestamp",
           subfields: []
         }
       end
@@ -20942,7 +20054,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time spent neither ascending nor descending",
           subfields: []
         }
       end
@@ -20961,7 +20072,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20980,7 +20090,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -20999,8 +20108,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.",
           subfields: []
         }
       end
@@ -21019,7 +20126,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21038,7 +20144,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21057,7 +20162,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "secondary_custom_target_speed_low",
@@ -21066,7 +20170,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -21082,7 +20185,6 @@ defmodule Fitparser.Profile do
               enum: %{100 => "bpm_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -21098,7 +20200,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -21114,7 +20215,6 @@ defmodule Fitparser.Profile do
               enum: %{1000 => "watts_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -21141,7 +20241,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Accumulated altitude along the segment at the described point",
           subfields: []
         }
       end
@@ -21160,7 +20259,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21179,7 +20277,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibration factor divisor",
           subfields: []
         }
       end
@@ -21198,7 +20295,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "time of update for current conditions, else forecast time",
           subfields: []
         }
       end
@@ -21217,7 +20313,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21236,7 +20331,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21255,7 +20349,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21274,7 +20367,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21303,7 +20395,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21322,8 +20413,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates the quality of sleep based on sleep stages, heart-rate variability and possible awakenings during the night. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -21342,7 +20431,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Percentage of hemoglobin saturated with oxygen",
           subfields: []
         }
       end
@@ -21361,7 +20449,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21391,7 +20478,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21410,7 +20496,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21429,7 +20514,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Mode when data was captured",
           subfields: []
         }
       end
@@ -21448,7 +20532,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21467,7 +20550,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average volumetric surface air consumption",
           subfields: []
         }
       end
@@ -21501,7 +20583,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21520,7 +20601,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21539,7 +20619,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21558,7 +20637,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Offset from system time.",
           subfields: []
         }
       end
@@ -21577,7 +20655,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Exclude pauses",
           subfields: []
         }
       end
@@ -21596,7 +20673,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21615,7 +20691,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Trigger the alarm on ascent",
           subfields: []
         }
       end
@@ -21634,7 +20709,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of total_ascent",
           subfields: []
         }
       end
@@ -21653,7 +20727,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Supports larger cycle sizes needed for paddlesports. Max cycle size: 655.35",
           subfields: []
         }
       end
@@ -21672,7 +20745,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21691,7 +20763,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21837,7 +20908,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21856,7 +20926,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21875,7 +20944,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Relative. 0 is none 254 is Max.",
           subfields: []
         }
       end
@@ -21941,7 +21009,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -21960,7 +21027,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of total_descent",
           subfields: []
         }
       end
@@ -21979,7 +21045,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Avg percentage of hemoglobin saturated with oxygen",
           subfields: []
         }
       end
@@ -21998,7 +21063,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22144,7 +21208,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22184,7 +21247,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22203,7 +21265,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22222,7 +21283,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Bitfield to indicate one page as default for each supported loop",
           subfields: []
         }
       end
@@ -22368,7 +21428,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22387,7 +21446,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22406,7 +21464,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Optional, data size of PID[i]. If not specified refer to SAE J1979.",
           subfields: []
         }
       end
@@ -22425,7 +21482,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22444,7 +21500,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "X-Axis Measurement",
           subfields: []
         }
       end
@@ -22463,7 +21518,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22482,7 +21536,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22501,7 +21554,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22520,7 +21572,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22539,7 +21590,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Use Bluetooth for connectivity features",
           subfields: []
         }
       end
@@ -22558,7 +21608,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22577,7 +21626,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22596,7 +21644,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22615,7 +21662,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22634,7 +21680,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22653,7 +21698,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22672,7 +21716,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Total time spend in the standing position",
           subfields: []
         }
       end
@@ -22691,7 +21734,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -22710,7 +21752,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "favero_product",
@@ -22719,7 +21760,6 @@ defmodule Fitparser.Profile do
               enum: %{10 => "assioma_uno", 12 => "assioma_duo"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -23230,7 +22270,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -23257,7 +22296,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23276,7 +22314,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23295,7 +22332,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Fractional part of timestamp, added to timestamp",
           subfields: []
         }
       end
@@ -23314,7 +22350,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23333,7 +22368,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23352,7 +22386,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "UTC timestamp used to set the devices clock and date",
           subfields: []
         }
       end
@@ -23371,7 +22404,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23390,7 +22422,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "custom_target_speed_low",
@@ -23399,7 +22430,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -23415,7 +22445,6 @@ defmodule Fitparser.Profile do
               enum: %{100 => "bpm_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -23431,7 +22460,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -23447,7 +22475,6 @@ defmodule Fitparser.Profile do
               enum: %{1000 => "watts_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -23474,7 +22501,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Use language_bits_x types where x is index of array.",
           subfields: []
         }
       end
@@ -23493,7 +22519,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Total saturated and unsaturated hemoglobin",
           subfields: []
         }
       end
@@ -23512,7 +22537,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23531,7 +22555,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average platform center offset Right",
           subfields: []
         }
       end
@@ -23550,7 +22573,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23569,7 +22591,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23588,7 +22609,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Avg temperature during the logging interval ended at timestamp",
           subfields: []
         }
       end
@@ -23607,7 +22627,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23626,7 +22645,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23645,8 +22663,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.",
           subfields: []
         }
       end
@@ -23665,7 +22681,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "total_strokes",
@@ -23674,7 +22689,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -23701,7 +22715,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23720,7 +22733,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of total_ascent",
           subfields: []
         }
       end
@@ -23739,7 +22751,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Number of teeth on each gear 0 is innermost",
           subfields: []
         }
       end
@@ -23769,7 +22780,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Activity Type associated with an auto_activity_detect event",
           subfields: []
         }
       end
@@ -23788,7 +22798,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23807,7 +22816,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23831,7 +22839,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23850,7 +22857,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23869,7 +22875,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23888,7 +22893,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Repeat alarm each time threshold is crossed?",
           subfields: []
         }
       end
@@ -23907,7 +22911,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23926,7 +22929,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibration factor used to convert from raw ADC value to degrees, g, etc.",
           subfields: [
             %{
               name: "accel_cal_factor",
@@ -23935,7 +22937,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "Accelerometer calibration factor",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -23951,7 +22952,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "Gyro calibration factor",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -23978,7 +22978,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -23997,7 +22996,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24016,7 +23014,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Usually 1.0/1.5/2.0 representing 3/4.5/6m or 10/15/20ft",
           subfields: []
         }
       end
@@ -24035,7 +23032,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24054,7 +23050,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Current or forecast",
           subfields: []
         }
       end
@@ -24073,7 +23068,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24092,7 +23086,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24111,7 +23104,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24130,7 +23122,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time alert was issued",
           subfields: []
         }
       end
@@ -24149,7 +23140,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24168,7 +23158,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Number of the frame that the timestamp and timestamp_ms correlate to",
           subfields: []
         }
       end
@@ -24187,7 +23176,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24206,7 +23194,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24225,7 +23212,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24244,7 +23230,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Long titles will be split into multiple parts",
           subfields: []
         }
       end
@@ -24263,7 +23248,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24282,7 +23266,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Count of zero crossings",
           subfields: []
         }
       end
@@ -24301,7 +23284,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24320,7 +23302,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24339,7 +23320,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24358,7 +23338,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24377,7 +23356,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Alarm ID",
           subfields: []
         }
       end
@@ -24396,7 +23374,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24415,8 +23392,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for gear_change subfield components. Front gear number. 1 is innermost.",
           subfields: []
         }
       end
@@ -24435,7 +23410,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24454,7 +23428,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24473,8 +23446,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for radar_threat_alert subfield components",
           subfields: []
         }
       end
@@ -24739,7 +23710,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24758,7 +23728,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Enablement flag",
           subfields: []
         }
       end
@@ -24777,8 +23746,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -24797,7 +23764,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24816,7 +23782,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Left power phase angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -24835,7 +23800,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "South west corner longitude",
           subfields: []
         }
       end
@@ -24854,8 +23818,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for sport_point subfield components",
           subfields: []
         }
       end
@@ -24874,7 +23836,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24893,7 +23854,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24912,7 +23872,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -24931,8 +23890,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average of awake_time_score and awakenings_count_score. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -24951,7 +23908,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Segment Time (includes pauses)",
           subfields: []
         }
       end
@@ -24970,7 +23926,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Total number of description parts",
           subfields: []
         }
       end
@@ -24989,7 +23944,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25008,7 +23962,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25027,7 +23980,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25046,7 +23998,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25065,7 +24016,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25084,7 +24034,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "lev average motor power during lap",
           subfields: []
         }
       end
@@ -25113,7 +24062,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25132,7 +24080,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25151,7 +24098,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25170,7 +24116,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25189,7 +24134,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "7 day RMSSD average over sleep",
           subfields: []
         }
       end
@@ -25208,7 +24152,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25227,7 +24170,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25246,7 +24188,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Minimum steps before an autosync can occur",
           subfields: []
         }
       end
@@ -25265,7 +24206,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25284,7 +24224,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "duration_time",
@@ -25293,7 +24232,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -25309,7 +24247,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 100,
@@ -25325,7 +24262,6 @@ defmodule Fitparser.Profile do
               enum: %{100 => "bpm_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -25341,7 +24277,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -25357,8 +24292,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment:
-                "message_index of step to loop back to. Steps are assumed to be in the order by message_index. custom_name and intensity members are undefined for this duration type.",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -25376,7 +24309,6 @@ defmodule Fitparser.Profile do
               enum: %{1000 => "watts_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -25392,7 +24324,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -25419,7 +24350,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25438,7 +24368,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time after leaving bottom until reaching surface",
           subfields: []
         }
       end
@@ -25457,7 +24386,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25476,7 +24404,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25495,7 +24422,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25514,7 +24440,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "SpO2 Confidence: [0,254]",
           subfields: []
         }
       end
@@ -25533,7 +24458,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25552,7 +24476,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25571,7 +24494,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Based on the associated category, see [category]_exercise_names",
           subfields: []
         }
       end
@@ -25590,7 +24512,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Current Stress value",
           subfields: []
         }
       end
@@ -25609,8 +24530,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for threat_alert subfield components.",
           subfields: []
         }
       end
@@ -25629,7 +24548,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25648,7 +24566,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "If low PO2 should be switched to automatically",
           subfields: []
         }
       end
@@ -25667,7 +24584,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25686,7 +24602,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25705,7 +24620,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25724,7 +24638,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25743,7 +24656,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25762,7 +24674,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25781,7 +24692,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25800,8 +24710,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Breaths * 100 /min, -300 indicates invalid, -200 indicates large motion, -100 indicates off wrist",
           subfields: []
         }
       end
@@ -25820,7 +24728,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25839,7 +24746,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25858,7 +24764,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Selected bit is set for the current session.",
           subfields: []
         }
       end
@@ -25877,7 +24782,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25896,7 +24800,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the system timestamp",
           subfields: []
         }
       end
@@ -25915,7 +24818,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Min percentage of hemoglobin saturated with oxygen",
           subfields: []
         }
       end
@@ -25934,7 +24836,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25953,7 +24854,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Range -8.727 to +8.727 (-500 degs/sec to +500 degs/sec)",
           subfields: []
         }
       end
@@ -25972,7 +24872,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -25991,7 +24890,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Repeat alarm each time threshold is crossed?",
           subfields: []
         }
       end
@@ -26020,7 +24918,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26039,7 +24936,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26058,7 +24954,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26077,7 +24972,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26096,7 +24990,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26115,7 +25008,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Tone and Vibe setting for the alarm.",
           subfields: []
         }
       end
@@ -26134,7 +25026,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26153,7 +25044,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26172,7 +25062,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "~4kJ per kcal, 0.25 allows max 16384 kcal",
           subfields: []
         }
       end
@@ -26191,7 +25080,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "timezone offset in 1/4 hour increments",
           subfields: []
         }
       end
@@ -26210,7 +25098,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26229,7 +25116,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26248,8 +25134,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Each time in the array describes the time at which the accelerometer sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in accel_x and accel_y and accel_z",
           subfields: []
         }
       end
@@ -26268,7 +25152,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26287,7 +25170,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "1 = high confidence. 0 = low confidence. N/A when gap = 1",
           subfields: []
         }
       end
@@ -26306,7 +25188,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26325,7 +25206,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26344,7 +25224,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26373,7 +25252,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26392,7 +25270,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26411,7 +25288,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26430,7 +25306,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26449,7 +25324,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "System time associated with sample expressed in ms.",
           subfields: []
         }
       end
@@ -26468,7 +25342,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "# of active lengths of swim pool",
           subfields: []
         }
       end
@@ -26487,7 +25360,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26506,7 +25378,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated accel reading",
           subfields: []
         }
       end
@@ -26525,7 +25396,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "North east corner latitude.",
           subfields: []
         }
       end
@@ -26544,7 +25414,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Index for the Leader Board entry selected as the default race participant",
           subfields: []
         }
       end
@@ -26563,7 +25432,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26582,8 +25450,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "System time associated with sample expressed in ms, can be used instead of time_offset. There will be a system_time value for each raw_data element. For multibyte pids the system_time is repeated.",
           subfields: []
         }
       end
@@ -26602,7 +25468,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26621,7 +25486,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26640,7 +25504,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indexed by activity_type",
           subfields: []
         }
       end
@@ -26665,7 +25528,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26684,7 +25546,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average right platform center offset",
           subfields: []
         }
       end
@@ -26703,7 +25564,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26722,7 +25582,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26741,7 +25600,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond part of the timestamp.",
           subfields: []
         }
       end
@@ -26760,7 +25618,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26779,7 +25636,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Timer Time (excludes pauses)",
           subfields: []
         }
       end
@@ -26798,7 +25654,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26817,7 +25672,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26836,8 +25690,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "total_cycles / total_timer_time if non_zero_avg_cadence otherwise total_cycles / total_elapsed_time",
           subfields: [
             %{
               name: "avg_running_cadence",
@@ -26846,7 +25698,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -26873,7 +25724,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26898,7 +25748,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26917,8 +25766,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -26937,7 +25784,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26956,7 +25802,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -26975,7 +25820,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Long descriptions will be split into multiple parts",
           subfields: []
         }
       end
@@ -26994,7 +25838,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27013,7 +25856,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27032,7 +25874,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Index of mesg that this glob is associated with.",
           subfields: []
         }
       end
@@ -27051,7 +25892,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27070,7 +25910,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27089,7 +25928,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27108,7 +25946,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27127,7 +25964,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average SPO2 for the monitoring session",
           subfields: []
         }
       end
@@ -27146,7 +25982,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Index of the alarm",
           subfields: []
         }
       end
@@ -27165,7 +26000,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27184,8 +26018,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "total_cycles / total_timer_time if non_zero_avg_cadence otherwise total_cycles / total_elapsed_time",
           subfields: []
         }
       end
@@ -27204,7 +26036,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27306,7 +26137,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27325,7 +26155,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "UUID of the segment",
           subfields: []
         }
       end
@@ -27344,7 +26173,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27363,7 +26191,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "North east corner longitude.",
           subfields: []
         }
       end
@@ -27382,8 +26209,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Millisecond part of the UTC timestamp at the time the system timestamp was recorded.",
           subfields: []
         }
       end
@@ -27402,7 +26227,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27421,7 +26245,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27440,7 +26263,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27459,7 +26281,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of the avg_cadence",
           subfields: []
         }
       end
@@ -27478,7 +26299,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27518,7 +26338,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27537,7 +26356,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27556,7 +26374,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "secondary_target_speed_zone",
@@ -27565,7 +26382,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "speed zone (1-10);Custom =0;",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -27581,7 +26397,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "hr zone (1-5);Custom =0;",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -27597,7 +26412,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "Zone (1-?); Custom = 0;",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -27613,7 +26427,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "Power Zone ( 1-7); Custom = 0;",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -27639,7 +26452,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -27666,7 +26478,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27685,8 +26496,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -27705,7 +26514,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27724,7 +26532,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Log cadence and fractional cadence for backwards compatability",
           subfields: []
         }
       end
@@ -27743,7 +26550,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27762,7 +26568,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27781,7 +26586,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated gyro reading",
           subfields: []
         }
       end
@@ -27800,7 +26604,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "# of lengths of swim pool",
           subfields: []
         }
       end
@@ -27819,7 +26622,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the timestamp",
           subfields: []
         }
       end
@@ -27838,7 +26640,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Trigger the alarm on ascent",
           subfields: []
         }
       end
@@ -27857,7 +26658,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond part of the timestamp.",
           subfields: []
         }
       end
@@ -27876,7 +26676,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time to reach deepest level stop",
           subfields: []
         }
       end
@@ -27895,7 +26694,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27914,7 +26712,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Sequence number of memo blocks",
           subfields: []
         }
       end
@@ -27933,7 +26730,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27952,7 +26748,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27971,7 +26766,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -27990,7 +26784,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28009,7 +26802,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28028,7 +26820,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28047,7 +26838,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28179,7 +26969,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28198,7 +26987,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28217,7 +27005,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28236,7 +27023,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Depth setting (m) for depth type alarms",
           subfields: []
         }
       end
@@ -28255,7 +27041,6 @@ defmodule Fitparser.Profile do
           accumulate: "1",
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28274,8 +27059,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates the number of awakenings that interrupt sleep. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -28294,7 +27077,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28313,7 +27095,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Volumetric surface air consumption",
           subfields: []
         }
       end
@@ -28332,8 +27113,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -28465,7 +27244,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28484,7 +27262,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28503,7 +27280,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Warning, Watch, Advisory, Statement",
           subfields: []
         }
       end
@@ -28522,7 +27298,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28541,7 +27316,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28560,8 +27334,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.",
           subfields: []
         }
       end
@@ -28580,7 +27352,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Min percentage of hemoglobin saturated with oxygen",
           subfields: []
         }
       end
@@ -28599,7 +27370,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "TRUE if this activity has been started",
           subfields: []
         }
       end
@@ -28618,7 +27388,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28637,7 +27406,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28656,7 +27424,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28675,8 +27442,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Indicates if the estimate was obtained using a chest strap or wrist heart rate",
           subfields: []
         }
       end
@@ -28695,7 +27460,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "lev battery consumption during lap",
           subfields: []
         }
       end
@@ -28714,7 +27478,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28733,7 +27496,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28752,8 +27514,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for gear_change subfield components. Rear gear number. 1 is innermost.",
           subfields: []
         }
       end
@@ -28772,7 +27532,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Body battery level: [0,100] Blank: -16",
           subfields: []
         }
       end
@@ -28791,7 +27550,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average left platform center offset",
           subfields: []
         }
       end
@@ -28810,7 +27568,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28829,7 +27586,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "num_per_file",
@@ -28838,7 +27594,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -28854,7 +27609,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -28870,7 +27624,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -28897,8 +27650,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Associates this data to device_info message. Not required for file with single device (sensor).",
           subfields: []
         }
       end
@@ -28917,7 +27668,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Last night RMSSD average over sleep",
           subfields: []
         }
       end
@@ -28936,7 +27686,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Display mode for the date",
           subfields: []
         }
       end
@@ -28955,7 +27704,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -28974,7 +27722,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Total accelerometer energy in the interval",
           subfields: []
         }
       end
@@ -28993,7 +27740,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29012,7 +27758,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29144,7 +27889,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29163,7 +27907,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Fractional part of timestamp, added to timestamp",
           subfields: []
         }
       end
@@ -29182,7 +27925,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29201,7 +27943,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29220,7 +27961,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29239,7 +27979,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Only set for files that are not created/erased.",
           subfields: []
         }
       end
@@ -29258,7 +27997,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "7-day rolling average",
           subfields: []
         }
       end
@@ -29277,7 +28015,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29296,7 +28033,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29315,7 +28051,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Milliseconds past date_time",
           subfields: []
         }
       end
@@ -29334,8 +28069,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for gear_change subfield components. Number of front teeth.",
           subfields: []
         }
       end
@@ -29354,7 +28087,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29373,7 +28105,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29392,7 +28123,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Max saturated and unsaturated hemoglobin",
           subfields: []
         }
       end
@@ -29411,7 +28141,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Speed at 1s intervals. Timestamp field indicates time of last array element.",
           subfields: []
         }
       end
@@ -29440,7 +28169,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29459,7 +28187,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indicates which sensor the calibration is for",
           subfields: []
         }
       end
@@ -29478,7 +28205,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Range -78.4 to +78.4 (-8 Gs to 8 Gs)",
           subfields: []
         }
       end
@@ -29497,7 +28223,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29516,7 +28241,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Accumulated altitude along the segment at the described point",
           subfields: []
         }
       end
@@ -29535,7 +28259,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time interval length in seconds",
           subfields: []
         }
       end
@@ -29554,7 +28277,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29656,7 +28378,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29675,7 +28396,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Index of travel dive_gas message",
           subfields: []
         }
       end
@@ -29694,7 +28414,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29713,7 +28432,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29732,7 +28450,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29751,7 +28468,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated accel reading",
           subfields: []
         }
       end
@@ -29770,7 +28486,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29789,7 +28504,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Track Angle/Heading Range 0 - 2pi",
           subfields: []
         }
       end
@@ -29808,7 +28522,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "ble_device_type",
@@ -29826,7 +28539,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -29868,7 +28580,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -29884,7 +28595,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -29909,7 +28619,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -29936,8 +28645,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.",
           subfields: []
         }
       end
@@ -29956,7 +28663,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -29975,8 +28681,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "total_power / total_timer_time if non_zero_avg_power otherwise total_power / total_elapsed_time",
           subfields: []
         }
       end
@@ -30009,7 +28713,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30028,7 +28731,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "The average 7 day overnight deviation from baseline temperature in degrees C",
           subfields: []
         }
       end
@@ -30047,7 +28749,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30066,7 +28767,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30085,7 +28785,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30104,7 +28803,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30123,7 +28821,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Target PO2 when using high setpoint",
           subfields: []
         }
       end
@@ -30142,7 +28839,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30161,7 +28857,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30180,7 +28875,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30199,7 +28893,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Timestamp of the set",
           subfields: []
         }
       end
@@ -30218,7 +28911,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30237,7 +28929,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30256,7 +28947,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average respiratory minute volume",
           subfields: []
         }
       end
@@ -30275,7 +28965,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30294,7 +28983,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30313,7 +29001,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "total active time in all split rounds",
           subfields: []
         }
       end
@@ -30332,7 +29019,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30351,7 +29037,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30370,8 +29055,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Maximum power by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -30390,7 +29073,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30409,7 +29091,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30428,7 +29109,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30447,7 +29127,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30466,7 +29145,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30485,7 +29163,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30504,7 +29181,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30523,7 +29199,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "stroke_type enum used as the index",
           subfields: []
         }
       end
@@ -30542,8 +29217,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average left power phase peak angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -30562,7 +29235,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Instance ID of zero crossing algorithm",
           subfields: []
         }
       end
@@ -30581,8 +29253,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average cadence by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -30601,8 +29271,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average right power phase angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -30621,7 +29289,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30640,7 +29307,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30659,7 +29325,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30678,7 +29343,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "lev average motor power during session",
           subfields: []
         }
       end
@@ -30697,7 +29361,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "lev maximum motor power during session",
           subfields: []
         }
       end
@@ -30716,7 +29379,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Accumulated distance along the segment at the described point",
           subfields: []
         }
       end
@@ -30735,7 +29397,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "total_reps",
@@ -30744,7 +29405,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -30760,7 +29420,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -30776,7 +29435,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -30792,7 +29450,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "total number of pushes in a session",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -30819,7 +29476,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "User defined walking step length set to 0 for auto length",
           subfields: []
         }
       end
@@ -30838,7 +29494,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Amount of weight applied for the set",
           subfields: []
         }
       end
@@ -30857,7 +29512,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "South west corner latitude",
           subfields: []
         }
       end
@@ -30876,7 +29530,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Total time spent in the standing position",
           subfields: []
         }
       end
@@ -30895,7 +29548,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Trigger the alarm on descent",
           subfields: []
         }
       end
@@ -30914,7 +29566,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Index of the alarm",
           subfields: []
         }
       end
@@ -30933,7 +29584,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Typically 1.60",
           subfields: []
         }
       end
@@ -30952,7 +29602,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -30971,8 +29620,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "total_power / total_timer_time if non_zero_avg_power otherwise total_power / total_elapsed_time",
           subfields: []
         }
       end
@@ -30991,7 +29638,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31010,8 +29656,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Score that evaluates the amount of deep sleep. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -31030,7 +29674,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31049,7 +29692,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31068,7 +29710,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31087,7 +29728,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31106,7 +29746,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31125,7 +29764,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "target_speed_zone",
@@ -31134,7 +29772,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "speed zone (1-10);Custom =0;",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -31150,7 +29787,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "hr zone (1-5);Custom =0;",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -31166,7 +29802,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "Zone (1-?); Custom = 0;",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -31182,7 +29817,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "Power Zone ( 1-7); Custom = 0;",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -31198,7 +29832,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "# of repetitions",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -31214,7 +29847,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -31230,7 +29862,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 100,
@@ -31246,7 +29877,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -31262,7 +29892,6 @@ defmodule Fitparser.Profile do
               enum: %{100 => "bpm_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -31278,7 +29907,6 @@ defmodule Fitparser.Profile do
               enum: %{1000 => "watts_offset"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -31304,7 +29932,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -31338,7 +29965,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31357,7 +29983,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31376,7 +30001,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31395,7 +30019,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31414,7 +30037,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Avg percentage of hemoglobin saturated with oxygen",
           subfields: []
         }
       end
@@ -31516,7 +30138,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31535,7 +30156,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Min temperature during the logging interval ended at timestamp",
           subfields: []
         }
       end
@@ -31554,7 +30174,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31573,7 +30192,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31592,7 +30210,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -31611,8 +30228,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Type of gas consumption rate to display. Some values are only valid if tank volume is known.",
           subfields: []
         }
       end
@@ -31631,7 +30246,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Corresponds to file_id of scheduled workout / course.",
           subfields: [
             %{
               name: "favero_product",
@@ -31640,7 +30254,6 @@ defmodule Fitparser.Profile do
               enum: %{10 => "assioma_uno", 12 => "assioma_duo"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -32151,7 +30764,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -32178,7 +30790,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32197,7 +30808,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32216,7 +30826,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32235,8 +30844,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Breaths / min: [1,100] Invalid: 255 Excess motion: 254 Off wrist: 253 Not available: 252 Blank: 2.4",
           subfields: []
         }
       end
@@ -32296,7 +30903,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Indicates the location of the sensor",
           subfields: []
         }
       end
@@ -32315,7 +30921,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32334,7 +30939,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32353,7 +30957,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32372,7 +30975,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32391,7 +30993,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32410,7 +31011,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32429,7 +31029,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Encoded configuration data",
           subfields: []
         }
       end
@@ -32448,7 +31047,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "max_running_cadence",
@@ -32457,7 +31055,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -32484,7 +31081,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32503,7 +31099,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32536,7 +31131,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32555,7 +31149,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32574,7 +31167,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32593,7 +31185,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32612,8 +31203,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for gear_change subfield components. Number of rear teeth.",
           subfields: []
         }
       end
@@ -32632,7 +31221,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Primary user ID of this leader",
           subfields: []
         }
       end
@@ -32651,7 +31239,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "South west corner latitude.",
           subfields: []
         }
       end
@@ -32670,7 +31257,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32689,7 +31275,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time alert expires",
           subfields: []
         }
       end
@@ -32708,7 +31293,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "lev battery state of charge",
           subfields: []
         }
       end
@@ -32727,7 +31311,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32768,7 +31351,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Corresponds to GSC Response weatherIcon field",
           subfields: []
         }
       end
@@ -32787,7 +31369,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32806,7 +31387,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32825,7 +31405,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Rollover counter that can be used to extend the odometer",
           subfields: []
         }
       end
@@ -32844,7 +31423,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32863,8 +31441,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Root mean square successive difference (RMSSD) - Heart rate variability measure most useful for athletes",
           subfields: []
         }
       end
@@ -32883,7 +31459,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32902,7 +31477,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Number of screens configured to display",
           subfields: []
         }
       end
@@ -32921,7 +31495,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32940,7 +31513,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time between beats",
           subfields: []
         }
       end
@@ -32966,7 +31538,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -32985,7 +31556,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33004,7 +31574,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33023,7 +31592,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33042,7 +31610,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Show a visible pop-up for this alarm",
           subfields: []
         }
       end
@@ -33061,7 +31628,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "fractional part of the avg_cadence",
           subfields: []
         }
       end
@@ -33080,7 +31646,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33099,7 +31664,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33118,7 +31682,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33137,7 +31700,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Respiratory minute volume",
           subfields: []
         }
       end
@@ -33239,7 +31801,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33258,7 +31819,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33277,7 +31837,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33296,7 +31855,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "lev battery consumption during session",
           subfields: []
         }
       end
@@ -33315,7 +31873,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "If New Leaf",
           subfields: []
         }
       end
@@ -33334,7 +31891,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33353,7 +31909,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated accel reading",
           subfields: []
         }
       end
@@ -33372,7 +31927,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33391,7 +31945,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33410,7 +31963,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33429,7 +31981,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33448,7 +31999,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33467,7 +32017,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33486,7 +32035,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Z-Axis Measurement",
           subfields: []
         }
       end
@@ -33751,7 +32299,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33770,7 +32317,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibrated gyro reading",
           subfields: []
         }
       end
@@ -33789,7 +32335,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33808,7 +32353,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time (includes pauses)",
           subfields: []
         }
       end
@@ -33827,7 +32371,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33846,7 +32389,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Parameter ID",
           subfields: []
         }
       end
@@ -33865,7 +32407,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33884,7 +32425,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33903,8 +32443,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average left power phase angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -33923,8 +32461,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Accumulated distance. Maintained by MonitoringReader for each activity_type. See SDK documentation.",
           subfields: []
         }
       end
@@ -33943,7 +32479,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33962,7 +32497,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -33981,7 +32515,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34000,7 +32533,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34019,8 +32551,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Processing interval length in seconds. File start: 0xFFFFFFEF File stop: 0xFFFFFFEE",
           subfields: []
         }
       end
@@ -34039,7 +32569,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34058,7 +32587,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34124,7 +32652,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34143,7 +32670,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34162,7 +32688,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34181,7 +32706,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34200,7 +32724,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34219,7 +32742,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34238,7 +32760,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time (includes pauses)",
           subfields: []
         }
       end
@@ -34257,7 +32778,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34276,7 +32796,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34295,7 +32814,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Used to describe the sensor or location",
           subfields: []
         }
       end
@@ -34314,8 +32832,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Total score that summarizes the overall quality of sleep, combining sleep duration and quality. If valid: 0 (worst) to 100 (best). If unknown: FIT_UINT8_INVALID.",
           subfields: []
         }
       end
@@ -34334,7 +32850,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Enablement flag",
           subfields: []
         }
       end
@@ -34353,7 +32868,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34372,7 +32886,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34391,7 +32904,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Timer Time (excludes pauses)",
           subfields: []
         }
       end
@@ -34410,7 +32922,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34429,7 +32940,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34448,7 +32958,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Range -78.4 to +78.4 (-8 Gs to 8 Gs)",
           subfields: []
         }
       end
@@ -34467,7 +32976,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Use footpod for speed source instead of GPS",
           subfields: []
         }
       end
@@ -34497,7 +33005,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34516,7 +33023,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Includes atmospheric pressure",
           subfields: []
         }
       end
@@ -34535,7 +33041,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34554,7 +33059,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34573,7 +33077,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34592,7 +33095,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Tone and Vibe setting for the alarm",
           subfields: []
         }
       end
@@ -34611,7 +33113,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34876,7 +33377,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Corresponds to file_id of scheduled workout / course.",
           subfields: []
         }
       end
@@ -34895,8 +33395,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average left power phase peak angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -34915,7 +33413,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -34934,7 +33431,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "3 x 3 rotation matrix (row major)",
           subfields: []
         }
       end
@@ -35036,7 +33532,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35055,7 +33550,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Rollover counter that can be used to extend the odometer",
           subfields: []
         }
       end
@@ -35074,7 +33568,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35093,7 +33586,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Corresponds to file_id of scheduled workout / course.",
           subfields: []
         }
       end
@@ -35112,7 +33604,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35131,7 +33622,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35150,7 +33640,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "# of repitions of the movement",
           subfields: []
         }
       end
@@ -35169,7 +33658,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35188,7 +33676,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35207,7 +33694,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time stress score was calculated",
           subfields: []
         }
       end
@@ -35226,7 +33712,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35245,7 +33730,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35264,8 +33748,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average cadence by position. Data value indexes defined by rider_position_type.",
           subfields: []
         }
       end
@@ -35284,7 +33766,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35303,7 +33784,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35322,7 +33802,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: [
             %{
               name: "timer_trigger",
@@ -35331,7 +33810,6 @@ defmodule Fitparser.Profile do
               enum: %{0 => "manual", 1 => "auto", 2 => "fitness_equipment"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35347,7 +33825,6 @@ defmodule Fitparser.Profile do
               enum: %{4095 => "mask", 28672 => "reserved", 32768 => "selected"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35363,7 +33840,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -35379,7 +33855,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -35395,7 +33870,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35411,7 +33885,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35427,7 +33900,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -35443,7 +33915,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -35459,7 +33930,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35475,7 +33945,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35491,7 +33960,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35507,7 +33975,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35523,7 +33990,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 1000,
@@ -35539,7 +34005,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: 100,
@@ -35555,7 +34020,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35571,7 +34035,6 @@ defmodule Fitparser.Profile do
               enum: %{0 => "ready", 1 => "in_use", 2 => "paused", 3 => "unknown"},
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35587,7 +34050,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: [16, 16],
-              comment: nil,
               components: ["score", "opponent_score"],
               accumulate: nil,
               scale: 1,
@@ -35603,7 +34065,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: ~c"\b\b\b\b",
-              comment: nil,
               components: ["rear_gear_num", "rear_gear", "front_gear_num", "front_gear"],
               accumulate: nil,
               scale: 1,
@@ -35624,7 +34085,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: "Indicates the rider position value.",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35645,7 +34105,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35701,7 +34160,6 @@ defmodule Fitparser.Profile do
               },
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35717,7 +34175,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: nil,
               components: [],
               accumulate: nil,
               scale: nil,
@@ -35733,8 +34190,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: ~c"\b\b\b\b",
-              comment:
-                "The first byte is the radar_threat_level_max, the second byte is the radar_threat_count, third bytes is the average approach speed, and the 4th byte is the max approach speed",
               components: [
                 "radar_threat_level_max",
                 "radar_threat_count",
@@ -35879,7 +34334,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -35898,7 +34352,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time since end of last dive",
           subfields: []
         }
       end
@@ -36000,7 +34453,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36019,7 +34471,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36038,7 +34489,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Millisecond resolution of the timestamp",
           subfields: []
         }
       end
@@ -36057,7 +34507,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Enabled state of the segment file",
           subfields: []
         }
       end
@@ -36076,7 +34525,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36095,7 +34543,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Time maxMET and vo2 were calculated",
           subfields: []
         }
       end
@@ -36114,7 +34561,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36133,7 +34579,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Calibration factor used to convert from raw ADC value to degrees, g, etc.",
           subfields: [
             %{
               name: "baro_cal_factor",
@@ -36142,7 +34587,6 @@ defmodule Fitparser.Profile do
               enum: nil,
               array: false,
               bits: nil,
-              comment: "Barometer calibration factor",
               components: [],
               accumulate: nil,
               scale: nil,
@@ -36169,7 +34613,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36188,7 +34631,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Average descent rate, not including ascents or stops",
           subfields: []
         }
       end
@@ -36207,7 +34649,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36226,7 +34667,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36245,7 +34685,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36264,7 +34703,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36283,7 +34721,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Whole second part of the timestamp",
           subfields: []
         }
       end
@@ -36302,7 +34739,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36321,7 +34757,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "32 kHz timestamp",
           subfields: []
         }
       end
@@ -36340,7 +34775,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36359,7 +34793,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Level shift value used to shift the ADC value back into range",
           subfields: []
         }
       end
@@ -36378,8 +34811,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.",
           subfields: []
         }
       end
@@ -36511,7 +34942,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36530,7 +34960,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36549,7 +34978,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36568,7 +34996,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36587,7 +35014,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36606,7 +35032,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "lev maximum motor power during lap",
           subfields: []
         }
       end
@@ -36625,7 +35050,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36644,7 +35068,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36663,7 +35086,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36682,7 +35104,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36701,7 +35122,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36720,7 +35140,6 @@ defmodule Fitparser.Profile do
           accumulate: "0,1",
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36739,7 +35158,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "string corresponding to GCS response location string",
           subfields: []
         }
       end
@@ -36790,7 +35208,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36816,7 +35233,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36846,7 +35262,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36865,7 +35280,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36884,7 +35298,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36918,7 +35331,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -36937,7 +35349,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37010,7 +35421,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37029,7 +35439,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37048,7 +35457,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37067,7 +35475,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Typically 1.40",
           subfields: []
         }
       end
@@ -37086,7 +35493,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "ID of the device that created the segment",
           subfields: []
         }
       end
@@ -37105,7 +35511,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Timer Time (excludes pauses)",
           subfields: []
         }
       end
@@ -37237,7 +35642,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37256,7 +35660,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37275,7 +35678,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37294,7 +35696,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37313,7 +35714,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37332,7 +35732,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37351,8 +35750,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Use to convert activity timestamps to local time if device does not support time zone and daylight savings time correction.",
           subfields: []
         }
       end
@@ -37371,7 +35768,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37390,7 +35786,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37409,7 +35804,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37428,7 +35822,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Number of transitions to the standing state",
           subfields: []
         }
       end
@@ -37447,7 +35840,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Min saturated and unsaturated hemoglobin",
           subfields: []
         }
       end
@@ -37466,7 +35858,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37485,8 +35876,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Offset of PID reading [i] from start_timestamp+start_timestamp_ms. Readings may span accross seconds.",
           subfields: []
         }
       end
@@ -37505,7 +35894,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37524,7 +35912,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37552,7 +35939,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Use sport_bits_x types where x is index of array.",
           subfields: []
         }
       end
@@ -37698,7 +36084,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37722,8 +36107,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Do not populate directly. Autogenerated by decoder for threat_alert subfield components.",
           subfields: []
         }
       end
@@ -37742,8 +36125,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment:
-            "Average right power phase angles. Data value indexes defined by power_phase_type.",
           subfields: []
         }
       end
@@ -37762,7 +36143,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37781,7 +36161,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37898,7 +36277,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37933,7 +36311,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Leader classification",
           subfields: []
         }
       end
@@ -37952,7 +36329,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37971,7 +36347,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -37990,7 +36365,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "Pressure-based surface air consumption",
           subfields: []
         }
       end
@@ -38009,7 +36383,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -38028,7 +36401,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: "SpO2 Reading: [70,100] Blank: 240",
           subfields: []
         }
       end
@@ -38047,7 +36419,6 @@ defmodule Fitparser.Profile do
           accumulate: nil,
           ref_field_name: nil,
           ref_field_value: nil,
-          comment: nil,
           subfields: []
         }
       end
@@ -40869,260 +39240,6 @@ defmodule Fitparser.Profile do
       defp field_by_name(3, "message_index"), do: field(3, 254)
 
       defp field_by_name(_, _), do: nil
-
-      defp type(:file_id), do: 0
-
-      defp type(:capabilities), do: 1
-
-      defp type(:device_settings), do: 2
-
-      defp type(:user_profile), do: 3
-
-      defp type(:hrm_profile), do: 4
-
-      defp type(:sdm_profile), do: 5
-
-      defp type(:bike_profile), do: 6
-
-      defp type(:zones_target), do: 7
-
-      defp type(:hr_zone), do: 8
-
-      defp type(:power_zone), do: 9
-
-      defp type(:met_zone), do: 10
-
-      defp type(:sport), do: 12
-
-      defp type(:training_settings), do: 13
-
-      defp type(:goal), do: 15
-
-      defp type(:session), do: 18
-
-      defp type(:lap), do: 19
-
-      defp type(:record), do: 20
-
-      defp type(:event), do: 21
-
-      defp type(:device_info), do: 23
-
-      defp type(:workout), do: 26
-
-      defp type(:workout_step), do: 27
-
-      defp type(:schedule), do: 28
-
-      defp type(:weight_scale), do: 30
-
-      defp type(:course), do: 31
-
-      defp type(:course_point), do: 32
-
-      defp type(:totals), do: 33
-
-      defp type(:activity), do: 34
-
-      defp type(:software), do: 35
-
-      defp type(:file_capabilities), do: 37
-
-      defp type(:mesg_capabilities), do: 38
-
-      defp type(:field_capabilities), do: 39
-
-      defp type(:file_creator), do: 49
-
-      defp type(:blood_pressure), do: 51
-
-      defp type(:speed_zone), do: 53
-
-      defp type(:monitoring), do: 55
-
-      defp type(:training_file), do: 72
-
-      defp type(:hrv), do: 78
-
-      defp type(:ant_rx), do: 80
-
-      defp type(:ant_tx), do: 81
-
-      defp type(:ant_channel_id), do: 82
-
-      defp type(:length), do: 101
-
-      defp type(:monitoring_info), do: 103
-
-      defp type(:pad), do: 105
-
-      defp type(:slave_device), do: 106
-
-      defp type(:connectivity), do: 127
-
-      defp type(:weather_conditions), do: 128
-
-      defp type(:weather_alert), do: 129
-
-      defp type(:cadence_zone), do: 131
-
-      defp type(:hr), do: 132
-
-      defp type(:segment_lap), do: 142
-
-      defp type(:memo_glob), do: 145
-
-      defp type(:segment_id), do: 148
-
-      defp type(:segment_leaderboard_entry), do: 149
-
-      defp type(:segment_point), do: 150
-
-      defp type(:segment_file), do: 151
-
-      defp type(:workout_session), do: 158
-
-      defp type(:watchface_settings), do: 159
-
-      defp type(:gps_metadata), do: 160
-
-      defp type(:camera_event), do: 161
-
-      defp type(:timestamp_correlation), do: 162
-
-      defp type(:gyroscope_data), do: 164
-
-      defp type(:accelerometer_data), do: 165
-
-      defp type(:three_d_sensor_calibration), do: 167
-
-      defp type(:video_frame), do: 169
-
-      defp type(:obdii_data), do: 174
-
-      defp type(:nmea_sentence), do: 177
-
-      defp type(:aviation_attitude), do: 178
-
-      defp type(:video), do: 184
-
-      defp type(:video_title), do: 185
-
-      defp type(:video_description), do: 186
-
-      defp type(:video_clip), do: 187
-
-      defp type(:ohr_settings), do: 188
-
-      defp type(:exd_screen_configuration), do: 200
-
-      defp type(:exd_data_field_configuration), do: 201
-
-      defp type(:exd_data_concept_configuration), do: 202
-
-      defp type(:field_description), do: 206
-
-      defp type(:developer_data_id), do: 207
-
-      defp type(:magnetometer_data), do: 208
-
-      defp type(:barometer_data), do: 209
-
-      defp type(:one_d_sensor_calibration), do: 210
-
-      defp type(:monitoring_hr_data), do: 211
-
-      defp type(:time_in_zone), do: 216
-
-      defp type(:set), do: 225
-
-      defp type(:stress_level), do: 227
-
-      defp type(:max_met_data), do: 229
-
-      defp type(:dive_settings), do: 258
-
-      defp type(:dive_gas), do: 259
-
-      defp type(:dive_alarm), do: 262
-
-      defp type(:exercise_title), do: 264
-
-      defp type(:dive_summary), do: 268
-
-      defp type(:spo2_data), do: 269
-
-      defp type(:sleep_level), do: 275
-
-      defp type(:jump), do: 285
-
-      defp type(:aad_accel_features), do: 289
-
-      defp type(:beat_intervals), do: 290
-
-      defp type(:respiration_rate), do: 297
-
-      defp type(:hsa_accelerometer_data), do: 302
-
-      defp type(:hsa_step_data), do: 304
-
-      defp type(:hsa_spo2_data), do: 305
-
-      defp type(:hsa_stress_data), do: 306
-
-      defp type(:hsa_respiration_data), do: 307
-
-      defp type(:hsa_heart_rate_data), do: 308
-
-      defp type(:split), do: 312
-
-      defp type(:split_summary), do: 313
-
-      defp type(:hsa_body_battery_data), do: 314
-
-      defp type(:hsa_event), do: 315
-
-      defp type(:climb_pro), do: 317
-
-      defp type(:tank_update), do: 319
-
-      defp type(:tank_summary), do: 323
-
-      defp type(:sleep_assessment), do: 346
-
-      defp type(:hrv_status_summary), do: 370
-
-      defp type(:hrv_value), do: 371
-
-      defp type(:raw_bbi), do: 372
-
-      defp type(:device_aux_battery_info), do: 375
-
-      defp type(:hsa_gyroscope_data), do: 376
-
-      defp type(:chrono_shot_session), do: 387
-
-      defp type(:chrono_shot_data), do: 388
-
-      defp type(:hsa_configuration_data), do: 389
-
-      defp type(:dive_apnea_alarm), do: 393
-
-      defp type(:skin_temp_overnight), do: 398
-
-      defp type(:hsa_wrist_temperature_data), do: 409
-
-      defp type(:nap_event), do: 412
-
-      defp type(:sleep_disruption_severity_period), do: 470
-
-      defp type(:sleep_disruption_overnight_severity), do: 471
-
-      defp type(:mfg_range_min), do: 65280
-
-      defp type(:mfg_range_max), do: 65534
-
-      defp type(_), do: nil
     end
   end
 end

@@ -42,7 +42,6 @@ defmodule Fitparser.Decoder do
   @base_type_sint64 14
   @base_type_uint64 15
   @base_type_mask 0x1F
-  @base_type_big_endian_flag 0x80
   @local_definition_count 16
   @empty_definitions Tuple.duplicate(nil, @local_definition_count)
 
@@ -80,7 +79,7 @@ defmodule Fitparser.Decoder do
     %{
       validate_crc: Keyword.get(opts, :validate_crc, false),
       processors: Keyword.get(opts, :processors, []),
-      expand_components: Keyword.get(opts, :expand_components, true),
+      expand_components: Keyword.get(opts, :expand_components, false),
       standard_units: Keyword.get(opts, :standard_units, false),
       include_metadata: Keyword.get(opts, :include_metadata, false),
       processor_opts: opts
@@ -351,15 +350,15 @@ defmodule Fitparser.Decoder do
   defp developer_field_definitions(_, _, _), do: :error
 
   defp definition_data(global, endian, fields, dev_fields, size) do
-    profile_fields = profile_fields(global, fields)
-    reference_fields? = reference_fields_required?(profile_fields)
+    decode_defs = decode_definitions(global, fields)
+    reference_fields? = reference_fields_required?(decode_defs)
 
-    {:definition, global, endian, fields, dev_fields, size, profile_fields, reference_fields?}
+    {:definition, global, endian, fields, decode_defs, dev_fields, size, reference_fields?}
   end
 
-  defp profile_fields(global, fields) do
-    Map.new(fields, fn {number, _size, _type} ->
-      {number, cache_field_metadata(global, field(global, number))}
+  defp decode_definitions(global, fields) do
+    Enum.map(fields, fn {number, field_size, type} ->
+      {number, field_size, type, cache_field_metadata(global, field(global, number))}
     end)
   end
 
@@ -403,13 +402,13 @@ defmodule Fitparser.Decoder do
   defp next_accumulate([]), do: {"0", []}
 
   defp definition_global(
-         {:definition, global, _endian, _fields, _dev_fields, _size, _profile, _references}
+         {:definition, global, _endian, _fields, _decode_defs, _dev_fields, _size, _references}
        ),
        do: global
 
   defp data(
          binary,
-         {:definition, global, endian, defs, dev_defs, size, profile_fields, reference_fields?},
+         {:definition, global, endian, _fields, decode_defs, dev_defs, size, reference_fields?},
          last,
          opts,
          component_state
@@ -419,9 +418,8 @@ defmodule Fitparser.Decoder do
       size,
       global,
       endian,
-      defs,
+      decode_defs,
       dev_defs,
-      profile_fields,
       reference_fields?,
       last,
       opts,
@@ -434,9 +432,8 @@ defmodule Fitparser.Decoder do
          size,
          _global,
          _endian,
-         _defs,
+         _decode_defs,
          _dev_defs,
-         _profile_fields,
          _reference_fields?,
          _last,
          _opts,
@@ -450,64 +447,74 @@ defmodule Fitparser.Decoder do
          _size,
          global,
          endian,
-         defs,
+         decode_defs,
          dev_defs,
-         profile_fields,
          reference_fields?,
          last,
          opts,
          component_state
        ) do
-    {pairs, rest} = Enum.map_reduce(defs, binary, &decode_field(&1, &2, profile_fields, endian))
+    {pairs, rest} =
+      Enum.map_reduce(decode_defs, binary, &decode_field(&1, &2, endian, opts.expand_components))
+
     {dev_pairs, rest} = Enum.map_reduce(dev_defs, rest, &decode_developer_field/2)
 
     timestamp = Enum.find_value(pairs, last, &timestamp_pair/1)
 
     field_opts =
-      Map.put(opts, :reference_fields, reference_fields(profile_fields, pairs, reference_fields?))
+      Map.put(opts, :reference_fields, reference_fields(pairs, reference_fields?))
 
     {fields, component_state} =
       decode_fields(
         pairs,
         global,
-        profile_fields,
         field_opts,
         opts,
         component_state,
         []
       )
 
-    fields = Enum.reduce(dev_pairs, fields, &[make_developer_field(&1) | &2])
-    {:ok, sort_fields(fields), rest, timestamp, component_state}
+    developer_fields = Enum.map(dev_pairs, &make_developer_field/1)
+    fields = Enum.reverse(fields, developer_fields)
+
+    {fields, component_state} = normalize_hr_timestamps(global, fields, last, component_state)
+
+    {:ok, fields, rest, timestamp, component_state}
   end
 
-  defp decode_fields([], _global, _profile_fields, _field_opts, _opts, state, fields),
-    do: {fields, state}
+  defp decode_fields([], _global, _field_opts, _opts, state, fields), do: {fields, state}
 
   defp decode_fields(
          [pair | pairs],
          global,
-         profile_fields,
          field_opts,
          opts,
          state,
          fields
        ) do
-    {number, _value} = pair
-    definition = Map.get(profile_fields, number)
+    {number, value, component_raw, definition} = pair
+    field_pair = {number, value}
 
     {components, state} =
-      component_fields(global, pair, definition, state, opts, opts.expand_components)
+      component_fields(
+        global,
+        field_pair,
+        component_raw,
+        definition,
+        state,
+        opts,
+        opts.expand_components
+      )
 
-    fields = [make_field(definition, pair, field_opts) | Enum.reverse(components, fields)]
-    decode_fields(pairs, global, profile_fields, field_opts, opts, state, fields)
+    fields = Enum.reverse(components, [make_field(definition, field_pair, field_opts) | fields])
+    decode_fields(pairs, global, field_opts, opts, state, fields)
   end
 
-  defp decode_field({number, field_size, type}, input, profile_fields, endian) do
+  defp decode_field({number, field_size, type, definition}, input, endian, expand_components) do
     <<raw::binary-size(^field_size), tail::binary>> = input
+    value = decode_value(raw, type, endian, number, array_field?(definition))
 
-    {{number, decode_value(raw, type, endian, number, array_field?(profile_fields, number))},
-     tail}
+    {{number, value, component_raw(definition, raw, type, expand_components), definition}, tail}
   end
 
   defp decode_developer_field({number, field_size, developer_index}, input) do
@@ -515,7 +522,7 @@ defmodule Fitparser.Decoder do
     {{number, developer_index, raw}, tail}
   end
 
-  defp timestamp_pair({@timestamp_field, value}), do: value
+  defp timestamp_pair({@timestamp_field, value, _component_raw, _definition}), do: value
   defp timestamp_pair(_pair), do: nil
 
   defp make_developer_field({number, developer_index, value}) do
@@ -528,26 +535,10 @@ defmodule Fitparser.Decoder do
     }
   end
 
-  defp sort_fields(fields) do
-    case ordered_fields?(fields) do
-      true -> fields
-      false -> Enum.sort_by(fields, & &1.number)
-    end
-  end
+  defp reference_fields(_pairs, false), do: %{}
 
-  defp ordered_fields?([]), do: true
-  defp ordered_fields?([_field]), do: true
-
-  defp ordered_fields?([left, right | rest]) when left.number <= right.number,
-    do: ordered_fields?([right | rest])
-
-  defp ordered_fields?(_fields), do: false
-
-  defp reference_fields(_profile_fields, _pairs, false), do: %{}
-
-  defp reference_fields(profile_fields, pairs, true) do
-    Map.new(pairs, fn {number, value} ->
-      definition = Map.get(profile_fields, number)
+  defp reference_fields(pairs, true) do
+    Map.new(pairs, fn {number, value, _component_raw, definition} ->
       name = field_name(definition, number)
       value = enum_value(definition, value)
 
@@ -555,9 +546,9 @@ defmodule Fitparser.Decoder do
     end)
   end
 
-  defp reference_fields_required?(profile_fields) do
-    Enum.any?(profile_fields, fn
-      {_number, %{subfields: [_ | _]}} -> true
+  defp reference_fields_required?(decode_defs) do
+    Enum.any?(decode_defs, fn
+      {_number, _field_size, _type, %{subfields: [_ | _]}} -> true
       _field -> false
     end)
   end
@@ -651,15 +642,12 @@ defmodule Fitparser.Decoder do
   defp decode_value(raw, base, endian, true), do: decode_array(raw, base, endian)
   defp decode_value(raw, base, endian, false), do: decode_scalar(raw, base, endian)
 
-  defp effective_endian(type, _endian) when (type &&& @base_type_big_endian_flag) != 0, do: :big
+  # The high bit in a FIT base-type ID marks an endian-capable type; it does
+  # not override the architecture declared by the message definition.
   defp effective_endian(_type, endian), do: endian
 
-  defp array_field?(profile_fields, number) do
-    case Map.get(profile_fields, number) do
-      %{array: true} -> true
-      _ -> false
-    end
-  end
+  defp array_field?(%{array: true}), do: true
+  defp array_field?(_definition), do: false
 
   defp decode_array(raw, base, endian) do
     case element_size(base) do
@@ -847,24 +835,27 @@ defmodule Fitparser.Decoder do
 
   defp subfield_matches?(_subfield, _references), do: false
 
-  defp component_fields(_global, _pair, _definition, state, _opts, false), do: {[], state}
+  defp component_fields(_global, _pair, _component_raw, _definition, state, _opts, false),
+    do: {[], state}
 
-  defp component_fields(global, pair, definition, state, opts, true),
-    do: expand_component_fields(global, pair, definition, state, opts)
+  defp component_fields(global, pair, component_raw, definition, state, opts, true),
+    do: expand_component_fields(global, pair, component_raw, definition, state, opts)
 
   defp expand_component_fields(
          global,
          {number, value},
+         component_raw,
          %{component_specs: [_ | _] = specs},
          state,
          opts
        ) do
-    raw = component_integer(value)
+    raw = component_integer(component_raw || value)
 
     expand_component_specs(specs, global, number, raw, 0, state, opts, [])
   end
 
-  defp expand_component_fields(_global, _pair, _definition, state, _opts), do: {[], state}
+  defp expand_component_fields(_global, _pair, _component_raw, _definition, state, _opts),
+    do: {[], state}
 
   defp expand_component_specs([], _global, _number, _raw, _offset, state, _opts, fields),
     do: {Enum.reverse(fields), state}
@@ -899,6 +890,42 @@ defmodule Fitparser.Decoder do
 
   defp component_widths(bits, _count) when is_list(bits), do: bits
   defp component_widths(bits, count), do: List.duplicate(bits, count)
+
+  defp component_raw(%{component_specs: [_ | _]}, raw, type, true)
+       when (type &&& @base_type_mask) == @base_type_byte,
+       do: raw
+
+  defp component_raw(_definition, _raw, _type, _expand_components), do: nil
+
+  # Heart-rate messages encode event timestamps as offsets from the most recent
+  # timestamp. Keep that base separately because HR messages themselves do not
+  # carry a timestamp field.
+  defp normalize_hr_timestamps(132, fields, last, state) do
+    {base, state} =
+      if Enum.any?(fields, &(&1.name == "event_timestamp_12")) and is_integer(last) do
+        base = @epoch + last
+        {base, Map.put(state, :hr_timestamp_base, base)}
+      else
+        {Map.get(state, :hr_timestamp_base), state}
+      end
+
+    if is_integer(base) do
+      fields =
+        Enum.map(fields, fn
+          %FitDataField{name: "event_timestamp", value: value} = field when is_number(value) ->
+            %{field | value: base + value}
+
+          field ->
+            field
+        end)
+
+      {fields, state}
+    else
+      {fields, state}
+    end
+  end
+
+  defp normalize_hr_timestamps(_global, fields, _last, state), do: {fields, state}
 
   defp accumulate_component("1", state, key, raw, width) do
     value = rem(Map.get(state, key, 0) + raw, 1 <<< width)
@@ -998,7 +1025,7 @@ defmodule Fitparser.Decoder do
   defp timestamp_value(value, _type), do: value
 
   defp put_definition(acc, local, definition, %{include_metadata: true}) do
-    {:definition, global, endian, fields, developer_fields, _size, _profile_fields, _references} =
+    {:definition, global, endian, fields, _decode_defs, developer_fields, _size, _references} =
       definition
 
     definition = %FitDataDefinition{
@@ -1015,7 +1042,7 @@ defmodule Fitparser.Decoder do
   defp put_definition(acc, _local, _definition, _opts), do: acc
 
   defp put_record(acc, global, fields) do
-    name = message(global) || String.to_atom("message_#{global}")
+    name = message(global) || "message_#{global}"
     record = %FitDataRecord{kind: name, fields: fields}
     Map.update(acc, name, [record], &[record | &1])
   end

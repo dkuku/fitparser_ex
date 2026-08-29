@@ -22,17 +22,13 @@ defmodule Fitparser.MixProject do
     [
       files: [
         "lib",
-        "messages.csv",
-        "types.csv",
         "Profile.xlsx",
         "mix.exs",
-        "checksum-*.exs",
         "README*"
       ],
       licenses: ["Apache-2.0"],
       links: %{
         "GitHub" => "https://github.com/dkuku/fitparser_ex/",
-        "Fitparser on Cargo" => "https://docs.rs/fitparser/latest/fitparser/",
         "Garmin FitSDK" => "https://developer.garmin.com/fit/overview/"
       }
     ]

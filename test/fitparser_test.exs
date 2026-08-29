@@ -1,4 +1,4 @@
-defmodule NativeTest do
+defmodule DecoderTest do
   use ExUnit.Case
 
   alias Fitparser.FitDataRecord
@@ -7,34 +7,201 @@ defmodule NativeTest do
   describe "from_fit/1" do
     test "fails" do
       assert (Application.app_dir(:fitparser) <> "non existent")
-             |> Fitparser.Native.from_fit() ==
+             |> Fitparser.Decoder.from_fit() ==
                {:error, "Error opening file"}
     end
 
     test "success" do
       assert decoded_term() ==
                (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
-               |> Fitparser.Native.from_fit!()
+               |> Fitparser.Decoder.from_fit!()
     end
   end
 
   describe "load_fit/1" do
     test "invalid content" do
-      assert Fitparser.Native.load_fit("sratatata") ==
-               {:error, "Error parsing file"}
+      assert Fitparser.Decoder.load_fit("sratatata") ==
+               {:error, "Invalid FIT header"}
+    end
+
+    test "reports truncated FIT files" do
+      data = File.read!("priv/examples/WeightScaleSingleUser.fit")
+      assert {:error, "Truncated FIT file"} = Fitparser.Decoder.load_fit(binary_part(data, 0, 20))
     end
 
     test "success from bytes" do
       assert decoded_term() ==
                (Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit")
                |> File.read!()
-               |> Fitparser.Native.load_fit!()
+               |> Fitparser.Decoder.load_fit!()
     end
+
+    test "validates the FIT CRC when requested" do
+      path = Application.app_dir(:fitparser) <> "/priv/examples/WeightScaleSingleUser.fit"
+      data = File.read!(path)
+
+      assert {:ok, _decoded} = Fitparser.Decoder.load_fit(data, validate_crc: true)
+
+      <<prefix::binary-size(20), byte, suffix::binary>> = data
+      tampered = <<prefix::binary, Bitwise.bxor(byte, 1), suffix::binary>>
+
+      assert {:error, "Invalid FIT CRC"} =
+               Fitparser.Decoder.load_fit(tampered, validate_crc: true)
+    end
+
+    test "resolves developer field descriptions" do
+      path = Application.app_dir(:fitparser) <> "/priv/examples/DeveloperData.fit"
+      [record | _] = Fitparser.Decoder.from_fit!(path)[:record]
+      [field | _] = record.fields
+
+      assert field.name == "doughnuts_earned"
+      assert field.units == "doughnuts"
+      assert field.value == 1
+      assert field.developer_data_index == 0
+    end
+
+    test "expands component fields" do
+      record =
+        "priv/examples/activity_poolswim_with_hr.fit"
+        |> Fitparser.Decoder.from_fit!()
+        |> Map.fetch!(:record)
+        |> Enum.find(fn record -> Enum.any?(record.fields, &(&1.name == "speed")) end)
+
+      assert Enum.any?(record.fields, &(&1.name == "enhanced_speed"))
+    end
+
+    test "can disable component expansion" do
+      data = File.read!("priv/examples/activity_poolswim_with_hr.fit")
+
+      records =
+        Fitparser.Decoder.load_fit!(data, expand_components: false)[:record]
+
+      refute Enum.any?(records, fn record ->
+               Enum.any?(record.fields, &(&1.name == "enhanced_speed"))
+             end)
+    end
+
+    test "can return FIT timestamps as Unix seconds" do
+      data = File.read!("priv/examples/WeightScaleSingleUser.fit")
+      [record | _] = Fitparser.Decoder.load_fit!(data)[:weight_scale]
+      timestamp = Enum.find(record.fields, &(&1.name == "timestamp"))
+
+      assert timestamp.value == 1_252_532_280
+    end
+  end
+
+  test "decode aliases load_fit" do
+    data = File.read!("priv/examples/WeightScaleSingleUser.fit")
+
+    assert Fitparser.Decoder.decode(data) ==
+             {:ok, Fitparser.Decoder.load_fit!(data)}
+
+    assert Fitparser.Decoder.decode!(data) == Fitparser.Decoder.load_fit!(data)
+  end
+
+  test "applies processors in order" do
+    data = File.read!("priv/examples/WeightScaleSingleUser.fit")
+
+    result =
+      Fitparser.Decoder.load_fit!(data,
+        processors: [
+          fn record -> %{record | kind: String.to_atom("processed_#{record.kind}")} end,
+          fn record, _opts ->
+            %{record | fields: Enum.map(record.fields, &%{&1 | units: :processed})}
+          end
+        ]
+      )
+
+    assert [%FitDataRecord{kind: :processed_weight_scale, fields: fields} | _] =
+             result[:weight_scale]
+
+    assert Enum.all?(fields, &(&1.units == :processed))
+  end
+
+  test "supports module processors with processor options" do
+    data = File.read!("priv/examples/WeightScaleSingleUser.fit")
+
+    result =
+      Fitparser.Decoder.load_fit!(data,
+        processors: [{__MODULE__.TestProcessor, [suffix: "_custom"]}]
+      )
+
+    assert [%FitDataRecord{kind: :weight_scale_custom} | _] = result[:weight_scale]
+  end
+
+  test "can include FIT structural metadata" do
+    data = File.read!("priv/examples/WeightScaleSingleUser.fit")
+
+    result = Fitparser.Decoder.decode!(data, include_metadata: true)
+
+    assert [%Fitparser.FitDataHeader{header_size: 14, data_size: 134} | _] = result["__headers__"]
+    assert [%Fitparser.FitDataDefinition{} | _] = result["__definitions__"]
+    assert [%Fitparser.FitDataCrc{valid: true} | _] = result["__crcs__"]
+  end
+
+  test "preserves unknown messages and fields" do
+    body = <<0x40, 0, 0, 999::little-16, 1, 0, 1, 2, 0, 42>>
+
+    data =
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
+        0::little-16>>
+
+    result = Fitparser.Decoder.decode!(data)
+    assert %{message_999: [%FitDataRecord{fields: [field]}]} = result
+
+    assert field == %FitDataField{name: "field_0", value: 42, units: nil, number: 0}
+  end
+
+  test "decodes byte arrays as byte lists" do
+    body = <<0x40, 0, 0, 174::little-16, 1, 3, 3, 13, 0, 1, 2, 255>>
+
+    data =
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
+        0::little-16>>
+
+    assert %{obdii_data: [%FitDataRecord{fields: [field]}]} =
+             Fitparser.Decoder.decode!(data)
+
+    assert field.name == "raw_data"
+    assert field.value == [1, 2, 255]
+  end
+
+  test "decodes signed FIT invalid sentinels as nil" do
+    body = <<0x40, 0, 0, 314::little-16, 1, 3, 2, 3, 0, 255, 127>>
+
+    data =
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
+        0::little-16>>
+
+    assert %{hsa_body_battery_data: [%FitDataRecord{fields: [field]}]} =
+             Fitparser.Decoder.decode!(data)
+
+    assert field.name == "uncharged"
+    assert field.value == [nil]
+  end
+
+  test "decodes IEEE floats with bit syntax" do
+    body = <<0x40, 0, 0, 999::little-16, 1, 0, 4, 8, 0, 0, 0, 72, 65>>
+
+    data =
+      <<14, 16, 0::little-16, byte_size(body)::little-32, ".FIT", 0::little-16, body::binary,
+        0::little-16>>
+
+    assert %{message_999: records} = Fitparser.Decoder.decode!(data)
+    assert hd(hd(records).fields).value == 12.5
+  end
+
+  defmodule TestProcessor do
+    @behaviour Fitparser.Processor
+
+    @impl true
+    def process(record, opts),
+      do: %{record | kind: String.to_atom(Atom.to_string(record.kind) <> opts[:suffix])}
   end
 
   def decoded_term do
     %{
-      "device_info" => [
+      :device_info => [
         %FitDataRecord{
           fields: [
             %FitDataField{
@@ -48,10 +215,10 @@ defmodule NativeTest do
               name: "timestamp",
               number: 253,
               units: "s",
-              value: "2009-09-09T22:38:00+01:00"
+              value: 1_252_532_280
             }
           ],
-          kind: "device_info"
+          kind: :device_info
         },
         %FitDataRecord{
           fields: [
@@ -66,13 +233,13 @@ defmodule NativeTest do
               name: "timestamp",
               number: 253,
               units: "s",
-              value: "2009-09-09T23:38:00+01:00"
+              value: 1_252_535_880
             }
           ],
-          kind: "device_info"
+          kind: :device_info
         }
       ],
-      "file_id" => [
+      :file_id => [
         %FitDataRecord{
           fields: [
             %FitDataField{name: "type", number: 0, units: nil, value: "weight"},
@@ -93,13 +260,13 @@ defmodule NativeTest do
               name: "time_created",
               number: 4,
               units: nil,
-              value: "2009-09-09T21:38:00+01:00"
+              value: 1_252_528_680
             }
           ],
-          kind: "file_id"
+          kind: :file_id
         }
       ],
-      "user_profile" => [
+      :user_profile => [
         %FitDataRecord{
           fields: [
             %FitDataField{name: "gender", number: 1, units: nil, value: "male"},
@@ -108,35 +275,35 @@ defmodule NativeTest do
             %FitDataField{name: "weight", number: 4, units: "kg", value: 71.0},
             %FitDataField{name: "message_index", number: 254, units: nil, value: 0}
           ],
-          kind: "user_profile"
+          kind: :user_profile
         }
       ],
-      "weight_scale" => [
+      :weight_scale => [
         %FitDataRecord{
           fields: [
-            %FitDataField{name: "weight", number: 0, units: "kg", value: 7580},
+            %FitDataField{name: "weight", number: 0, units: "kg", value: 75.8},
             %FitDataField{name: "percent_fat", number: 1, units: "%", value: 22.3},
             %FitDataField{
               name: "timestamp",
               number: 253,
               units: "s",
-              value: "2009-09-09T22:38:00+01:00"
+              value: 1_252_532_280
             }
           ],
-          kind: "weight_scale"
+          kind: :weight_scale
         },
         %FitDataRecord{
           fields: [
-            %FitDataField{name: "weight", number: 0, units: "kg", value: 7609},
+            %FitDataField{name: "weight", number: 0, units: "kg", value: 76.09},
             %FitDataField{name: "percent_fat", number: 1, units: "%", value: 25.1},
             %FitDataField{
               name: "timestamp",
               number: 253,
               units: "s",
-              value: "2009-09-09T23:38:00+01:00"
+              value: 1_252_535_880
             }
           ],
-          kind: "weight_scale"
+          kind: :weight_scale
         }
       ]
     }
